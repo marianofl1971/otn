@@ -1,0 +1,52 @@
+\documentclass[spanish,11pt,oneside,a4paper]{book}
+\usepackage{cite}
+
+% El siguiente paquete se utiliza para la divisiÃ³n en sÃ­labas en espaÃ±ol. IMPORTANTE: requiere instalaciÃ³n de paquetes texlive-babel-spanish y texlive-babel-spanish-doc (ambos sin t al final de tex). La opciÃ³n es-noshorthands es para evitar el problema que se ocasiona cuando la opciÃ³n spanish deshabilita algunos caracteres.
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{eurosym} % Para poder escribir el sÃ­mbolo del euro
+\lstset{escapeinside=||} % Para poder poner acentos en dentro del entorno lstlisting. Por ejemplo, para poner "FernÃ¡ndez" en unos comentarios de Java, hay que escribir "Fern|Ã¡|ndez"
+\usepackage{framed} % Para poder crear cuadros alrededor de textos. Permite utilizar el entorno framed.
+\usepackage{courier}
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\usepackage{tikz} % Para las figuras en formato LaTeX
+\usetikzlibrary{arrows,positioning,calc,shapes.geometric}
+\usepackage{amsthm} % Este paquete lo utilizo para crear entornos ejemplo, ejercicio, etc. con newtheorem.
+\usepackage{amsmath} % Lo utilizo para poder utilizar el entorno equation*, que permite tener fÃ³rmulas si nÃºmero de fÃ³rmula.
+\usepackage{float} % Para poder poner las figuras donde yo quiera.
+\usepackage{amsfonts} % Para poder escribir el sÃ­mbolo de los nÃºmeros naturales, el de los nÃºmeros enteros, etc.
+\usepackage{booktabs} % Para poder utilizar \toprule, midrule, etc. en tablas.
+\usepackage{tikz} % Para poder dibujar, por ejemplo, autómatas
+\usetikzlibrary{automata,positioning} % Para poder dibujar autómatas
+
+%\usepackage{array}
+
+%\input{latex-macros}
+
+\begin{document}
+
+\theoremstyle{definition}
+\newtheorem{ejercicio}{Ejercicio}[chapter] %El primer parÃ¡metro es el nombre del entorno y, el segundo, el nombre que va a aparecer en el texto. Lo que hay entre corchetes indica que la numeraciÃ³n va a llevar el nÃºmero de secciÃ³n.
+\newtheorem{definimos}{DefiniciÃ³n}[chapter] 
+\newtheorem{teorema}{Teorema}[chapter] 
+\newtheorem{observamos}{ObservaciÃ³n}[chapter] 
+\newtheorem{ejemplo}{Ejemplo}[chapter] 
+%\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\tablename}{Tabla}
+\include{cover}
+
+\tableofcontents
+
+\include{contenido}
+%Blablabla said Nobody ~\cite{Nobody06}.
+
+\end{document}
