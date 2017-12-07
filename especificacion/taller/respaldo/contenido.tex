@@ -1,0 +1,210 @@
+% FILE NAME: contenido.tex
+
+\sloppy % Para que no se me salgan las URLs de los m\'argenes
+
+\chapter{Información general}
+
+\section{Propósito}
+
+El propósito de la elaboración de esta ontología es especificar de manera
+formal una estructura conceptual para el intercambio de información de acuerdo
+con la Guía Práctica para la Evaluación del Seguimiento de Títulos
+Universitarios Oficiales de la Fundación Madri+d\footnote{\url{http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia\_de\_Evaluacion\_2014.pdf}}. La ontología estará centrada en la información de los títulos que, según Madri+d, debe ser pública.
+
+Se espera que esta ontología sea útil para desarrollar sistemas de ayuda a la
+decisión, orientados a futuros estudiantes universitarios, que traten de forma
+automatizada los diferentes títulos sin necesidad de programar un
+\emph{scrapper} para el sitio Web de cada título. También puede resultar útil
+para intercambio de información entre las aplicaciones de Madri+d y las de las
+universidades.
+
+\section{Recursos para elaborar la ontología}
+
+La identificación de las entidades que se han de definir en la ontología se llevará a cabo tomando como referencia el documento de Madri+d anteriormente citado.
+
+Las definiciones de los términos que aparecen en la ontología se obtendrán a partir de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades, en su versión consolidada de 23 de marzo de 2016\footnote{\url{http://www.boe.es/buscar/act.php?id=BOE-A-2001-24515}}.
+
+\chapter{Descripción de la ontologia en lenguaje natural}
+
+Los apartados siguientes están estructurados según el capítulo 2 del documento de la Fundación Madri+d anteriormente mencionado (sobre la información pública). En cada uno de ellos se expondrá qué información deberá estar representada en la ontología.
+
+%Los distintos puntos estarán clasificados según su prioridad. Los que tengan un número de prioridad menor serán más prioritarios.
+
+\section{Descripción del título}
+
+Blablabla said Nobody ~\cite{Nobody06}.
+
+\begin{enumerate}
+
+    \item Denominación del título.
+
+    \item Universidad donde se imparte.
+
+    \item Centro, Departamento o Instituto responsable
+
+    \item Centros en los que se imparte el título.
+
+    \item Curso académico en el que se implantó.
+
+    \item Tipo de enseñanza (presencial, semi-presencial, a distancia).
+
+    \item Número total de créditos ECTS.
+
+    \item Número mínimo y máximo de ECTS por tipo de matrícula y curso. Así, tanto para
+        los estudiantes a tiempo completo, como para los estudiantes a tiempo
+        parcial, se representará el número mínimo y máximo de ECTS de los que
+        podrá matricularse durante el primer curso, y la misma información para
+        el resto de cursos. Estos máximos y mínimos serán los mismos para
+        segundo curso, tercer curso, etc.
+
+    \item Recurso donde se describe la normativa de permanencia.
+
+    \item Idiomas en que se imparte el título.
+
+\end{enumerate}
+
+\section{Competencias}
+
+Por competencia se entiende ``el conjunto de conocimientos, habilidades,
+actitudes que se adquieren o desarrollan mediante experiencias formativas
+coordinadas, las cuales tienen el propósito de lograr conocimientos
+funcionales que den respuesta de modo eficiente a una tarea o problema de la
+vida cotidiana y profesional que requiera un proceso de enseñanza y
+aprendizaje''%\cite{madriMasDGuiaSeg}.
+
+\begin{enumerate}
+
+    \item Competencias generales.
+
+    \item Competencias transversales.
+
+    \item Competencias específicas.
+
+    \item Profesiones reguladas para las que capacita el título, en su caso.
+
+\end{enumerate}
+
+\section{Acceso y admisión}
+
+\begin{enumerate}
+
+    \item{Información dirigida al estudiante de nuevo ingreso}
+
+        \begin{enumerate}
+
+            \item Recurso donde se describen las vías y requisitos de acceso (GRADOS).
+
+            \item Recurso donde se describen los criterios de admisión (MASTERS).
+
+            \item Número de plazas de nuevo ingreso ofertadas.
+
+            \item Recurso donde se describen las pruebas especiales, en su caso.
+
+            \item Plazos de preinscripción.
+
+            \item Periodo y recurso donde se describen los requisitos para formalizar
+                la matrícula.
+
+            \item Recurso donde se describe el perfil recomendado para el
+                estudiante de nuevo ingreso.
+
+        \end{enumerate}
+
+    \item Recurso con la información sobre transferencia y reconocimiento de créditos.
+
+    \item Recurso con el procedimiento de adaptación de los estudiantes procedentes de enseñanzas anteriores (sólo en el caso de que el título provenga de la transformación a la nueva legislación de otro título).
+
+    \item Cursos de adaptación (plan curricular y condiciones de acceso).
+
+    \item Recurso donde se describen los mecanismos de información y orientación para estudiantes matriculados.
+
+\end{enumerate}
+
+\section{Planificación de las enseñanzas}
+
+\begin{enumerate}
+
+    \item Calendario de implantación del código.
+
+    \item Información con secuencia temporal ( curso/semestre) en la que se haga
+        constar el nombre de la materia, su carácter, el número de créditos ECTS
+        y las asignaturas en las que se desdoble dicha materia con indicación del
+        número de créditos ECTS asignado a cada una de ellas.
+
+    \item Competencias asociadas a cada una de las materias.
+
+    \item Itinerarios formativos (menciones / grados – especialidades/ másteres).
+
+    \item Guías docentes de las asignaturas:
+
+        \begin{itemize}
+
+            \item Tipo de asignatura.
+            \item Número de créditos.
+            \item Programa.
+            \item Objetivos de aprendizaje.
+            \item Metodología de aprendizaje.
+            \item Criterios de evaluación.
+            \item Idioma.
+
+        \end{itemize}
+
+    \item Acuerdos o convenios de colaboración y programas de ayuda para el
+        intercambio de estudiantes
+
+    \item Prácticas externas (convenios con entidades públicas o privadas, sistema
+        de tutorías, sistemas de solicitud, criterios de adjudicación, etc.).
+
+
+\end{enumerate}
+
+\section{Personal académico}
+
+\begin{enumerate}
+
+    \item Personal académico adscrito al título.
+
+    \item Para las universidades públicas, se requiere la siguiente información agregada:
+
+        \begin{itemize}
+
+            \item Número total de profesores por categoría.
+
+            \item Porcentaje de doctores por categoría.
+
+        \end{itemize}
+
+    \item La información agregada para las universidades privadas, será la que
+        se muestra a continuación:
+
+        \begin{itemize}
+
+            \item Número total de profesores.
+
+            \item Porcentaje de doctores.
+
+        \end{itemize}
+
+\end{enumerate}
+
+\section{Medios materiales}
+
+ Aulas informáticas, recursos bibliográficos, bibliotecas, salas de estudio.
+
+\section{Sistema interno de calidad}
+
+\begin{enumerate}
+
+    \item Breve descripción de la organización ,composición y funciones del SICG
+        (título o centro)
+
+    \item Mejoras implantadas.
+
+    \item Información sobre acceso al sistema de quejas y reclamaciones.
+
+    \item Información sobre la inserción laboral de los graduados.
+
+\end{enumerate}
+
+\bibliography{bibText}{}
+\bibliographystyle{plain}
