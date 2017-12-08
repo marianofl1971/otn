@@ -4,14 +4,12 @@ import re
 import unicodedata
 import sys
 
-'''
 def elimina_tildes(cadena):
-    s = ''.join((c for c in unicodedata.normalize('NFD',unicode(cadena)) if unicodedata.category(c) != 'Mn'))
-    return s.decode()
-'''
+    s = ''.join((c for c in unicodedata.normalize('NFD',cadena) if unicodedata.category(c) != 'Mn'))
+    return s
 
 def generar_uri(etiqueta):
-    etiqueta_sin_tildes = etiqueta
+    etiqueta_sin_tildes = elimina_tildes(etiqueta)
     lista_palabras = etiqueta_sin_tildes.split()
     palabra_en_mayuscula = ''
     for palabra in lista_palabras:
