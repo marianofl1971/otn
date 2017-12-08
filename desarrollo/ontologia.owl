@@ -21,415 +21,334 @@
      -->
 <!--http://w3id.org/education/otn#TítuloOficial-->
 <owl:Class rdf:about="http://w3id.org/education/otn#TítuloOficial">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\label{def_titulo_documento} Documento expedido
-        en nombre del Rey por el Rector de una universidad \cite[artículo
-        35]{leyUniversidades} que acredita una serie de conocimientos
-        científicos, técnicos o artísticos \cite[artículo
-        33]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">\label{def_titulo_documento} Documento expedido en nombre del Rey por el Rector de una universidad \cite[artículo 35]{leyUniversidades} que acredita una serie de conocimientos científicos, técnicos o artísticos \cite[artículo 33]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">título oficial</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#PlanDeEstudios-->
 <owl:Class rdf:about="http://w3id.org/education/otn#PlanDeEstudios">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programa en el que se detallan las
-        asignaturas que hay que cursar para obtener un título, así como los
-        medios, tanto humanos como materiales, que se van a emplear para
-        llevara buen término el programa</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programa en el que se detallan las asignaturas que hay que cursar para obtener un título, así como los medios, tanto humanos como materiales, que se van a emplear para llevara buen término el programa.>></rdfs:comment>
    <rdfs:label xml:lang="es">plan de estudios</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Universidad-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Universidad">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Institución de educación superior dedicada a la
-        investigación, la docencia y el estudio \cite[articulo 1, apartado 
-        1]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Institución de educación superior dedicada a la investigación, la docencia y el estudio \cite[articulo 1, apartado 1]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">universidad</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#UniversidadPública-->
 <owl:Class rdf:about="http://w3id.org/education/otn#UniversidadPública">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad cuya titularidad ostenta el Estado o
-        una Comunidad Autónoma \cite[artículo 3]{rdUniversidadesPrivadas}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad cuya titularidad ostenta el Estado o una Comunidad Autónoma \cite[artículo 3]{rdUniversidadesPrivadas}.>></rdfs:comment>
    <rdfs:label xml:lang="es">universidad pública</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#UniversidadPrivada-->
 <owl:Class rdf:about="http://w3id.org/education/otn#UniversidadPrivada">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad cuya titularidad ostenta una persona
-        física o jurídica de carácter privado\cite[artículo
-        3]{rdUniversidadesPrivadas}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">División académica de una universidad, en la que se agrupan los estudios de disciplinas similares (adaptado de la RAE\footnote{\url{http://dle.rae.es/?id=HTxyZDZ}}). Un centro está encargado de la organización de las enseñanzas y de los procesos académicos, administrativos y de gestión conducentes a la obtención de títulos universitarios \cite[artículo 8]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">universidad privada</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CentroUno-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CentroUno">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">División académica de una universidad, en la que se agrupan
-                los estudios de disciplinas similares</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local o conjunto de locales en que funciona un centro según la acepción \ref{centro_div} (adaptado de la RAE\footnote{\url{http://dle.rae.es/?id=HTxyZDZ}}).>></rdfs:comment>
    <rdfs:label xml:lang="es">centro uno</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CentroDos-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CentroDos">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local o conjunto de locales en que funciona un centro según la acepción \ref{centro_div}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad de docencia e investigación encargada de coordinar las enseñanzas de uno o varios ámbitos del conocimiento en uno o varios centros, de acuerdo con la programación docente de la universidad, de apoyar las actividades e iniciativas docentes e investigadoras del profesorado, y de ejercer aquellas otras funciones que sean determinadas por los estatutos\cite[artículo 9]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">centro dos</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Departamento-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Departamento">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad de docencia e investigación encargada de
-        coordinar las enseñanzas de uno o varios ámbitos del conocimiento en uno o varios centros,
-        de acuerdo con la programación docente de la universidad, de apoyar las actividades e
-        iniciativas docentes e investigadoras del profesorado, y de ejercer aquellas otras funciones
-        que sean determinadas por los estatutos\cite[artículo 9]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intervalo de tiempo anual en el que se desarrolla la actividad académica.>></rdfs:comment>
    <rdfs:label xml:lang="es">departamento</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CursoAcadémico-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CursoAcadémico">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intervalo de tiempo anual en el que se desarrolla la actividad académica</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla que requiere que el estudiante asista de forma regular y continuada durante todos los cursos a actividades formativas regladas en el centro de impartición del título\cite[página 10]{guiaMadridMasD}.>></rdfs:comment>
    <rdfs:label xml:lang="es">curso académico</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#EnseñanzaPresencial-->
 <owl:Class rdf:about="http://w3id.org/education/otn#EnseñanzaPresencial">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla que requiere que el estudiante
-        asista de forma regular y continuada durante todos los cursos a
-        actividades formativas regladas en el centro de impartición del título\cite[página 10]{guiaMadridMasD}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla en la que la planificación de las actividades formativas previstas en el Plan de Estudios combina la presencia física del estudiante en el centro de impartición del título con un mayor trabajo autónomo del estudiante al propio de la enseñanza presencial\cite[página 10]{guiaMadridMasD}.>></rdfs:comment>
    <rdfs:label xml:lang="es">enseñanza presencial</rdfs:label>
+</owl:Class>
+
+<!--http://w3id.org/education/otn#EnseñanzaSemi-presencial-->
+<owl:Class rdf:about="http://w3id.org/education/otn#EnseñanzaSemi-presencial">
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla en que la gran mayoría de las actividades formativas previstas en el Plan de Estudios no requieren la presencia física del estudiante en el centro de impartición del título\cite[página 10]{guiaMadridMasD}.>></rdfs:comment>
+   <rdfs:label xml:lang="es">enseñanza semi-presencial</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#EnseñanzaADistancia-->
 <owl:Class rdf:about="http://w3id.org/education/otn#EnseñanzaADistancia">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla en la que la planificación de las
-        actividades formativas previstas en el Plan de Estudios combina la
-        presencia física del estudiante en el centro de impartición del título con un
-        mayor trabajo autónomo del estudiante al propio de la enseñanza
-        presencial\cite[página 10]{guiaMadridMasD}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El crédito europeo es la unidad de medida del haber académico que representa la cantidad de trabajo del estudiante para cumplir los objetivos del programa de estudios y que se obtiene por la superación de cada una de las materias que integran los planes de estudios de las diversas enseñanzas conducentes a la obtención de títulos universitarios de carácter oficial y validez en todo el territorio nacional. En esta unidad de medida se integran las enseñanzas teóricas y prácticas, así como otras actividades académicas dirigidas, con inclusión de las horas de estudio y de trabajo que el estudiante debe realizar para alcanzar los objetivos formativos propios de cada una de las materias del correspondiente plan de estudios\cite[artículo 3]{rdECTS}. El número mínimo de horas, por crédito, será de 25, y el número máximo, de 30\cite[artículo 4, apartado 5]{rdECTS}.>></rdfs:comment>
    <rdfs:label xml:lang="es">enseñanza a distancia</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CréditoECTS-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CréditoECTS">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla en que la gran mayoría de las actividades
-        formativas previstas en el Plan de Estudios no requieren la presencia física
-        del estudiante en el centro de impartición del título\cite[página 10]{guiaMadridMasD}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toda  persona  que  curse  enseñanzas  oficiales en alguno de los tres ciclos universitarios (Grado, Máster y Doctorado \cite[artículo 8]{rd1393}), enseñanzas de formación continua u otros estudios ofrecidos por las universidades\cite[artículo 1, apartado 3]{estatutoEstudiante}.>></rdfs:comment>
    <rdfs:label xml:lang="es">crédito ECTS</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Estudiante-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Estudiante">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El crédito europeo es la unidad de medida del
-        haber académico que representa la cantidad de trabajo del estudiante
-        para cumplir los objetivos del programa de estudios y que se obtiene
-        por la superación de cada una de las materias que integran los planes
-        de estudios de las diversas enseñanzas conducentes a la obtención de
-        títulos universitarios de carácter oficial y validez en todo el
-        territorio nacional. En esta unidad de medida se integran las
-        enseñanzas teóricas y prácticas, así como otras actividades académicas
-        dirigidas, con inclusión de las horas de estudio y de trabajo que el
-        estudiante debe realizar para alcanzar los objetivos formativos propios
-        de cada una de las materias del correspondiente plan de
-        estudios\cite[artículo 3]{rdECTS}. El número mínimo de horas, por
-        crédito, será de 25, y el número máximo, de 30\cite[artículo 4, apartado 
-        5]{rdECTS}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante que dedica un mínimo de 36 horas y un máximo de 40 a la semana a sus universitarios\cite[artículo 4, apartado 4]{rdECTS}.>></rdfs:comment>
    <rdfs:label xml:lang="es">estudiante</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#EstudianteATiempoCompleto-->
 <owl:Class rdf:about="http://w3id.org/education/otn#EstudianteATiempoCompleto">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toda  persona  que  curse  enseñanzas  oficiales
-        en alguno de los tres ciclos universitarios</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante que requiere una trayectoria de aprendizaje flexible \cite[artículo 7, apartado 2]{estatutoEstudiante}, y que, por tanto, no llega a una dedicación de 36 horas semanales a sus estudios universitarios.>></rdfs:comment>
    <rdfs:label xml:lang="es">estudiante a tiempo completo</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#EstudianteATiempoParcial-->
 <owl:Class rdf:about="http://w3id.org/education/otn#EstudianteATiempoParcial">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante que dedica un mínimo
-        de 36 horas y un máximo de 40 a la semana a sus
-        universitarios\cite[artículo 4, apartado 4]{rdECTS}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjunto de normas que establecen bajo qué condiciones un estudiante puede permanecer en la universidad.>></rdfs:comment>
    <rdfs:label xml:lang="es">estudiante a tiempo parcial</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#NormativaDePermanencia-->
 <owl:Class rdf:about="http://w3id.org/education/otn#NormativaDePermanencia">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante que requiere una
-        trayectoria de aprendizaje flexible \cite[artículo 7, apartado 
-        2]{estatutoEstudiante}, y que, por tanto, no llega a una dedicación de
-        36 horas semanales a sus estudios universitarios</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lengua de un pueblo o nación, o común a varios\footnote{\url{http://dle.rae.es/?id=KuMp7nw} acepción 1}.>></rdfs:comment>
    <rdfs:label xml:lang="es">normativa de permanencia</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Idioma-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Idioma">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjunto de normas que establecen
-        bajo qué condiciones un estudiante puede permanecer en la universidad</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}.  En el ámbito universitario, las competencias deben ser evaluables y coherentes \cite[página 19]{guiaAneca}.>></rdfs:comment>
    <rdfs:label xml:lang="es">idioma</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Competencia-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Competencia">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lengua de un pueblo o nación, o común a
-        varios\footnote{\url{htt</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}.>></rdfs:comment>
    <rdfs:label xml:lang="es">competencia</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CompetenciaBásica-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CompetenciaBásica">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}.
-        En el ámbito universitario, las competencias deben ser
-        evaluables y coherentes \cite[página 19]{guiaAneca}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}.>></rdfs:comment>
    <rdfs:label xml:lang="es">competencia básica</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CompetenciaEspecífica-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CompetenciaEspecífica">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}.>></rdfs:comment>
    <rdfs:label xml:lang="es">competencia específica</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CompetenciaTransversal-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CompetenciaTransversal">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empleo, facultad u oficio que alguien ejerce y por el que percibe una retribución\footnote{\url{http://dle.rae.es/?id=UHx86MW} acepción 2}.>></rdfs:comment>
    <rdfs:label xml:lang="es">competencia transversal</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Profesión-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Profesión">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Véase la sección \ref{competencias}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Según \cite[artículo 4, apartado c]{rdECTS}, aquella profesión para cuyo acceso se exija estar en posesión de un título universitario oficial cuyo diseño y directrices respondan a lo dispuesto en los artículos 12.9 y 15.4 del Real Decreto 1393/2007\cite{rd1393}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesión</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesiónReguladaPorExigenciaDeTítuloUniversitario-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesiónReguladaPorExigenciaDeTítuloUniversitario">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empleo, facultad u oficio que alguien ejerce y por
-        el que percibe una
-        retribución\footnote{\url{htt</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Descripción utilizando un idioma humano (véase \ref{idioma}).>></rdfs:comment>
    <rdfs:label xml:lang="es">profesión regulada por exigencia de título universitario</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#DescripciónEnLenguajeNatural-->
 <owl:Class rdf:about="http://w3id.org/education/otn#DescripciónEnLenguajeNatural">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 
-        Según \cite[artículo 4, apartado c]{rdECTS}, aquella profesión para cuyo
-        acceso se exija estar en posesión de un título universitario oficial
-        cuyo diseño y directrices respondan a lo dispuesto en los artículos
-        12.9 y 15.4 del Real Decreto 139</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Número de nuevos estudiantes que pueden admitirse a lo largo de un curso académico en una titulación.>></rdfs:comment>
    <rdfs:label xml:lang="es">descripción en lenguaje natural</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#NúmeroDePlazas-->
 <owl:Class rdf:about="http://w3id.org/education/otn#NúmeroDePlazas">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Descripción utilizando un idioma humano</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intervalo de tiempo en el que se puede solicitar el ingreso en una tituación.>></rdfs:comment>
    <rdfs:label xml:lang="es">número de plazas</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#PlazoDePreinscripción-->
 <owl:Class rdf:about="http://w3id.org/education/otn#PlazoDePreinscripción">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Número de nuevos estudiantes que pueden
-        admitirse a lo largo de un curso académico en una titulación</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secuencia temporal en la que se van implantando los diferentes cursos de la titulación\cite[página 62]{guiaAneca}.>></rdfs:comment>
    <rdfs:label xml:lang="es">plazo de preinscripción</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CalendarioDeImplantaciónDelTítulo-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CalendarioDeImplantaciónDelTítulo">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intervalo de tiempo en el que se
-        puede solicitar el ingreso en una tituación</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Área del saber que, según el RD 1393 \cite[artículo 12, apartado 4]{rd1393}, puede ser una de las siguientes: Artes y Humanidades, Ciencias, Ciencias de la salud, Ciencias Sociales y Jurídicas, e Ingeniería y Arquitectura. Todo título debe estar adscrito a, al menos, una rama de conocimiento.>></rdfs:comment>
    <rdfs:label xml:lang="es">calendario de implantación del título</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#RamaDeConocimiento-->
 <owl:Class rdf:about="http://w3id.org/education/otn#RamaDeConocimiento">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secuencia temporal en la
-        que se van implantando los diferentes cursos de la
-        titulación\cite[página 62]{guiaAneca}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad académica que incluye una o varias asignaturas que pueden concebirse de manera integrada, de tal forma que constituyen unidades coherentes desde el punto de vista disciplinar \cite[página 33]{guiaAneca}.>></rdfs:comment>
    <rdfs:label xml:lang="es">rama de conocimiento</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Materia-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Materia">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Área del saber que, según el RD 1393
-        \cite[artículo 12, apartado 4]{rd1393}, puede ser una de las siguiente</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad académica que incluye una o varias materias que constituyen una unidad organizativa dentro de un plan de estudios \cite[página 33]{guiaAneca}.>></rdfs:comment>
    <rdfs:label xml:lang="es">materia</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Módulo-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Módulo">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad académica que incluye una o varias asignaturas que
-        pueden concebirse de manera integrada, de tal forma que constituyen
-        unidades coherentes desde el punto de vista disciplinar \cite[página
-        33]{guiaAneca}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad académica que incluye una serie de contenidos coherentes desde el punto de vista disciplinar de la que es evaluado el estudiante y se le asigna una calificación.>></rdfs:comment>
    <rdfs:label xml:lang="es">módulo</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Asignatura-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Asignatura">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad académica que incluye una o varias materias que
-        constituyen una unidad organizativa dentro de un plan de estudios
-        \cite[página 33]{guiaAneca}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta.\cite[artículo 12, apartado 2]{rd1393} \cite[sección D.5]{guiaMadridMasD}>></rdfs:comment>
    <rdfs:label xml:lang="es">asignatura</rdfs:label>
+</owl:Class>
+
+<!--http://w3id.org/education/otn#CarácterDeMateria/asignatura-->
+<owl:Class rdf:about="http://w3id.org/education/otn#CarácterDeMateria/asignatura">
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materia/asignatura en que el estudiante adquiere las competencias fundamentales de la rama de conocimiento \cite[artículo 12, apartado 2]{rd1393}. El RD 1393 \cite[anexo II]{rd1393} proporciona un catálogo de materias básicas por ramas de conocimiento.>></rdfs:comment>
+   <rdfs:label xml:lang="es">carácter de materia/asignatura</rdfs:label>
+</owl:Class>
+
+<!--http://w3id.org/education/otn#Materia/asignaturaBásica-->
+<owl:Class rdf:about="http://w3id.org/education/otn#Materia/asignaturaBásica">
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla no básica que debe ser cursada necesariamente para obtener el título\cite[sección D.5]{guiaMadridMasD}\cite[artículo 12, apartado 2]{rd1393}.>></rdfs:comment>
+   <rdfs:label xml:lang="es">materia/asignatura básica</rdfs:label>
+</owl:Class>
+
+<!--http://w3id.org/education/otn#Materia/asignaturaObligatoria-->
+<owl:Class rdf:about="http://w3id.org/education/otn#Materia/asignaturaObligatoria">
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla que elige el estudiante entre otras posibles para cursarla\cite[sección D.5]{guiaMadridMasD}\cite[artículo 12, apartado 2]{rd1393}.>></rdfs:comment>
+   <rdfs:label xml:lang="es">materia/asignatura obligatoria</rdfs:label>
+</owl:Class>
+
+<!--http://w3id.org/education/otn#Materia/asignaturaOptativa-->
+<owl:Class rdf:about="http://w3id.org/education/otn#Materia/asignaturaOptativa">
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materia que engloba asignaturas de diferente carácter\cite[sección D.5]{guiaMadridMasD}\cite[artículo 12, apartado 2]{rd1393}.>></rdfs:comment>
+   <rdfs:label xml:lang="es">materia/asignatura optativa</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#MateriaMixta-->
 <owl:Class rdf:about="http://w3id.org/education/otn#MateriaMixta">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad académica que incluye una serie de
-        contenidos coherentes desde el punto de vista disciplinar de la que es
-        evaluado el estudiante y se le asigna una calificación</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mención (para el caso de un grado), especialidad (para el caso de un máster) \cite[sección D.4]{guiaMadridMasD}\cite[artículo 9, apartado 3]{rd1393}.>></rdfs:comment>
    <rdfs:label xml:lang="es">materia mixta</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ItinerarioFormativo-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ItinerarioFormativo">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clasificación de la materi</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trabajo con el que concluye un título de grado\cite[artículo 12, apartado 3]{rd1393}. El trabajo de fin de Grado tendrá entre 6 y 30 créditos, deberá realizarse en la fase final del plan de estudios y estar orientado a la evaluación de competencias asociadas al título.\cite[artículo 12, apartado 7]{rd1393}.>></rdfs:comment>
    <rdfs:label xml:lang="es">itinerario formativo</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#TrabajoFinDeGrado-->
 <owl:Class rdf:about="http://w3id.org/education/otn#TrabajoFinDeGrado">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materi</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trabajo con el que concluye un título de máster\cite[artículo 15, apartado 3]{rd1393}. Tendrá entre 6 y 30 créditos.>></rdfs:comment>
    <rdfs:label xml:lang="es">trabajo fin de grado</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#TrabajoFinDeMáster-->
 <owl:Class rdf:about="http://w3id.org/education/otn#TrabajoFinDeMáster">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla no básica que debe ser cursada
-        necesariamente para obtener el título\cite[sección
-        D.5]{guiaMadridMasD}\cite[artículo 12, apartado 2]{rd1393}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Especificación de una asignatura que incluye su número de créditos ECTS, el programa a desarrollar, la metodología de aprendizaje, los sistemas de evaluación, etc. \cite[sección D.5]{guiaMadridMasD}.>></rdfs:comment>
    <rdfs:label xml:lang="es">trabajo fin de máster</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#GuíaDocente-->
 <owl:Class rdf:about="http://w3id.org/education/otn#GuíaDocente">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla que elige el estudiante entre
-        otras posibles para cursarla\cite[sección
-        D.5]{guiaMadridMasD}\cite[artículo 12, apartado 2]{rd1393}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona que se dedica a la docencia en la universidad.>></rdfs:comment>
    <rdfs:label xml:lang="es">guía docente</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Profesor-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Profesor">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materia que engloba asignaturas de diferente
-        carácter\cite[sección D.5]{guiaMadridMasD}\cite[artículo 12, apartado 
-        2]{rd1393}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor en periodo de formación, con contrato de carácter temporal y dedicación a tiempo completo, que ha sido admitido, o está en condiciones de ser admitido, en estudios de doctorado\cite[artículo 49]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorAyudante-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorAyudante">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mención</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor doctor, con contrato de carácter temporal y dedicación a tiempo completo, que ha obtenido una acreditación nacional o autonómica, y que desarrolla tareas docentes y de investigación\cite[artículo 50]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor ayudante</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorAyudanteDoctor-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorAyudanteDoctor">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trabajo con el que concluye un título de
-        grado\cite[artículo 12, apartado 3]{rd1393}. El trabajo de fin de Grado
-        tendrá entre 6 y 30 créditos, deberá realizarse en la fase final del
-        plan de estudios y estar orientado a la evaluación de competencias
-        asociadas al título.\cite[artículo 12, apartado 7]{rd1393}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor funcionario doctor con plena capacidad tanto para la docencia como para la investigación. Para acceder a esta posición es necesario haber obtenido una acreditación nacional\cite{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor ayudante doctor</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorTitularDeUniversidad-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorTitularDeUniversidad">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trabajo con el que concluye un título
-        de máster\cite[artículo 15, apartado 3]{rd1393}. Tendrá entre 6 y 30 créditos</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor funcionario doctor con plena capacidad tanto para la docencia como para la investigación que tiene la categoría docente más alta. Para acceder a esta posición es necesario haber obtenido una acreditación nacional\cite{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor titular de universidad</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#CatedráticoDeUniversidad-->
 <owl:Class rdf:about="http://w3id.org/education/otn#CatedráticoDeUniversidad">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Especificación de una asignatura que incluye su
-        número de créditos ECTS, el programa a desarrollar, la metodología de
-        aprendizaje, los sistemas de evaluación, etc. \cite[sección
-        D.5]{guiaMadridMasD}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor doctor con contrato laboral indefinido y dedicación a tiempo completo que ha obtenido una acreditación nacional o autonómica, que desarrolla, con plena capacidad docente e investigadora, tareas docentes y de investigación (o prioritariamente de investigación)\cite[artículo 52]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">catedrático de universidad</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorContratadoDoctor-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorContratadoDoctor">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona que se dedica a la docencia en la
-        universidad</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor, con contrado temporal a tiempo parcial, especialista de reconocida competencia que acredita ejercer su actividad profesional fuera del ámbito académico universitario que desarrolla tareas docentes a través de las que aporta sus conocimientos y experiencia profesionales a la universidad\cite[artículo 53]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor contratado doctor</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorAsociado-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorAsociado">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor en periodo de formación, con
-        contrato de carácter temporal y dedicación a tiempo completo, que ha
-        sido admitido, o está en condiciones de ser admitido, en estudios de
-        doctorado\cite[artículo 49]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor o investigador, con contrato temporal a tiempo parcial o completo, de reconocido prestigio de otra universidad o centro de investigación, que desarrolla tareas docentes o de investigación a través de las que aporta conocimientos y experiencia docente e investigadora\cite[artículo 54]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor asociado</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorVisitante-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorVisitante">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor doctor, con contrato de
-        carácter temporal y dedicación a tiempo completo, que ha obtenido una
-        acreditación nacional o autonómica, y que desarrolla tareas docentes y de
-        investigación\cite[artículo 50]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor jubilado que ha que ha prestado servicios destacados a la universidad\cite[artículo 54bis]{leyUniversidades}.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor visitante</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#ProfesorEmérito-->
 <owl:Class rdf:about="http://w3id.org/education/otn#ProfesorEmérito">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor funcionario doctor con plena
-        capacidad tanto para la docencia como para la
-        investigación. Para acceder a esta posición es necesario haber obtenido
-        una acreditación nacional\cite{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona que ha defendido con éxito una tesis doctoral, consistente en un trabajo original de investigación y que, por tanto, posee el título de doctor.>></rdfs:comment>
    <rdfs:label xml:lang="es">profesor emérito</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Doctor-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Doctor">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor funcionario doctor con plena
-        capacidad tanto para la docencia como para la investigación que tiene
-        la categoría docente más alta. Para acceder a esta posición es
-        necesario haber obtenido una acreditación nacional\cite{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sala donde se imparten clases en los centros docentes\footnote{\url{http://dle.rae.es/?id=4OCO4gi} acepción 1}.>></rdfs:comment>
    <rdfs:label xml:lang="es">doctor</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Aula-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Aula">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor doctor con contrato
-        laboral indefinido y dedicación a tiempo completo que ha obtenido una
-        acreditación nacional o autonómica, que desarrolla, con plena capacidad
-        docente e investigadora, tareas docentes y de investigación</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aula con ordenadores para que puedan trabajar con ellos los alumnos.>></rdfs:comment>
    <rdfs:label xml:lang="es">aula</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#AulaInformática-->
 <owl:Class rdf:about="http://w3id.org/education/otn#AulaInformática">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor, con contrado temporal a tiempo
-        parcial, especialista de reconocida competencia que acredita ejercer su
-        actividad profesional fuera del ámbito académico universitario que
-        desarrolla tareas docentes a través de las que aporta sus conocimientos
-        y experiencia profesionales a la universidad\cite[artículo 53]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libro, revista o cualquier otra obra científica o literaria que puede estar impresa o en otro soporte.>></rdfs:comment>
    <rdfs:label xml:lang="es">aula informática</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#RecursoBibliográfico-->
 <owl:Class rdf:about="http://w3id.org/education/otn#RecursoBibliográfico">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor o investigador, con contrato
-        temporal a tiempo parcial o completo, de reconocido prestigio de otra
-        universidad o centro de investigación, que desarrolla tareas docentes o
-        de investigación a través de las que aporta conocimientos y experiencia
-        docente e investigadora\cite[artículo 54]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Órgano cuya finalidad consiste en la adquisición, conservación, estudio y exposición de libros y documentos\footnote{Inspirado en \url{http://dle.rae.es/?id=5SGETnQ} acepción 1}.>></rdfs:comment>
    <rdfs:label xml:lang="es">recurso bibliográfico</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#Biblioteca-->
 <owl:Class rdf:about="http://w3id.org/education/otn#Biblioteca">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profesor jubilado que ha que ha prestado
-        servicios destacados a la universidad\cite[artículo 54bis]{leyUniversidades}</rdfs:comment>
+   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sala debidamente acondicionada para que los alumnos puedan estudiar.>></rdfs:comment>
    <rdfs:label xml:lang="es">biblioteca</rdfs:label>
 </owl:Class>
 
 <!--http://w3id.org/education/otn#SalaDeEstudio-->
 <owl:Class rdf:about="http://w3id.org/education/otn#SalaDeEstudio">
-   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona que ha defendido con éxito una tesis doctoral,
-        consistente en un trabajo original de investigación y que, por tanto,
-        posee el título de doctor</rdfs:comment>
-   <rdfs:label xml:lang="es">sala de estudio</rdfs:label>
-</owl:Class>
-
 </owl:Ontology>
