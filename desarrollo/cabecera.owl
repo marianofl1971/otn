@@ -11,7 +11,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://w3id.org/education/otn">
         <owl:imports rdf:resource="https://w3id.org/def/dul-dolce-zero-en-espannol"/>
-
+    </owl:Ontology>
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

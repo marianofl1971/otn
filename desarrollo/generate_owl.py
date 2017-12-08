@@ -2,9 +2,18 @@
 
 import re
 import unicodedata
-import sys
 
-def elimina_tildes(cadena):
+def eliminar_instruccion_url(instruccion_url):
+    return re.search('(?<=url{).+?}', instruccion_url).group()[:-1] # La última interrogación se utiliza para indicare que es non-greedy
+
+def obtener_seeAlso_una_entidad(entrada_bibtex):
+    titulo = re.search('(?<=title = {).+?}', entrada_bibtex).group()[:-1] # La última interrogación se utiliza para indicare que es non-greedy
+    nota = re.search('(?<=note = {).+?}', entrada_bibtex).group()[:-1] # La última interrogación se utiliza para indicare que es non-greedy
+    return titulo + nota  
+
+#def obtener_seeAlso_ontologia():
+
+def elimina_tildes(cadena): #función inspirada en https://gist.github.com/victorono/7633010
     s = ''.join((c for c in unicodedata.normalize('NFD',cadena) if unicodedata.category(c) != 'Mn'))
     return s
 
@@ -13,7 +22,6 @@ def generar_uri(etiqueta):
     lista_palabras = etiqueta_sin_tildes.split()
     palabra_en_mayuscula = ''
     for palabra in lista_palabras:
-        #palabra_en_mayuscula = ''.join((palabra[0].upper(),palabra[1:]))
         palabra_en_mayuscula = palabra_en_mayuscula+''.join((palabra[0].upper(),palabra[1:]))
     return 'http://w3id.org/education/otn#' + palabra_en_mayuscula 
 
@@ -23,12 +31,12 @@ def generar_ontologia(datos_leidos):
          f.closed
     with open('ontologia.owl', 'w') as g:
          g.write(cabecera)
-         etiquetas = obtener_anotaciones(datos_leidos, obtener_etiqueta)
+         etiquetas = obtener_anotaciones(datos_leidos, obtener_etiqueta, -1)
          itEt = iter(etiquetas)
-         definiciones = obtener_anotaciones(datos_leidos, obtener_definicion)
+         definiciones = obtener_anotaciones(datos_leidos, obtener_definicion, -3)
          itDef = iter(definiciones)
-         print(len(etiquetas))
-         print(len(definiciones))
+         print('Número de etiquetas generadas: ' + str(len(etiquetas)))
+         print('Número de definiciones generadas: ' + str(len(definiciones)))
          try:
              for i in range(len(etiquetas)):
                  etiqueta = next(itEt)
@@ -40,20 +48,20 @@ def generar_ontologia(datos_leidos):
                  g.write('</owl:Class>\n\n')
          except StopIteration:
               pass
-         g.write('</owl:Ontology>')
+         g.write('</rdf:RDF>')
          g.closed
 
-def obtener_anotaciones(cadena, obtener_anotacion):
+def obtener_anotaciones(cadena, obtener_anotacion, recorte):
     etiquetas=[]
     m=obtener_anotacion(cadena)
-    etiquetas.append(m.group()[:-1])
+    etiquetas.append(m.group()[:recorte])
     cadena = cadena[m.end():]
     fin = m==None
     while not fin:
        m=obtener_anotacion(cadena)
        fin = m==None
        if not fin: 
-          etiquetas.append(m.group()[:-1])
+          etiquetas.append(m.group()[:recorte])
           cadena = cadena[m.end():]
     return etiquetas
 
@@ -68,10 +76,5 @@ def obtener_definicion(cadena):
 with open('glosario_2.tex') as f:
     datos_leidos = f.read()
     f.closed
-#print generar_uri("plan de estudios")
+#print(eliminar_instruccion_url('url{https://www.boe.es/buscar/pdf/1985/BOE-A-1985-11578-consolidado.pdf}'))
 generar_ontologia(datos_leidos)
-'''
-    m = obtener_definicion(datos_leidos)
-    print m.group(0)
-'''
-#print obtener_etiquetas(datos_leidos)
