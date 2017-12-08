@@ -1,13 +1,29 @@
 # -*- coding: utf-8 -*-
 import re
+from collections import deque
+
+def convertir_caracter_esp_a_ingles(caracter):
+    conv_caracteres = {'Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U','Ü':'U','Ñ':'NN',
+                      'á':'a','é':'e','í':'i','ó':'o','ú':'u','ñ':'nn','ü':'u'}
+    if caracter in conv_caracteres:
+        return conv_caracteres[caracter]
+    else:
+        return caracter
+
+def convertir_caracteres_esp_a_ingles(palabra):
+    cola_caracteres = deque([])
+    for i in range(len(palabra)):
+        cola_caracteres.append(palabra[i])
+    return ''.join(map(convertir_caracter_esp_a_ingles, cola_caracteres))
+    #return ''.join(cola_caracteres)
 
 def generar_uri(etiqueta):
-    listaPalabras = etiqueta.split()
-    palabraEnMayuscula = ''
-    for palabra in listaPalabras:
-        #palabraEnMayuscula = ''.join((palabra[0].upper(),palabra[1:]))
-        palabraEnMayuscula = palabraEnMayuscula+''.join((palabra[0].upper(),palabra[1:]))
-    return 'http://w3id.org/education/otn#' + palabraEnMayuscula 
+    lista_palabras = etiqueta.split()
+    palabra_en_mayuscula = ''
+    for palabra in lista_palabras:
+        #palabra_en_mayuscula = ''.join((palabra[0].upper(),palabra[1:]))
+        palabra_en_mayuscula = palabra_en_mayuscula+''.join((convertir_caracteres_esp_a_ingles(palabra[0]).upper(),palabra[1:]))
+    return 'http://w3id.org/education/otn#' + palabra_en_mayuscula 
 
 def generar_ontologia():
     with open('cabecera.owl') as f:
@@ -30,6 +46,7 @@ def generar_ontologia():
                  g.write('</owl:Class>\n\n')
          except StopIteration:
               pass
+         g.write('</owl:Ontology>')
          g.closed
 
 def obtener_etiqueta(cadena):
