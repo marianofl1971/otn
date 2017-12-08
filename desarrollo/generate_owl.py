@@ -60,13 +60,10 @@ def obtener_anotaciones(cadena, obtener_anotacion):
     return etiquetas
 
 def obtener_etiqueta(cadena):
-    #caracterEsp = '[A-Za-zÁÉÍÓÚÜÑáéíóúñü\s]'
     m = re.search('(?<=\\emph{).+?}', cadena) # La última interrogación se utiliza para indicare que es non-greedy
-    #m = re.search('(?<=<<<).+>>>', cadena)
     return m
 
 def obtener_definicion(cadena):
-    #caracterEsp = '[\\\A-Za-zÁÉÍÓÚÜÑáéíóúñü0-9,\s\{\}\[\]\_\.]'
     m = re.search('(?<=<<<).+?>>>', cadena)
     return m
 
