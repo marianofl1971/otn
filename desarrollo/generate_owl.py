@@ -64,7 +64,7 @@ def explotar_referencia_en_definicion(definicion, entrada_bibtex):
     """
     linea = definicion
     m = re.search(']{'+entrada_bibtex.identificador+'}', definicion)
-    if m==None: #Sólo hay que hacer las transformación si la entrada de bibtex está presente en la definición.
+    if m!=None: #Sólo hay que hacer las transformación si la entrada de bibtex está presente en la definición.
        linea = re.sub('\[', '[véase el ', linea)
        linea = re.sub(']{'+entrada_bibtex.identificador+'}', ' del ' + entrada_bibtex.titulo + ' 00(' + entrada_bibtex.uri + ')00', linea)
        linea = re.sub('\[','(', linea)
