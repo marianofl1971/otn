@@ -46,10 +46,11 @@ def extraer_referencia(cadena):
     return m
 
 def explotar_referencias_en_definicion(definicion, ebs):
-    definicion_con_refs_explotadas = definicion
+    l_string = []
+    l_string.append(definicion)
     for eb in ebs:
-       definicion_con_refs_explotadas = explotar_referencia_en_definicion(definicion_con_refs_explotadas, eb)
-    return definicion_con_refs_explotadas 
+       l_string.append(explotar_referencia_en_definicion(l_string[len(l_string)-1], eb))
+    return l_string[len(l_string)-1]
 
 def explotar_referencia_en_definicion(definicion, entrada_bibtex):
     """
@@ -62,12 +63,14 @@ def explotar_referencia_en_definicion(definicion, entrada_bibtex):
        :return definición transformada de tal forma que sus referencias están en un formato natural.
     """
     linea = definicion
-    linea = re.sub('\[', '[véase el ', linea)
-    linea = re.sub(']{'+entrada_bibtex.identificador+'}', ' del ' + entrada_bibtex.titulo + ' 00(' + entrada_bibtex.uri + ')00', linea)
-    linea = re.sub('\[','(', linea)
-    linea = re.sub('\]',')', linea)
-    linea = re.sub('00\(','[', linea)
-    linea = re.sub('\)00', '])', linea)
+    m = re.search(']{'+entrada_bibtex.identificador+'}', definicion)
+    if m==None: #Sólo hay que hacer las transformación si la entrada de bibtex está presente en la definición.
+       linea = re.sub('\[', '[véase el ', linea)
+       linea = re.sub(']{'+entrada_bibtex.identificador+'}', ' del ' + entrada_bibtex.titulo + ' 00(' + entrada_bibtex.uri + ')00', linea)
+       linea = re.sub('\[','(', linea)
+       linea = re.sub('\]',')', linea)
+       linea = re.sub('00\(','[', linea)
+       linea = re.sub('\)00', '])', linea)
     return linea
 
 def obtener_uri_de_latex(instruccion_url):
