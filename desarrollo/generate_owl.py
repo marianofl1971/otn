@@ -8,7 +8,7 @@ EntradaBibTex = namedtuple("EntradaBibTex", "identificador titulo uri")
 
 #:%s@]{leyUniversidades}@ del Real Decreto 898/1985, sobre régimen del profesorado universitario 00https://www.boe.es/buscar/pdf/1985/BOE-A-1985-11578-consolidado.pdf00]@g
 
-def generar_referencias():
+def extraer_referencias():
     """
         A partir de un fichero bibtex transformado, genera una lista de tuplas del tipo EntradaBibTex.
         Véase el fichero 'diccionario_bib.dic' para ver el formato esperado. Tal y como se puede
@@ -36,7 +36,7 @@ def generar_referencias():
 def extraer_referencia(cadena):
     """
        A partir de una cadena de caracteres según el formato que se puede apreciar en diccionario_bib.dic,
-       se obtiene la primera referencia. Para ver el uso de este método, se puede examinar generar_referencias()
+       se obtiene la primera referencia. Para ver el uso de este método, se puede examinar extraer_referencias()
 
        :param cadena: Cadena de caracteres según el formato que se puede apreciar en diccionario_bib.dic.
        :return: un match
@@ -45,7 +45,13 @@ def extraer_referencia(cadena):
     m = re.search('(?<=@).+?,,,}', cadena) # La última interrogación se utiliza para indicare que es non-greedy
     return m
 
-def generar_referencia(definicion, entrada_bibtex):
+def explotar_referencias_en_definicion(definicion, ebs):
+    definicion_con_refs_explotadas = definicion
+    for eb in ebs:
+       definicion_con_refs_explotadas = explotar_referencia_en_definicion(definicion_con_refs_explotadas, eb)
+    return definicion_con_refs_explotadas 
+
+def explotar_referencia_en_definicion(definicion, entrada_bibtex):
     """
        Toma como entrada una definición de un término de una ontología según el formato de glosario_mod_1.tex, y de una
        tupla del tipo EntradaBibTex, y transforma la definición en otra con las referencias en un formato natural para
@@ -55,7 +61,6 @@ def generar_referencia(definicion, entrada_bibtex):
        :param entrada_bibtex: tupla del tipo EntradaBibTex.
        :return definición transformada de tal forma que sus referencias están en un formato natural.
     """
-    #entrada_bibtex = transformar_string_entrada_bibtex(string_entrada_bibtex)
     linea = definicion
     linea = re.sub('\[', '[véase el ', linea)
     linea = re.sub(']{'+entrada_bibtex.identificador+'}', ' del ' + entrada_bibtex.titulo + ' 00(' + entrada_bibtex.uri + ')00', linea)
@@ -77,12 +82,12 @@ def obtener_uri_de_latex(instruccion_url):
 def transformar_string_entrada_bibtex(string_entrada_bibtex):
     """
        Transforma una entrada del estilo de las que se pueden encontrar en el fichero diccionario_bib.dic en una
-       tupla del tipo EntradaBibTex. Para ver su uso, puede consultarse la función generar_referencias().
+       tupla del tipo EntradaBibTex. Para ver su uso, puede consultarse la función extraer_referencias().
 
        :param: string_entrada_bibtex: entrada del estilo de las que se pueden encontrar en el fichero diccionario_bib.dic.
        :return tupla del tipo EntradaBibTex.
     """
-    identificador = re.search('(?<=inicio).+?,', string_entrada_bibtex).group()[:-1]
+    identificador = re.search('(?<=inicio{).+?,', string_entrada_bibtex).group()[:-1]
     titulo = re.search('(?<=title = {).+?}', string_entrada_bibtex).group()[:-1] # La última interrogación se utiliza para indicare que es non-greedy
     nota = re.search('(?<=note = ").+?"', string_entrada_bibtex).group()[:-1] # La última interrogación se utiliza para indicare que es non-greedy
     uri = obtener_uri_de_latex(nota)
@@ -114,6 +119,13 @@ def generar_uri(etiqueta):
     return 'http://w3id.org/education/otn#' + palabra_en_mayuscula 
 
 def generar_ontologia(datos_leidos):
+    """
+       A partir de una cadena de caractares leída de un glosario que sigue el formato de glosario_mod_1.tex,
+       genera una ontología en OWL. El resultado lo escribe en el fichero ontologia.owl.
+
+       :param: datos_leidos: cadena de caractares leída de un glosario que sigue el formato de glosario_mod_1.tex.
+    """
+    ebs = extraer_referencias()
     with open('cabecera.owl') as f:
          cabecera = f.read()
          f.closed
@@ -131,7 +143,9 @@ def generar_ontologia(datos_leidos):
                  termino = generar_uri(etiqueta)
                  g.write('<!--' +  termino + '-->\n')
                  g.write('<owl:Class rdf:about="'+termino+'">\n')
-                 g.write('   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'+next(itDef)+'</rdfs:comment>\n')
+                 definicion = next(itDef)
+                 definicion_con_referencias = explotar_referencias_en_definicion(definicion, ebs)
+                 g.write('   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'+definicion_con_referencias+'</rdfs:comment>\n')
                  g.write('   <rdfs:label xml:lang="es">'+etiqueta+'</rdfs:label>\n')
                  g.write('</owl:Class>\n\n')
          except StopIteration:
@@ -140,6 +154,17 @@ def generar_ontologia(datos_leidos):
          g.closed
 
 def obtener_anotaciones(cadena, obtener_anotacion, recorte):
+    """
+       Obtiene, a partir de una cadena leída de un fichero con un formato similar al de glosario_mod_1.tex,
+       utilizando la función obtener_anotacion, bien sea una etiqueta, bien sea una definición. Si se trata de una
+       etiqueta, obtener_anotacion será obtener_etiqueta y, si se trata de una definición, obtener_anotacion
+       será obtener_definicion. El recorte indica cuántos caracteres sobran del final de la cadena. En el caso de
+       las etiquetas, hay que quitar un carácter y, en el caso de las definciones, hay que quitar tres caracteres.
+
+       param: cadena: cadena leída de un fichero con un formato similar al de glosario_mod_1.tex.
+       param: cadena: obtener_anotacion: función para obtener la etiqueta o la definición, según el caso.
+       return: la anotación, que puede ser una etiqueta o una definición.
+    """
     etiquetas=[]
     m=obtener_anotacion(cadena)
     etiquetas.append(m.group()[:recorte])
@@ -154,14 +179,28 @@ def obtener_anotaciones(cadena, obtener_anotacion, recorte):
     return etiquetas
 
 def obtener_etiqueta(cadena):
+    """
+       Obtiene una etiqueta a partir de una definición de un término de la ontología en LaTeX. Se puede consultar
+       el fichero glosario_mod_1.tex para comprobar el formato.
+
+       param: cadena: definición de un término de la ontología en LaTeX.
+       return: la etiqueta del término.
+    """
     m = re.search('(?<=\\emph{).+?}', cadena) # La última interrogación se utiliza para indicare que es non-greedy
     return m
 
 def obtener_definicion(cadena):
+    """
+       Obtiene una definición a partir de una definición de un término de la ontología en LaTeX. Se puede consultar
+       el fichero glosario_mod_1.tex para comprobar el formato.
+
+       param: cadena: definición de un término de la ontología en LaTeX.
+       return: la etiqueta del término.
+    """
     m = re.search('(?<=<<<).+?>>>', cadena)
     return m
 
 with open('glosario_mod_1.tex') as f:
     datos_leidos = f.read()
     f.closed
-#generar_ontologia(datos_leidos)
+generar_ontologia(datos_leidos)
