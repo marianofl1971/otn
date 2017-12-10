@@ -45,14 +45,21 @@ def extraer_referencia(cadena):
     m = re.search('(?<=@).+?,,,}', cadena) # La última interrogación se utiliza para indicare que es non-greedy
     return m
 
-def explotar_referencias_en_definicion(definicion, ebs):
+def expandir_referencias_en_definicion(definicion, ebs):
+    """
+       Explota la definición que aparece en el primer parámetro con las referencias del segundo parámetro.
+
+       param: definicion: definición de una entidad de una ontología.
+       param: ebs: una lista de tuplas del tipo EntradaBibTex 
+       return: la definición expandida con las referencias de ebs.
+    """
     l_string = []
     l_string.append(definicion)
     for eb in ebs:
-       l_string.append(explotar_referencia_en_definicion(l_string[len(l_string)-1], eb))
+       l_string.append(expandir_referencia_en_definicion(l_string[len(l_string)-1], eb))
     return l_string[len(l_string)-1]
 
-def explotar_referencia_en_definicion(definicion, entrada_bibtex):
+def expandir_referencia_en_definicion(definicion, entrada_bibtex):
     """
        Toma como entrada una definición de un término de una ontología según el formato de glosario_mod_1.tex, y de una
        tupla del tipo EntradaBibTex, y transforma la definición en otra con las referencias en un formato natural para
@@ -65,12 +72,14 @@ def explotar_referencia_en_definicion(definicion, entrada_bibtex):
     linea = definicion
     m = re.search(']{'+entrada_bibtex.identificador+'}', definicion)
     if m!=None: #Sólo hay que hacer las transformación si la entrada de bibtex está presente en la definición.
-       linea = re.sub('\[', '[véase el ', linea)
+       linea = re.sub('\. cite\[', '. [Véase el ', linea)
+       linea = re.sub('cite\[', '[véase el ', linea)
        linea = re.sub(']{'+entrada_bibtex.identificador+'}', ' del ' + entrada_bibtex.titulo + ' 00(' + entrada_bibtex.uri + ')00', linea)
        linea = re.sub('\[','(', linea)
        linea = re.sub('\]',')', linea)
        linea = re.sub('00\(','[', linea)
        linea = re.sub('\)00', '])', linea)
+       linea = re.sub('del Ley', 'de la Ley', linea)
     return linea
 
 def obtener_uri_de_latex(instruccion_url):
@@ -80,7 +89,7 @@ def obtener_uri_de_latex(instruccion_url):
        :param instruccion_url: instrucción de LaTex, pero sin el símbolo '\'.
        :return: la uri en formato estándar de la Web.
     """
-    return re.search('(?<=url{).+?}', instruccion_url).group()[:-1] # La última interrogación se utiliza para indicare que es non-greedy
+    return re.search('(?<=url{).+?}', instruccion_url).group()[:-1] # La última interrogación se utiliza para indicar que es non-greedy
 
 def transformar_string_entrada_bibtex(string_entrada_bibtex):
     """
@@ -147,7 +156,7 @@ def generar_ontologia(datos_leidos):
                  g.write('<!--' +  termino + '-->\n')
                  g.write('<owl:Class rdf:about="'+termino+'">\n')
                  definicion = next(itDef)
-                 definicion_con_referencias = explotar_referencias_en_definicion(definicion, ebs)
+                 definicion_con_referencias = expandir_referencias_en_definicion(definicion, ebs)
                  g.write('   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'+definicion_con_referencias+'</rdfs:comment>\n')
                  g.write('   <rdfs:label xml:lang="es">'+etiqueta+'</rdfs:label>\n')
                  g.write('</owl:Class>\n\n')

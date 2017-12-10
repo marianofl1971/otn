@@ -12,7 +12,7 @@
 
 @inicio{rd861, title = {Real Decreto 861/2010, de 2 de julio, por el que se modifica el Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales.}, year = {2010}, note = "El documento está disponible en url{https://www.boe.es/boe/dias/2010/07/03/pdfs/BOE-A-2010-10542.pdf}" ,,,}
 
-@inicio{ guiaAneca, title = {Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster) }, publisher = {Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)}, year = {2012}, note = "Disponible en url{http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf}" ,,,}
+@inicio{guiaAneca, title = {Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster) }, publisher = {Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)}, year = {2012}, note = "Disponible en url{http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf}" ,,,}
 
-@inicio{ guiaMadridMasD, title = {Guía práctica para la evaluación del seguimiento}, publisher = {Fundación Madri+d para el conocimiento}, year = {2014}, note = "Disponible en url{http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf}" ,,,}
+@inicio{guiaMadridMasD, title = {Guía práctica para la evaluación del seguimiento}, publisher = {Fundación Madri+d para el conocimiento}, year = {2014}, note = "Disponible en url{http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf}" ,,,}
 
