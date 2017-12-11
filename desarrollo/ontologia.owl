@@ -255,9 +255,41 @@
     <!-- http://w3id.org/education/otn#CreditoECTS -->
 
     <owl:Class rdf:about="http://w3id.org/education/otn#CreditoECTS">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El crédito europeo es la unidad de medida del haber académico que representa la cantidad de trabajo del estudiante para cumplir los objetivos del programa de estudios y que se obtiene por la superación de cada una de las materias que integran los planes de estudios de las diversas enseñanzas conducentes a la obtención de títulos universitarios de carácter oficial y validez en todo el territorio nacional. En esta unidad de medida se integran las enseñanzas teóricas y prácticas, así como otras actividades académicas dirigidas, con inclusión de las horas de estudio y de trabajo que el estudiante debe realizar para alcanzar los objetivos formativos propios de cada una de las materias del correspondiente plan de estudios (véase el artículo 3 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf]). El número mínimo de horas, por crédito, será de 25, y el número máximo, de 30 (véase el artículo 4, apartado 5 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf]).</rdfs:comment>
         <rdfs:label xml:lang="es">crédito ECTS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/education/otn#CreditosECTSDeLaAsignatura -->
+
+    <owl:Class rdf:about="http://w3id.org/education/otn#CreditosECTSDeLaAsignatura">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CreditoECTS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Esfuerzo estimado, en ECTS, que debe realizar un alumno medio para culminar con éxito la asignatura.</rdfs:comment>
+        <rdfs:label xml:lang="es">créditos ECTS de la asignatura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/education/otn#CreditosECTSDeTitulacion -->
+
+    <owl:Class rdf:about="http://w3id.org/education/otn#CreditosECTSDeTitulacion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CreditoECTS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Créditos ECTS necesarios para completar la titulación.</rdfs:comment>
+        <rdfs:label xml:lang="es">créditos ECTS de la titulación</rdfs:label>
     </owl:Class>
     
 
@@ -282,12 +314,18 @@
     
 
 
-    <!-- http://w3id.org/education/otn#DescripcionEnLenguajeNatural -->
+    <!-- http://w3id.org/education/otn#DescripcionDeCompetenciaAAdquirir -->
 
-    <owl:Class rdf:about="http://w3id.org/education/otn#DescripcionEnLenguajeNatural">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Descripción utilizando un idioma humano (véase la clase idioma).</rdfs:comment>
-        <rdfs:label xml:lang="es">descripción en lenguaje natural</rdfs:label>
+    <owl:Class rdf:about="http://w3id.org/education/otn#DescripcionDeCompetenciaAAdquirir">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Competencia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Descripción de competencia que se tiene como meta adquirir.</rdfs:comment>
+        <rdfs:label xml:lang="es">descripción de competencia a adquirir</rdfs:label>
     </owl:Class>
     
 
@@ -298,6 +336,92 @@
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona que ha defendido con éxito una tesis doctoral, consistente en un trabajo original de investigación y que, por tanto, posee el título de doctor.</rdfs:comment>
         <rdfs:label xml:lang="es">doctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/education/otn#EjecucionDeAsignatura -->
+
+    <owl:Class rdf:about="http://w3id.org/education/otn#EjecucionDeAsignatura">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#GuiaDocente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Asignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Siituación en la que la asignatura está en ejecución.</rdfs:comment>
+        <rdfs:label xml:lang="es">ejecución de asignatura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/education/otn#EjecucionDePlanDeEstudios -->
+
+    <owl:Class rdf:about="http://w3id.org/education/otn#EjecucionDePlanDeEstudios">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/education/otn#estaBajoLaResponsabilidadDe"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CentroComoDivisionAcademica"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/education/otn#estaBajoLaResponsabilidadDe"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Departamento"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/education/otn#estaBajoLaResponsabilidadDe"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Instituto"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/education/otn#esTituloImpartidoPor"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CentroComoDivisionAcademica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/education/otn#tieneCoordinador"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Universidad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Enseñanza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Universidad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#MemoriaDeVerificacion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Idioma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Siituación en la que el plan de estudios está en ejecución.</rdfs:comment>
+        <rdfs:label xml:lang="es">ejecución de plan de estudios</rdfs:label>
     </owl:Class>
     
 
@@ -376,6 +500,12 @@
 
     <owl:Class rdf:about="http://w3id.org/education/otn#GuiaDocente">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#DescripcionDeCompetenciaAAdquirir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Especificación de una asignatura que incluye su número de créditos ECTS, el programa a desarrollar, la metodología de aprendizaje, los sistemas de evaluación, etc. (Véase el sección D.5 del Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]).</rdfs:comment>
         <rdfs:label xml:lang="es">guía docente</rdfs:label>
     </owl:Class>
@@ -438,6 +568,34 @@
     
 
 
+    <!-- http://w3id.org/education/otn#MemoriaDeVerificacion -->
+
+    <owl:Class rdf:about="http://w3id.org/education/otn#MemoriaDeVerificacion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CreditosECTSDeTitulacion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#NormativaDePermanencia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#NumeroDePlazas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Descripción del plan de estudios que ha de ser verificada por la ANECA.</rdfs:comment>
+        <rdfs:label xml:lang="es">memoria de verificación</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/education/otn#Modulo -->
 
     <owl:Class rdf:about="http://w3id.org/education/otn#Modulo">
@@ -479,39 +637,27 @@
     <owl:Class rdf:about="http://w3id.org/education/otn#PlanDeEstudios">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://w3id.org/education/otn#estaBajoLaResponsabilidadDe"/>
-                        <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CentroComoDivisionAcademica"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://w3id.org/education/otn#estaBajoLaResponsabilidadDe"/>
-                        <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Departamento"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://w3id.org/education/otn#estaBajoLaResponsabilidadDe"/>
-                        <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Instituto"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/education/otn#esTituloImpartidoPor"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CentroComoDivisionAcademica"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#RamaDeConocimiento"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/education/otn#tieneCoordinador"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Universidad"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CalendarioDeImplantacionDelTitulo"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
-                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#Universidad"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#ItinerarioFormativo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#MemoriaDeVerificacion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programa en el que se detallan las asignaturas que hay que cursar para obtener un título, así como los medios, tanto humanos como materiales, que se van a emplear para llevara buen término el programa.</rdfs:comment>
@@ -684,16 +830,6 @@
     
 
 
-    <!-- http://w3id.org/education/otn#TituloOficialComoDocumento -->
-
-    <owl:Class rdf:about="http://w3id.org/education/otn#TituloOficialComoDocumento">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documento expedido en nombre del Rey por el Rector de una universidad (véase el artículo 35 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf]) que acredita una serie de conocimientos científicos, técnicos o artísticos (artículo 33).</rdfs:comment>
-        <rdfs:label xml:lang="es">título oficial como documento</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/education/otn#TrabajoFinDeGrado -->
 
     <owl:Class rdf:about="http://w3id.org/education/otn#TrabajoFinDeGrado">
@@ -805,6 +941,32 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla que elige el estudiante entre otras posibles para cursarla (véase el sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]).</rdfs:comment>
         <rdfs:label xml:lang="es">materia/asignatura optativa</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CreditosECTSDeLaAsignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/education/otn#CreditosECTSDeLaAsignatura"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
 </rdf:RDF>
 
 
