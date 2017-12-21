@@ -314,7 +314,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 
     <owl:Class rdf:about="https://w3id.org/def/otn#CreditosECTSDeLaAsignatura">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
@@ -337,7 +337,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 
     <owl:Class rdf:about="https://w3id.org/def/otn#CreditosECTSDeTitulacion">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
@@ -747,7 +747,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 
     <owl:Class rdf:about="https://w3id.org/def/otn#NumeroDePlazas">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue"/>

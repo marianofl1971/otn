@@ -172,7 +172,7 @@ _:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/ot
 # 
 # https://w3id.org/def/otn#CreditosECTSDeLaAsignatura
 <https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> .
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> .
 <https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> .
@@ -186,7 +186,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/def/otn#CreditosECTSDeTitulacion
 <https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> .
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> .
 <https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> .
@@ -439,7 +439,7 @@ _:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 # 
 # https://w3id.org/def/otn#NumeroDePlazas
 <https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> .
+<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> .
 <https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> .

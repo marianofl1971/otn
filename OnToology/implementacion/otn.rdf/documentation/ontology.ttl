@@ -191,7 +191,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#CreditosECTSDeLaAsignatura
 :CreditosECTSDeLaAsignatura rdf:type owl:Class ;
-                            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> ,
+                            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> ;
                                               owl:someValuesFrom :CreditoECTS
@@ -206,7 +206,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#CreditosECTSDeTitulacion
 :CreditosECTSDeTitulacion rdf:type owl:Class ;
-                          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> ,
+                          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> ;
                                             owl:someValuesFrom :CreditoECTS
@@ -475,7 +475,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#NumeroDePlazas
 :NumeroDePlazas rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> ,
+                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> ;
                                   owl:someValuesFrom xsd:int
