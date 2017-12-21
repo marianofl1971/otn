@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1513458604338" name="duplicate:http://w3id.org/education/otn" uri="cabecera.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1513458604338" name="duplicate:http://w3id.org/education/otn" uri="root-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1513458604338" name="https://w3id.org/def/otn" uri="ontologia.owl"/>
-    </group>
-</catalog>

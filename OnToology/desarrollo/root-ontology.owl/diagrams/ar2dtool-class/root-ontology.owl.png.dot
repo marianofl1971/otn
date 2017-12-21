@@ -1,8 +1,0 @@
-digraph ar2dtool_diagram { 
-rankdir=LR;
-size="1501"
-node [shape = rectangle, color="orange"]; "http://webprotege.stanford.edu/R91LQFVGLSYYGEcSmVbLx1C" ; /*classes style*/
-	"http://w3id.org/education/otn" -> "https://w3id.org/def/dul-dolce-zero-en-espannol" [ label = "owl:imports" ];
-	"http://webprotege.stanford.edu/R91LQFVGLSYYGEcSmVbLx1C" -> "http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf" [ label = "rdfs:seeAlso" ];
-
-}
