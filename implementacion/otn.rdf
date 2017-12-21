@@ -637,16 +637,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
-    <!-- https://w3id.org/def/otn#MateriaMixta -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#MateriaMixta">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/otn#Materia"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materia que engloba asignaturas de diferente carácter (véase el sección D.5 Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]).</rdfs:comment>
-        <rdfs:label xml:lang="es">materia mixta</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/otn#MemoriaDeVerificacion -->
 
     <owl:Class rdf:about="https://w3id.org/def/otn#MemoriaDeVerificacion">
@@ -898,60 +888,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])</rdfs:comment>
         <rdfs:label xml:lang="es">carácter de materia/asignatura</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/otn#Materia/asignaturaBasica -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#Materia/asignaturaBasica">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/def/otn#Asignatura"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/otn#Materia"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materia/asignatura en que el estudiante adquiere las competencias fundamentales de la rama de conocimiento (véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]). El RD 1393 (véase el anexo II del Real Decreto) proporciona un catálogo de materias básicas por ramas de conocimiento.</rdfs:comment>
-        <rdfs:label xml:lang="es">materia/asignatura básica</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/otn#Materia/asignaturaObligatoria -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#Materia/asignaturaObligatoria">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/def/otn#Asignatura"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/otn#Materia"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla no básica que debe ser cursada necesariamente para obtener el título (véase el sección D.5 Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]).</rdfs:comment>
-        <rdfs:label xml:lang="es">materia/asignatura obligatoria</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/otn#Materia/asignaturaOptativa -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#Materia/asignaturaOptativa">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/def/otn#Asignatura"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/otn#Materia"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquélla que elige el estudiante entre otras posibles para cursarla (véase el sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]).</rdfs:comment>
-        <rdfs:label xml:lang="es">materia/asignatura optativa</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
