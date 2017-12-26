@@ -2389,19 +2389,36 @@ font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,529.475,288.137)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,615.762,10.2805)"
 font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
 >
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,529.475,288.137)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,615.762,10.2805)"
 font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
 >
-<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4.10938" y="16" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
- >+tiene localización</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4.125" y="16" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >tiene parte</text>
 </g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,529.475,288.137)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,615.762,10.2805)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,492.851,0.996847)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,492.851,0.996847)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="3.92188" y="16" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+tiene parte</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.996847,0,0,0.996847,492.851,0.996847)"
 font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
 >
 </g>

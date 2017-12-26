@@ -49,13 +49,35 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- https://w3id.org/def/otn#esCaracterDe -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esCaracterDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor"/>
+        <rdfs:comment xml:lang="es">Relación inversa de &apos;tiene carácter&apos;</rdfs:comment>
+        <rdfs:label xml:lang="es">es carácter de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/otn#esCursoAcademicoDe -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esCursoAcademicoDe">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor"/>
         <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tieneCursoAcademico"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#CursoAcademico"/>
         <rdfs:comment xml:lang="es">Curso académico a lo largo del cual tiene lugar una determinada entidad.</rdfs:comment>
         <rdfs:label xml:lang="es">es curso académico de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#esProfesorIncluidoEn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esProfesorIncluidoEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn"/>
+        <rdfs:comment xml:lang="es">Relación inversa de &apos;incluye profesor&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="es">es profesor incluido en</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -64,6 +86,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esResponsableDe">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#estaBajoLaResponsabilidadDe"/>
         <rdfs:comment xml:lang="es">Tiene a su cargo algo a alguien (inspirado en http://dle.rae.es/?id=WCrxqOp).</rdfs:comment>
         <rdfs:label xml:lang="es">es responsable de</rdfs:label>
     </owl:ObjectProperty>
@@ -76,6 +99,17 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough"/>
         <rdfs:comment xml:lang="es">Es la relación inversa de &apos;imparte título&apos;.</rdfs:comment>
         <rdfs:label xml:lang="es">es título impartido por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#esUnidadDeMedidadDe -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esUnidadDeMedidadDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tiene_UnidadDeMedida"/>
+        <rdfs:comment xml:lang="es">Es la relación inversa de &apos;tiene unidad de medida&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="es">es unidad de medida de</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -104,6 +138,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#incluyeProfesor">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#Profesor"/>
         <rdfs:comment xml:lang="es">Relación que se establece entre una situación y un profesor.</rdfs:comment>
         <rdfs:label xml:lang="es">incluye profesor</rdfs:label>
     </owl:ObjectProperty>
@@ -114,6 +150,15 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneCaracter">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/otn#Asignatura"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/otn#Materia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
         <rdfs:comment xml:lang="es">Relación que asocia una materia o asignatura con su carácter (básica, obligatoria, optativa, etc.)</rdfs:comment>
         <rdfs:label xml:lang="es">tiene carácter</rdfs:label>
         <rdfs:seeAlso xml:lang="es">https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura</rdfs:seeAlso>
@@ -137,6 +182,18 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
         <rdfs:comment xml:lang="es">Relación inversa de &apos;es curso académico de&apos;.</rdfs:comment>
         <rdfs:label xml:lang="es">tiene lugar durante curso académico</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#tiene_UnidadDeMedida -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tiene_UnidadDeMedida">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure"/>
+        <rdfs:comment xml:lang="es">Relación entre un parámetro y una unidad de medida, por ejemplo, entre los créditos ECTS de la titulacióǹ y la unidad de medida ECTS.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene unidad de medida</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -221,23 +278,12 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
-    <!-- https://w3id.org/def/otn#CaracterDeLaAsignatura -->
+    <!-- https://w3id.org/def/otn#CaracterMateriaAsignatura -->
 
-    <owl:Class rdf:about="https://w3id.org/def/otn#CaracterDeLaAsignatura">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
-        <rdfs:comment xml:lang="es">Si la asignatura es básica, optativa, obligatoria, etc.</rdfs:comment>
-        <rdfs:label xml:lang="es">carácter de la asignatura</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/otn#CaracterDeLaMateria -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#CaracterDeLaMateria">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
-        <rdfs:comment xml:lang="es">Si la materia es básica, optativa, obligatoria, etc.</rdfs:comment>
-        <rdfs:label xml:lang="es">carácter de la materia</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/def/otn#CaracterMateriaAsignatura">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="es">Sus posibles valores son los siguientes: básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter de materia-asignatura</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura</rdfs:seeAlso>
     </owl:Class>
     
@@ -335,17 +381,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/otn#Competencia"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">las competencias transversales son comunes a todos los estudiantes de una misma Universidad o centro universitario, independientemente del título que cursen. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf]).</rdfs:comment>
         <rdfs:label xml:lang="es">competencia transversal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="es">Sus posibles valores son los siguientes: básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta.</rdfs:comment>
-        <rdfs:label xml:lang="es">concepto de carácter de materia-asignatura</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -460,12 +495,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:Class rdf:about="https://w3id.org/def/otn#EjecucionDeAsignaturaDuranteCursoAcademico">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Enseñanza"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
@@ -957,7 +986,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterBasico -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterBasico">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -965,7 +994,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterMixto -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterMixto">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -973,7 +1002,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterObligatorio -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterObligatorio">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -981,7 +1010,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterOptativo -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterOptativo">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -989,7 +1018,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterPracticasExternas -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterPracticasExternas">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -997,7 +1026,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterSeminario -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterSeminario">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -1005,7 +1034,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterTrabajoDirigido -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterTrabajoDirigido">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -1013,7 +1042,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterTrabajoFinDeGrado -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterTrabajoFinDeGrado">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
     
 
@@ -1021,7 +1050,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     <!-- https://w3id.org/def/otn#caracterTrabajoFinDeMaster -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterTrabajoFinDeMaster">
-        <rdf:type rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
+        <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
