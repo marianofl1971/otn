@@ -7,7 +7,8 @@
 @base <https://w3id.org/def/otn> .
 
 <https://w3id.org/def/otn> rdf:type owl:Ontology ;
-                            owl:imports <https://w3id.org/def/dul-dolce-zero-en-espannol> ;
+                            owl:imports <http://www.w3.org/2004/02/skos/core> ,
+                                        <https://w3id.org/def/dul-dolce-zero-en-espannol> ;
                             <http://purl.org/dc/elements/1.1/title> "Ontología de Títulos Universitarios (OTN)"@es ;
                             <http://purl.org/dc/terms/creator> "Mariano Fernández-López"@es ;
                             <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es ;
@@ -29,6 +30,14 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
           owl:inverseOf :tieneCoordinador ;
           rdfs:label "coordina"@es ;
           owl:versionInfo "Cociernta los diferentes elementos del sistema."@es .
+
+
+###  https://w3id.org/def/otn#esCursoAcademicoDe
+:esCursoAcademicoDe rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor> ;
+                    owl:inverseOf :tieneCursoAcademico ;
+                    rdfs:comment "Curso académico a lo largo del cual tiene lugar una determinada entidad."@es ;
+                    rdfs:label "es curso académico de"@es .
 
 
 ###  https://w3id.org/def/otn#esResponsableDe
@@ -59,11 +68,33 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
                rdfs:label "imparte título"@es .
 
 
+###  https://w3id.org/def/otn#incluyeProfesor
+:incluyeProfesor rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent> ;
+                 rdfs:comment "Relación que se establece entre una situación y un profesor."@es ;
+                 rdfs:label "incluye profesor"@es .
+
+
+###  https://w3id.org/def/otn#tieneCaracter
+:tieneCaracter rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> ;
+               rdfs:comment "Relación que asocia una materia o asignatura con su carácter (básica, obligatoria, optativa, etc.)"@es ;
+               rdfs:label "tiene carácter"@es ;
+               rdfs:seeAlso "https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"@es .
+
+
 ###  https://w3id.org/def/otn#tieneCoordinador
 :tieneCoordinador rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf> ;
                   rdfs:comment "Es la relación inversa de 'coordina'."@es ;
                   rdfs:label "tiene coordinador"@es .
+
+
+###  https://w3id.org/def/otn#tieneCursoAcademico
+:tieneCursoAcademico rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion> ;
+                     rdfs:comment "Relación inversa de 'es curso académico de'."@es ;
+                     rdfs:label "tiene lugar durante curso académico"@es .
 
 
 #################################################################
@@ -82,10 +113,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject
 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> ;
-                                                                                            owl:someValuesFrom :ItinerarioFormativo
-                                                                                          ] ,
-                                                                                          [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
                                                                                             owl:someValuesFrom :CreditosECTSDeLaAsignatura
                                                                                           ] .
@@ -116,11 +143,20 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
                  rdfs:label "aula informática"@es .
 
 
-###  https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo
-:CalendarioDeImplantacionDelTitulo rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> ;
-                                   rdfs:comment "Secuencia temporal en la que se van implantando los diferentes cursos de la titulación (véase el página 62 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
-                                   rdfs:label "calendario de implantación del título"@es .
+###  https://w3id.org/def/otn#CaracterDeLaAsignatura
+:CaracterDeLaAsignatura rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ;
+                        rdfs:comment "Si la asignatura es básica, optativa, obligatoria, etc."@es ;
+                        rdfs:label "carácter de la asignatura"@es ;
+                        rdfs:seeAlso "https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura"^^xsd:anyURI .
+
+
+###  https://w3id.org/def/otn#CaracterDeLaMateria
+:CaracterDeLaMateria rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ;
+                     rdfs:comment "Si la materia es básica, optativa, obligatoria, etc."@es ;
+                     rdfs:label "carácter de la materia"@es ;
+                     rdfs:seeAlso "https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura"^^xsd:anyURI .
 
 
 ###  https://w3id.org/def/otn#CatedraticoDeUniversidad
@@ -148,7 +184,15 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#CentroComoLugar
 :CentroComoLugar rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ;
+                 rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+                                   owl:someValuesFrom :Aula
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+                                   owl:someValuesFrom :Sala
+                                 ] ;
                  rdfs:comment "Local o conjunto de locales en que funciona un 'centro como división académica' (adaptado de la RAE [http://dle.rae.es/?id=HTxyZDZ])."^^xsd:string ;
                  rdfs:label "centro como lugar"@es .
 
@@ -182,6 +226,14 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
                         rdfs:label "competencia transversal"@es .
 
 
+###  https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura
+:ConceptoDeCaracterMateriaAsignatura rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                     rdfs:comment "Sus posibles valores son los siguientes: básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta."@es ;
+                                     rdfs:label "concepto de carácter de materia-asignatura"@es ;
+                                     rdfs:seeAlso "https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura"^^xsd:anyURI .
+
+
 ###  https://w3id.org/def/otn#CreditoECTS
 :CreditoECTS rdf:type owl:Class ;
              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure> ;
@@ -191,7 +243,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#CreditosECTSDeLaAsignatura
 :CreditosECTSDeLaAsignatura rdf:type owl:Class ;
-                            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> ,
+                            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> ;
                                               owl:someValuesFrom :CreditoECTS
@@ -206,7 +258,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#CreditosECTSDeTitulacion
 :CreditosECTSDeTitulacion rdf:type owl:Class ;
-                          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> ,
+                          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> ;
                                             owl:someValuesFrom :CreditoECTS
@@ -228,7 +280,11 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#Departamento
 :Departamento rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> ;
+              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> ;
+                                owl:someValuesFrom :Universidad
+                              ] ;
               rdfs:comment "Unidad de docencia e investigación encargada de coordinar las enseñanzas de uno o varios ámbitos del conocimiento en uno o varios centros, de acuerdo con la programación docente de la universidad, de apoyar las actividades e iniciativas docentes e investigadoras del profesorado, y de ejercer aquellas otras funciones que sean determinadas por los estatutos (véase el artículo 9 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])."^^xsd:string ;
               rdfs:label "departamento"@es .
 
@@ -251,89 +307,100 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         rdfs:label "doctor"@es .
 
 
-###  https://w3id.org/def/otn#EjecucionDeAsignatura
-:EjecucionDeAsignatura rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
-                                         owl:someValuesFrom :Enseñanza
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent> ;
-                                         owl:someValuesFrom :Profesor
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy> ;
-                                         owl:someValuesFrom :GuiaDocente
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
-                                         owl:someValuesFrom :Asignatura
-                                       ] ;
-                       rdfs:comment "Siituación en la que la asignatura está en ejecución."@es ;
-                       rdfs:label "ejecución de asignatura"@es .
+###  https://w3id.org/def/otn#EjecucionDeAsignaturaDuranteCursoAcademico
+:EjecucionDeAsignaturaDuranteCursoAcademico rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+                                                              owl:someValuesFrom :Enseñanza
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                              owl:someValuesFrom :Asignatura
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                              owl:someValuesFrom :GuiaDocente
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :incluyeProfesor ;
+                                                              owl:someValuesFrom :Profesor
+                                                            ] ;
+                                            rdfs:comment "Siituación en la que la asignatura está en ejecución a lo largo de un curso académico."@es ;
+                                            rdfs:label "ejecución de asignatura durante curso académico"@es .
 
 
 ###  https://w3id.org/def/otn#EjecucionDePlanDeEstudios
 :EjecucionDePlanDeEstudios rdf:type owl:Class ;
-                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> ,
-                                           [ rdf:type owl:Class ;
-                                             owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :estaBajoLaResponsabilidadDe ;
-                                                             owl:someValuesFrom :CentroComoDivisionAcademica
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :estaBajoLaResponsabilidadDe ;
-                                                             owl:someValuesFrom :Departamento
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :estaBajoLaResponsabilidadDe ;
-                                                             owl:someValuesFrom :Instituto
-                                                           ]
-                                                         )
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
-                                             owl:someValuesFrom :Aula
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
-                                             owl:someValuesFrom :Sala
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
-                                             owl:someValuesFrom :EjecucionDeAsignatura
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant> ;
-                                             owl:someValuesFrom :Universidad
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction> ;
-                                             owl:someValuesFrom :Enseñanza
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy> ;
-                                             owl:someValuesFrom :MemoriaDeVerificacion
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
-                                             owl:someValuesFrom :Idioma
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
-                                             owl:someValuesFrom :NormativaDePermanencia
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :esTituloImpartidoPor ;
-                                             owl:someValuesFrom :CentroComoDivisionAcademica
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :tieneCoordinador ;
-                                             owl:someValuesFrom :Universidad
-                                           ] ;
+                           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> ;
                            rdfs:comment "Siituación en la que el plan de estudios está en ejecución."@es ;
                            rdfs:label "ejecución de plan de estudios"@es .
+
+
+###  https://w3id.org/def/otn#EjecucionDePlanDeEstudiosDuranteCursoAcademico
+:EjecucionDePlanDeEstudiosDuranteCursoAcademico rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> ,
+                                                                [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty :estaBajoLaResponsabilidadDe ;
+                                                                                  owl:someValuesFrom :CentroComoDivisionAcademica
+                                                                                ]
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty :estaBajoLaResponsabilidadDe ;
+                                                                                  owl:someValuesFrom :Departamento
+                                                                                ]
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty :estaBajoLaResponsabilidadDe ;
+                                                                                  owl:someValuesFrom :Instituto
+                                                                                ]
+                                                                              )
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+                                                                  owl:someValuesFrom :Aula
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
+                                                                  owl:someValuesFrom :Sala
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+                                                                  owl:someValuesFrom :EjecucionDeAsignaturaDuranteCursoAcademico
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant> ;
+                                                                  owl:someValuesFrom :Universidad
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction> ;
+                                                                  owl:someValuesFrom :Enseñanza
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> ;
+                                                                  owl:someValuesFrom :EjecucionDePlanDeEstudios
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> ;
+                                                                  owl:someValuesFrom :Idioma
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                                  owl:someValuesFrom :MemoriaDeVerificacion
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
+                                                                  owl:someValuesFrom :NormativaDePermanencia
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :esTituloImpartidoPor ;
+                                                                  owl:someValuesFrom :CentroComoDivisionAcademica
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :tieneCoordinador ;
+                                                                  owl:someValuesFrom :Universidad
+                                                                ] ;
+                                                rdfs:comment "Ejecución de un plan de estudios durante un determinado curso académico."@es ;
+                                                rdfs:label "ejecución de plan de estudios durante curso académico"@es .
 
 
 ###  https://w3id.org/def/otn#EnsenanzaADistancia
@@ -368,30 +435,21 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
            rdfs:label "enseñanza"@es .
 
 
-###  https://w3id.org/def/otn#Estudiante
-:Estudiante rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> ;
-            rdfs:comment "Toda  persona  que  curse  enseñanzas  oficiales en alguno de los tres ciclos universitarios (Grado, Máster y Doctorado (véase el artículo 8 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf])), enseñanzas de formación continua u otros estudios ofrecidos por las universidades (véase el artículo 1, apartado 3 del Estatuto del Estudiante [https://www.boe.es/boe/dias/2010/12/31/pdfs/BOE-A-2010-20147.pdf])."^^xsd:string ;
-            rdfs:label "estudiante"@es .
-
-
-###  https://w3id.org/def/otn#EstudianteATiempoCompleto
-:EstudianteATiempoCompleto rdf:type owl:Class ;
-                           rdfs:subClassOf :Estudiante ;
-                           rdfs:comment "Estudiante que dedica un mínimo de 36 horas y un máximo de 40 a la semana a sus universitarios (véase el artículo 4, apartado 4 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf])."^^xsd:string ;
-                           rdfs:label "estudiante a tiempo completo"@es .
-
-
-###  https://w3id.org/def/otn#EstudianteATiempoParcial
-:EstudianteATiempoParcial rdf:type owl:Class ;
-                          rdfs:subClassOf :Estudiante ;
-                          rdfs:comment "Estudiante que requiere una trayectoria de aprendizaje flexible (véase el artículo 7, apartado 2 del Real Decreto 1791/2010, de 30 de diciembre, por el que se aprueba el Estatuto del Estudiante Universitario. [https://www.boe.es/boe/dias/2010/12/31/pdfs/BOE-A-2010-20147.pdf]), y que, por tanto, no llega a una dedicación de 36 horas semanales a sus estudios universitarios."^^xsd:string ;
-                          rdfs:label "estudiante a tiempo parcial"@es .
+###  https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura
+:EsquemaDeCaracterDeMateriaAsignatura rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                      rdfs:comment "Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])."@es ;
+                                      rdfs:label "esquema de carácter de materia-asignatura"@es .
 
 
 ###  https://w3id.org/def/otn#GuiaDocente
 :GuiaDocente rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> ,
+             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> ,
+                             <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> ;
+                               owl:someValuesFrom :CreditosECTSDeLaAsignatura
+                             ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
                                owl:someValuesFrom :DescripcionDeCompetenciaAAdquirir
@@ -414,13 +472,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
            rdfs:label "instituto"@es .
 
 
-###  https://w3id.org/def/otn#ItinerarioFormativo
-:ItinerarioFormativo rdf:type owl:Class ;
-                     rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> ;
-                     rdfs:comment "Mención (para el caso de un grado), especialidad (para el caso de un máster) (véase el sección D.4 Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 9, apartado 3 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf])."^^xsd:string ;
-                     rdfs:label "itinerario formativo"@es .
-
-
 ###  https://w3id.org/def/otn#Materia
 :Materia rdf:type owl:Class ;
          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/d0.owl#Topic> ,
@@ -434,11 +485,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#MemoriaDeVerificacion
 :MemoriaDeVerificacion rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> ;
-                                         owl:someValuesFrom :CalendarioDeImplantacionDelTitulo
-                                       ] ,
+                       rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> ,
+                                       <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> ;
                                          owl:someValuesFrom :CreditosECTSDeTitulacion
@@ -446,10 +494,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> ;
                                          owl:someValuesFrom :NumeroDePlazas
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
-                                         owl:someValuesFrom :ItinerarioFormativo
                                        ] ;
                        rdfs:comment "Descripción del plan de estudios que ha de ser verificada por la ANECA."@es ;
                        rdfs:label "memoria de verificación"@es .
@@ -475,7 +519,7 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
 ###  https://w3id.org/def/otn#NumeroDePlazas
 :NumeroDePlazas rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Amount> ,
+                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> ;
                                   owl:someValuesFrom xsd:int
@@ -603,11 +647,53 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
                     rdfs:label "universidad pública"@es .
 
 
-###  https://w3id.org/def/otn#CaracterDeMateria/asignatura
-<https://w3id.org/def/otn#CaracterDeMateria/asignatura> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
-                                                        rdfs:comment "Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])"^^xsd:string ;
-                                                        rdfs:label "carácter de materia/asignatura"@es .
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/def/otn#caracterBasico
+:caracterBasico rdf:type owl:NamedIndividual ,
+                         :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterMixto
+:caracterMixto rdf:type owl:NamedIndividual ,
+                        :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterObligatorio
+:caracterObligatorio rdf:type owl:NamedIndividual ,
+                              :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterOptativo
+:caracterOptativo rdf:type owl:NamedIndividual ,
+                           :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterPracticasExternas
+:caracterPracticasExternas rdf:type owl:NamedIndividual ,
+                                    :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterSeminario
+:caracterSeminario rdf:type owl:NamedIndividual ,
+                            :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterTrabajoDirigido
+:caracterTrabajoDirigido rdf:type owl:NamedIndividual ,
+                                  :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterTrabajoFinDeGrado
+:caracterTrabajoFinDeGrado rdf:type owl:NamedIndividual ,
+                                    :ConceptoDeCaracterMateriaAsignatura .
+
+
+###  https://w3id.org/def/otn#caracterTrabajoFinDeMaster
+:caracterTrabajoFinDeMaster rdf:type owl:NamedIndividual ,
+                                     :ConceptoDeCaracterMateriaAsignatura .
 
 
 ###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
