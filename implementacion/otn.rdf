@@ -100,6 +100,16 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- https://w3id.org/def/otn#incluyeProfesor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#incluyeProfesor">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent"/>
+        <rdfs:comment xml:lang="es">Relación que se establece entre una situación y un profesor.</rdfs:comment>
+        <rdfs:label xml:lang="es">incluye profesor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/otn#tieneCaracter -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneCaracter">
@@ -458,20 +468,20 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Profesor"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Asignatura"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#GuiaDocente"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Asignatura"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/otn#incluyeProfesor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Profesor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Siituación en la que la asignatura está en ejecución a lo largo de un curso académico.</rdfs:comment>
@@ -899,22 +909,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/otn#Asignatura"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trabajo con el que concluye un título de máster (véase el artículo 15, apartado 3 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]). Tendrá entre 6 y 30 créditos.</rdfs:comment>
         <rdfs:label xml:lang="es">trabajo fin de máster</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/otn#UnidadTematicaAcademica -->
-
-    <owl:Class rdf:about="https://w3id.org/def/otn#UnidadTematicaAcademica">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/otn#tieneCaracter"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Materia o asignatura, que puede ser básica, obligatoria, optativa, etc.</rdfs:comment>
-        <rdfs:label xml:lang="es">unidad temática académica</rdfs:label>
     </owl:Class>
     
 
