@@ -13,12 +13,8 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#AulaInformatica" title="https://w3id.org/def/otn#AulaInformatica">aula informática</a>
       </li>
       <li>
-         <a href="#CalendarioDeImplantacionDelTitulo"
-            title="https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo">calendario de implantación del título</a>
-      </li>
-      <li>
-         <a href="#CaracterDeMateria/asignatura"
-            title="https://w3id.org/def/otn#CaracterDeMateria/asignatura">carácter de materia/asignatura</a>
+         <a href="#CaracterMateriaAsignatura"
+            title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
       </li>
       <li>
          <a href="#CatedraticoDeUniversidad"
@@ -42,6 +38,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </li>
       <li>
          <a href="#CompetenciaTransversal" title="https://w3id.org/def/otn#CompetenciaTransversal">competencia transversal</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">concepto SKOS</a>
       </li>
       <li>
          <a href="#CreditoECTS" title="https://w3id.org/def/otn#CreditoECTS">crédito ECTS</a>
@@ -68,11 +67,16 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#Doctor" title="https://w3id.org/def/otn#Doctor">doctor</a>
       </li>
       <li>
-         <a href="#EjecucionDeAsignatura" title="https://w3id.org/def/otn#EjecucionDeAsignatura">ejecución de asignatura</a>
+         <a href="#EjecucionDeAsignaturaDuranteCursoAcademico"
+            title="https://w3id.org/def/otn#EjecucionDeAsignaturaDuranteCursoAcademico">ejecución de asignatura durante curso académico</a>
       </li>
       <li>
          <a href="#EjecucionDePlanDeEstudios"
             title="https://w3id.org/def/otn#EjecucionDePlanDeEstudios">ejecución de plan de estudios</a>
+      </li>
+      <li>
+         <a href="#EjecucionDePlanDeEstudiosDuranteCursoAcademico"
+            title="https://w3id.org/def/otn#EjecucionDePlanDeEstudiosDuranteCursoAcademico">ejecución de plan de estudios durante curso académico</a>
       </li>
       <li>
          <a href="#Enseñanza" title="https://w3id.org/def/otn#Enseñanza">enseñanza</a>
@@ -88,15 +92,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             title="https://w3id.org/def/otn#EnsenanzaSemi-presencial">enseñanza semi-presencial</a>
       </li>
       <li>
-         <a href="#Estudiante" title="https://w3id.org/def/otn#Estudiante">estudiante</a>
+         <a href="#EsquemaDeCaracterDeMateriaAsignatura"
+            title="https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura">esquema de carácter de materia-asignatura</a>
       </li>
       <li>
-         <a href="#EstudianteATiempoCompleto"
-            title="https://w3id.org/def/otn#EstudianteATiempoCompleto">estudiante a tiempo completo</a>
-      </li>
-      <li>
-         <a href="#EstudianteATiempoParcial"
-            title="https://w3id.org/def/otn#EstudianteATiempoParcial">estudiante a tiempo parcial</a>
+         <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            title="http://www.w3.org/2004/02/skos/core#ConceptScheme">esquema de concepto SKOS</a>
       </li>
       <li>
          <a href="#GuiaDocente" title="https://w3id.org/def/otn#GuiaDocente">guía docente</a>
@@ -106,9 +107,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </li>
       <li>
          <a href="#Instituto" title="https://w3id.org/def/otn#Instituto">instituto</a>
-      </li>
-      <li>
-         <a href="#ItinerarioFormativo" title="https://w3id.org/def/otn#ItinerarioFormativo">itinerario formativo</a>
       </li>
       <li>
          <a href="#Materia" title="https://w3id.org/def/otn#Materia">materia</a>
@@ -190,11 +188,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic">topic</span>
+                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic">tema (según DOLCE-Zero)</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">associated with</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">asociado con</span> 
             <span class="logic">some</span> 
             <a href="#Competencia" title="https://w3id.org/def/otn#Competencia">competencia</a>
             <sup class="type-c" title="clase">c</sup>
@@ -248,39 +246,43 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
-   <div class="entity" id="CalendarioDeImplantacionDelTitulo">
-      <h3>calendario de implantación del título<sup class="type-c" title="clase">c</sup>
+   <div class="entity" id="CaracterMateriaAsignatura">
+      <h3>carácter de materia-asignatura<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo</p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#CaracterMateriaAsignatura</p>
       <div class="comment">
-         <span class="markdown">Secuencia temporal en la que se van implantando los diferentes cursos de la titulación (véase el página 62 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf]).</span>
+         <span class="markdown">Sus posibles valores son los siguientes: básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta.</span>
       </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan">plan</span>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">concepto SKOS</a>
+            <sup class="type-c" title="clase">c</sup>
          </dd>
-      </dl>
-   </div>
-   <div class="entity" id="CaracterDeMateria/asignatura">
-      <h3>carácter de materia/asignatura<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#CaracterDeMateria/asignatura</p>
-      <div class="comment">
-         <span class="markdown">Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
+         <dt>en rango de</dt>
          <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept">concept</span>
+            <a href="#tieneCaracter" title="https://w3id.org/def/otn#tieneCaracter">tiene carácter</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+         <dt>miembros</dt>
+         <dd>
+            <a href="#caracterBasico" title="https://w3id.org/def/otn#caracterBasico">carácter básico</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterMixto" title="https://w3id.org/def/otn#caracterMixto">carácter mixto</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterObligatorio" title="https://w3id.org/def/otn#caracterObligatorio">carácter obligatorio</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterOptativo" title="https://w3id.org/def/otn#caracterOptativo">carácter optativo</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterPracticasExternas"
+               title="https://w3id.org/def/otn#caracterPracticasExternas">carácter prácticas en empresa</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterSeminario" title="https://w3id.org/def/otn#caracterSeminario">carácter seminario</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterTrabajoDirigido"
+               title="https://w3id.org/def/otn#caracterTrabajoDirigido">carácter trabajo dirigido</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterTrabajoFinDeGrado"
+               title="https://w3id.org/def/otn#caracterTrabajoFinDeGrado">carácter trabajo fin de grado</a>
+            <sup class="type-ni" title="Individuo">ni</sup>, <a href="#caracterTrabajoFinDeMaster"
+               title="https://w3id.org/def/otn#caracterTrabajoFinDeMaster">carácter trabajo fin de máster</a>
+            <sup class="type-ni" title="Individuo">ni</sup>
          </dd>
       </dl>
    </div>
@@ -320,18 +322,18 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organization</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organización</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">has location</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">tiene localización</span> 
             <span class="logic">some</span> 
             <a href="#CentroComoLugar" title="https://w3id.org/def/otn#CentroComoLugar">centro como lugar</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf">is part of</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf">es parte de</span> 
             <span class="logic">some</span> 
             <a href="#Universidad" title="https://w3id.org/def/otn#Universidad">universidad</a>
             <sup class="type-c" title="clase">c</sup>
@@ -352,7 +354,21 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place">place</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place">lugar</span>
+         </dd>
+         <dd>
+            <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">tiene parte</span> 
+            <span class="logic">some</span> 
+            <a href="#Aula" title="https://w3id.org/def/otn#Aula">aula</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">tiene parte</span> 
+            <span class="logic">some</span> 
+            <a href="#Sala" title="https://w3id.org/def/otn#Sala">sala</a>
+            <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
    </div>
@@ -370,7 +386,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity">cognitive entity</span>
+                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity">entidad cognitiva (según DOLCE-Zero)</span>
          </dd>
          <dt>tiene subclases</dt>
          <dd>
@@ -435,6 +451,25 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+      <h3>concepto SKOS<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+      <div class="comment">
+         <span class="markdown">Una idea o noción; una unidad de pensamiento.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="CreditoECTS">
       <h3>crédito ECTS<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
@@ -449,7 +484,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure">unit of measure</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure">unidad de medida</span>
          </dd>
       </dl>
    </div>
@@ -467,18 +502,18 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parameter</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parámetro</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy">is parametrized by</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy">está parametrizado por</span> 
             <span class="logic">some</span> 
             <a href="#CreditoECTS" title="https://w3id.org/def/otn#CreditoECTS">crédito ECTS</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue">has parameter data value</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue">tiene valor de parámetro</span> 
             <span class="logic">some</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
          </dd>
@@ -498,18 +533,18 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parameter</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parámetro</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy">is parametrized by</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy">está parametrizado por</span> 
             <span class="logic">some</span> 
             <a href="#CreditoECTS" title="https://w3id.org/def/otn#CreditoECTS">crédito ECTS</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue">has parameter data value</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue">tiene valor de parámetro</span> 
             <span class="logic">some</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
          </dd>
@@ -529,7 +564,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval">time interval</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval">intervalo de tiempo</span>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#esCursoAcademicoDe" title="https://w3id.org/def/otn#esCursoAcademicoDe">es curso académico de</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
          </dd>
       </dl>
    </div>
@@ -547,7 +587,14 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organization</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organización</span>
+         </dd>
+         <dd>
+            <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf">es parte de</span> 
+            <span class="logic">some</span> 
+            <a href="#Universidad" title="https://w3id.org/def/otn#Universidad">universidad</a>
+            <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
    </div>
@@ -565,11 +612,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal">goal</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal">meta</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses">expresses</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses">expresa</span> 
             <span class="logic">some</span> 
             <a href="#Competencia" title="https://w3id.org/def/otn#Competencia">competencia</a>
             <sup class="type-c" title="clase">c</sup>
@@ -590,7 +637,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person">person</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person">persona</span>
          </dd>
          <dt>tiene subclases</dt>
          <dd>
@@ -604,48 +651,41 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
-   <div class="entity" id="EjecucionDeAsignatura">
-      <h3>ejecución de asignatura<sup class="type-c" title="clase">c</sup>
+   <div class="entity" id="EjecucionDeAsignaturaDuranteCursoAcademico">
+      <h3>ejecución de asignatura durante curso académico<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#EjecucionDeAsignatura</p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#EjecucionDeAsignaturaDuranteCursoAcademico</p>
       <div class="comment">
-         <span class="markdown">Siituación en la que la asignatura está en ejecución.</span>
+         <span class="markdown">Siituación en la que la asignatura está en ejecución a lo largo de un curso académico.</span>
       </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution">plan execution</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution">ejecución de plan</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has part</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">incluye</span> 
             <span class="logic">some</span> 
-            <a href="#Enseñanza" title="https://w3id.org/def/otn#Enseñanza">enseñanza</a>
+            <a href="#Asignatura" title="https://w3id.org/def/otn#Asignatura">asignatura</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent">includes agent</span> 
-            <span class="logic">some</span> 
-            <a href="#Profesor" title="https://w3id.org/def/otn#Profesor">profesor</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy">is expressed by</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisface</span> 
             <span class="logic">some</span> 
             <a href="#GuiaDocente" title="https://w3id.org/def/otn#GuiaDocente">guía docente</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</span> 
+            <a href="#incluyeProfesor" title="https://w3id.org/def/otn#incluyeProfesor">incluye profesor</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
-            <a href="#Asignatura" title="https://w3id.org/def/otn#Asignatura">asignatura</a>
+            <a href="#Profesor" title="https://w3id.org/def/otn#Profesor">profesor</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -664,7 +704,25 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution">plan execution</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution">ejecución de plan</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EjecucionDePlanDeEstudiosDuranteCursoAcademico">
+      <h3>ejecución de plan de estudios durante curso académico<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#EjecucionDePlanDeEstudiosDuranteCursoAcademico</p>
+      <div class="comment">
+         <span class="markdown">Ejecución de un plan de estudios durante un determinado curso académico.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution">ejecución de plan</span>
          </dd>
          <dd>(<a href="#estaBajoLaResponsabilidadDe"
                title="https://w3id.org/def/otn#estaBajoLaResponsabilidadDe">está bajo la responsabilidad de</a>
@@ -685,56 +743,65 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <sup class="type-c" title="clase">c</sup>)</dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">has location</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">tiene localización</span> 
             <span class="logic">some</span> 
             <a href="#Aula" title="https://w3id.org/def/otn#Aula">aula</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">has location</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">tiene localización</span> 
             <span class="logic">some</span> 
             <a href="#Sala" title="https://w3id.org/def/otn#Sala">sala</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has part</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">tiene parte</span> 
             <span class="logic">some</span> 
-            <a href="#EjecucionDeAsignatura" title="https://w3id.org/def/otn#EjecucionDeAsignatura">ejecución de asignatura</a>
+            <a href="#EjecucionDeAsignaturaDuranteCursoAcademico"
+               title="https://w3id.org/def/otn#EjecucionDeAsignaturaDuranteCursoAcademico">ejecución de asignatura durante curso académico</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant">has participant</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant">tiene participante</span> 
             <span class="logic">some</span> 
             <a href="#Universidad" title="https://w3id.org/def/otn#Universidad">universidad</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction">includes action</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction">incluye acción</span> 
             <span class="logic">some</span> 
             <a href="#Enseñanza" title="https://w3id.org/def/otn#Enseñanza">enseñanza</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy">is expressed by</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf">es parte de</span> 
             <span class="logic">some</span> 
-            <a href="#MemoriaDeVerificacion" title="https://w3id.org/def/otn#MemoriaDeVerificacion">memoria de verificación</a>
+            <a href="#EjecucionDePlanDeEstudios"
+               title="https://w3id.org/def/otn#EjecucionDePlanDeEstudios">ejecución de plan de estudios</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">is setting for</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor">incluye</span> 
             <span class="logic">some</span> 
             <a href="#Idioma" title="https://w3id.org/def/otn#Idioma">idioma</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisfies</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisface</span> 
+            <span class="logic">some</span> 
+            <a href="#MemoriaDeVerificacion" title="https://w3id.org/def/otn#MemoriaDeVerificacion">memoria de verificación</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies">satisface</span> 
             <span class="logic">some</span> 
             <a href="#NormativaDePermanencia" title="https://w3id.org/def/otn#NormativaDePermanencia">normativa de permanencia</a>
             <sup class="type-c" title="clase">c</sup>
@@ -770,11 +837,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">action</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action">acción</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval">has time interval</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval">tiene intervalo de tiempo</span> 
             <span class="logic">some</span> 
             <a href="#CursoAcademico" title="https://w3id.org/def/otn#CursoAcademico">curso académico</a>
             <sup class="type-c" title="clase">c</sup>
@@ -843,64 +910,40 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Estudiante">
-      <h3>estudiante<sup class="type-c" title="clase">c</sup>
+   <div class="entity" id="EsquemaDeCaracterDeMateriaAsignatura">
+      <h3>esquema de carácter de materia-asignatura<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#Estudiante</p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura</p>
       <div class="comment">
-         <span class="markdown">Toda  persona  que  curse  enseñanzas  oficiales en alguno de los tres ciclos universitarios (Grado, Máster y Doctorado (véase el artículo 8 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf])), enseñanzas de formación continua u otros estudios ofrecidos por las universidades (véase el artículo 1, apartado 3 del Estatuto del Estudiante [https://www.boe.es/boe/dias/2010/12/31/pdfs/BOE-A-2010-20147.pdf]).</span>
+         <span class="markdown">Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]).</span>
       </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">role</span>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">esquema de concepto SKOS</a>
+            <sup class="type-c" title="clase">c</sup>
          </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <h3>esquema de concepto SKOS<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
+      <div class="comment">
+         <span class="markdown">Un conjunto de conceptos, opcionalmente pueden incluir afirmaciones sobre relaciones semánticas entre tales conceptos.</span>
+      </div>
+      <dl class="description">
          <dt>tiene subclases</dt>
          <dd>
-            <a href="#EstudianteATiempoCompleto"
-               title="https://w3id.org/def/otn#EstudianteATiempoCompleto">estudiante a tiempo completo</a>
-            <sup class="type-c" title="clase">c</sup>, <a href="#EstudianteATiempoParcial"
-               title="https://w3id.org/def/otn#EstudianteATiempoParcial">estudiante a tiempo parcial</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="EstudianteATiempoCompleto">
-      <h3>estudiante a tiempo completo<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#EstudianteATiempoCompleto</p>
-      <div class="comment">
-         <span class="markdown">Estudiante que dedica un mínimo de 36 horas y un máximo de 40 a la semana a sus universitarios (véase el artículo 4, apartado 4 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf]).</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="#Estudiante" title="https://w3id.org/def/otn#Estudiante">estudiante</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="EstudianteATiempoParcial">
-      <h3>estudiante a tiempo parcial<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#EstudianteATiempoParcial</p>
-      <div class="comment">
-         <span class="markdown">Estudiante que requiere una trayectoria de aprendizaje flexible (véase el artículo 7, apartado 2 del Real Decreto 1791/2010, de 30 de diciembre, por el que se aprueba el Estatuto del Estudiante Universitario. [https://www.boe.es/boe/dias/2010/12/31/pdfs/BOE-A-2010-20147.pdf]), y que, por tanto, no llega a una dedicación de 36 horas semanales a sus estudios universitarios.</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="#Estudiante" title="https://w3id.org/def/otn#Estudiante">estudiante</a>
+            <a href="#EsquemaDeCaracterDeMateriaAsignatura"
+               title="https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura">esquema de carácter de materia-asignatura</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -919,11 +962,23 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">objeto de información</span>
+         </dd>
+         <dd>
+            <span class="dotted"
                   title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan">plan</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has part</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">define</span> 
+            <span class="logic">some</span> 
+            <a href="#CreditosECTSDeLaAsignatura"
+               title="https://w3id.org/def/otn#CreditosECTSDeLaAsignatura">créditos ECTS de la asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">tiene parte</span> 
             <span class="logic">some</span> 
             <a href="#DescripcionDeCompetenciaAAdquirir"
                title="https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir">descripción de competencia a adquirir</a>
@@ -945,7 +1000,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject">social object</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject">objeto social</span>
          </dd>
       </dl>
    </div>
@@ -963,25 +1018,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organization</span>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ItinerarioFormativo">
-      <h3>itinerario formativo<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/otn#ItinerarioFormativo</p>
-      <div class="comment">
-         <span class="markdown">Mención (para el caso de un grado), especialidad (para el caso de un máster) (véase el sección D.4 Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 9, apartado 3 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]).</span>
-      </div>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan">plan</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organización</span>
          </dd>
       </dl>
    </div>
@@ -999,11 +1036,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic">topic</span>
+                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic">tema (según DOLCE-Zero)</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has part</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">tiene parte</span> 
             <span class="logic">some</span> 
             <a href="#Asignatura" title="https://w3id.org/def/otn#Asignatura">asignatura</a>
             <sup class="type-c" title="clase">c</sup>
@@ -1024,19 +1061,15 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">objeto de información</span>
+         </dd>
+         <dd>
+            <span class="dotted"
                   title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan">plan</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">defines</span> 
-            <span class="logic">some</span> 
-            <a href="#CalendarioDeImplantacionDelTitulo"
-               title="https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo">calendario de implantación del título</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">defines</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">define</span> 
             <span class="logic">some</span> 
             <a href="#CreditosECTSDeTitulacion"
                title="https://w3id.org/def/otn#CreditosECTSDeTitulacion">créditos ECTS de la titulación</a>
@@ -1044,16 +1077,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">defines</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines">define</span> 
             <span class="logic">some</span> 
             <a href="#NumeroDePlazas" title="https://w3id.org/def/otn#NumeroDePlazas">número de plazas</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has part</span> 
-            <span class="logic">some</span> 
-            <a href="#ItinerarioFormativo" title="https://w3id.org/def/otn#ItinerarioFormativo">itinerario formativo</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -1072,11 +1098,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic">topic</span>
+                  title="http://www.ontologydesignpatterns.org/ont/d0.owl#Topic">tema (según DOLCE-Zero)</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">has part</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart">tiene parte</span> 
             <span class="logic">some</span> 
             <a href="#Materia" title="https://w3id.org/def/otn#Materia">materia</a>
             <sup class="type-c" title="clase">c</sup>
@@ -1097,7 +1123,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">information object</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">objeto de información</span>
          </dd>
       </dl>
    </div>
@@ -1115,11 +1141,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parameter</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parámetro</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue">has parameter data value</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue">tiene valor de parámetro</span> 
             <span class="logic">some</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
          </dd>
@@ -1139,11 +1165,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person">person</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person">persona</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">role</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role">papel</span>
          </dd>
          <dt>tiene subclases</dt>
          <dd>
@@ -1159,6 +1185,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
                title="https://w3id.org/def/otn#ProfesorTitularDeUniversidad">profesor titular de universidad</a>
             <sup class="type-c" title="clase">c</sup>, <a href="#ProfesorVisitante" title="https://w3id.org/def/otn#ProfesorVisitante">profesor visitante</a>
             <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en rango de</dt>
+         <dd>
+            <a href="#incluyeProfesor" title="https://w3id.org/def/otn#incluyeProfesor">incluye profesor</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
          </dd>
       </dl>
    </div>
@@ -1310,11 +1341,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place">place</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place">lugar</span>
          </dd>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">has location</span> 
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation">tiene localización</span> 
             <span class="logic">some</span> 
             <a href="#CentroComoLugar" title="https://w3id.org/def/otn#CentroComoLugar">centro como lugar</a>
             <sup class="type-c" title="clase">c</sup>
@@ -1414,7 +1445,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <span class="dotted"
-                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organization</span>
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">organización</span>
          </dd>
          <dt>tiene subclases</dt>
          <dd>
@@ -1461,16 +1492,28 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </dl>
    </div>
 </div><div id="objectproperties">
-   <h2>Propiedades entre objetos</h2>
+   <h3 id="objectproperties" class="list">Propiedades entre objetos</h3>
    <ul class="hlist">
       <li>
          <a href="#coordina" title="https://w3id.org/def/otn#coordina">coordina</a>
+      </li>
+      <li>
+         <a href="#esCaracterDe" title="https://w3id.org/def/otn#esCaracterDe">es carácter de</a>
+      </li>
+      <li>
+         <a href="#esCursoAcademicoDe" title="https://w3id.org/def/otn#esCursoAcademicoDe">es curso académico de</a>
+      </li>
+      <li>
+         <a href="#esProfesorIncluidoEn" title="https://w3id.org/def/otn#esProfesorIncluidoEn">es profesor incluido en</a>
       </li>
       <li>
          <a href="#esResponsableDe" title="https://w3id.org/def/otn#esResponsableDe">es responsable de</a>
       </li>
       <li>
          <a href="#esTituloImpartidoPor" title="https://w3id.org/def/otn#esTituloImpartidoPor">es título impartido por</a>
+      </li>
+      <li>
+         <a href="#esUnidadDeMedidadDe" title="https://w3id.org/def/otn#esUnidadDeMedidadDe">es unidad de medida de</a>
       </li>
       <li>
          <a href="#estaBajoLaResponsabilidadDe"
@@ -1480,7 +1523,19 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#imparteTitulo" title="https://w3id.org/def/otn#imparteTitulo">imparte título</a>
       </li>
       <li>
+         <a href="#incluyeProfesor" title="https://w3id.org/def/otn#incluyeProfesor">incluye profesor</a>
+      </li>
+      <li>
+         <a href="#tieneCaracter" title="https://w3id.org/def/otn#tieneCaracter">tiene carácter</a>
+      </li>
+      <li>
          <a href="#tieneCoordinador" title="https://w3id.org/def/otn#tieneCoordinador">tiene coordinador</a>
+      </li>
+      <li>
+         <a href="#tieneCursoAcademico" title="https://w3id.org/def/otn#tieneCursoAcademico">tiene lugar durante curso académico</a>
+      </li>
+      <li>
+         <a href="#tiene_UnidadDeMedida" title="https://w3id.org/def/otn#tiene_UnidadDeMedida">tiene unidad de medida</a>
       </li>
    </ul>
    <div class="entity" id="coordina">
@@ -1499,12 +1554,87 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <dt>tiene superpropiedades</dt>
             <dd>
                <span class="dotted"
-                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has role</span>
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">juega el papel de</span>
             </dd>
             <dt>inversa de</dt>
             <dd>
                <a href="#tieneCoordinador" title="https://w3id.org/def/otn#tieneCoordinador">tiene coordinador</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="esCaracterDe">
+      <h3>es carácter de<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#esCaracterDe</p>
+      <div class="comment">
+         <span class="markdown">Relación inversa de 'tiene carácter'</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor">es restricción para</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="esCursoAcademicoDe">
+      <h3>es curso académico de<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#esCursoAcademicoDe</p>
+      <div class="comment">
+         <span class="markdown">Curso académico a lo largo del cual tiene lugar una determinada entidad.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor">es región de</span>
+            </dd>
+            <dt>dominio</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">entidad</span>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#CursoAcademico" title="https://w3id.org/def/otn#CursoAcademico">curso académico</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#tieneCursoAcademico" title="https://w3id.org/def/otn#tieneCursoAcademico">tiene lugar durante curso académico</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="esProfesorIncluidoEn">
+      <h3>es profesor incluido en<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#esProfesorIncluidoEn</p>
+      <div class="comment">
+         <span class="markdown">Relación inversa de 'incluye profesor'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn">es agente incluido en</span>
             </dd>
          </dl>
       </div>
@@ -1524,7 +1654,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <dt>tiene superpropiedades</dt>
             <dd>
                <span class="dotted"
-                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">has role</span>
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">juega el papel de</span>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#estaBajoLaResponsabilidadDe"
+                  title="https://w3id.org/def/otn#estaBajoLaResponsabilidadDe">está bajo la responsabilidad de</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
@@ -1544,7 +1680,32 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <dt>tiene superpropiedades</dt>
             <dd>
                <span class="dotted"
-                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough">acts through</span>
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough">actúa a través de</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="esUnidadDeMedidadDe">
+      <h3>es unidad de medida de<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#esUnidadDeMedidadDe</p>
+      <div class="comment">
+         <span class="markdown">Es la relación inversa de 'tiene unidad de medida'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy">está clasificado por</span>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#tiene_UnidadDeMedida" title="https://w3id.org/def/otn#tiene_UnidadDeMedida">tiene unidad de medida</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
@@ -1564,7 +1725,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <dt>tiene superpropiedades</dt>
             <dd>
                <span class="dotted"
-                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf">is role of</span>
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf">es papel de</span>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#esResponsableDe" title="https://w3id.org/def/otn#esResponsableDe">es responsable de</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
@@ -1584,7 +1750,71 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <dt>tiene superpropiedades</dt>
             <dd>
                <span class="dotted"
-                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor">acts for</span>
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor">actúa para</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="incluyeProfesor">
+      <h3>incluye profesor<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#incluyeProfesor</p>
+      <div class="comment">
+         <span class="markdown">Relación que se establece entre una situación y un profesor.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent">incluye agente</span>
+            </dd>
+            <dt>dominio</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation">situación</span>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#Profesor" title="https://w3id.org/def/otn#Profesor">profesor</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="tieneCaracter">
+      <h3>tiene carácter<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#tieneCaracter</p>
+      <div class="comment">
+         <span class="markdown">Relación que asocia una materia o asignatura con su carácter (básica, obligatoria, optativa, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint">tiene restricción</span>
+            </dd>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#Asignatura" title="https://w3id.org/def/otn#Asignatura">asignatura</a>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Materia" title="https://w3id.org/def/otn#Materia">materia</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <a href="#CaracterMateriaAsignatura"
+                  title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+               <sup class="type-c" title="clase">c</sup>
             </dd>
          </dl>
       </div>
@@ -1604,11 +1834,71 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             <dt>tiene superpropiedades</dt>
             <dd>
                <span class="dotted"
-                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf">is role of</span>
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf">es papel de</span>
             </dd>
             <dt>inversa de</dt>
             <dd>
                <a href="#coordina" title="https://w3id.org/def/otn#coordina">coordina</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="tieneCursoAcademico">
+      <h3>tiene lugar durante curso académico<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#tieneCursoAcademico</p>
+      <div class="comment">
+         <span class="markdown">Relación inversa de 'es curso académico de'.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion">tiene región</span>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#esCursoAcademicoDe" title="https://w3id.org/def/otn#esCursoAcademicoDe">es curso académico de</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="tiene_UnidadDeMedida">
+      <h3>tiene unidad de medida<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#tiene_UnidadDeMedida</p>
+      <div class="comment">
+         <span class="markdown">Relación entre un parámetro y una unidad de medida, por ejemplo, entre los créditos ECTS de la titulacióǹ y la unidad de medida ECTS.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies">clasifica</span>
+            </dd>
+            <dt>dominio</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter">parámetro</span>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure">unidad de medida</span>
+            </dd>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#esUnidadDeMedidadDe" title="https://w3id.org/def/otn#esUnidadDeMedidadDe">es unidad de medida de</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
@@ -1631,6 +1921,212 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       <div class="comment">
          <span class="markdown">Nombre que recibe la entidad.</span>
       </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Individuos</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#caracterBasico" title="https://w3id.org/def/otn#caracterBasico">carácter básico</a>
+      </li>
+      <li>
+         <a href="#caracterMixto" title="https://w3id.org/def/otn#caracterMixto">carácter mixto</a>
+      </li>
+      <li>
+         <a href="#caracterObligatorio" title="https://w3id.org/def/otn#caracterObligatorio">carácter obligatorio</a>
+      </li>
+      <li>
+         <a href="#caracterOptativo" title="https://w3id.org/def/otn#caracterOptativo">carácter optativo</a>
+      </li>
+      <li>
+         <a href="#caracterPracticasExternas"
+            title="https://w3id.org/def/otn#caracterPracticasExternas">carácter prácticas en empresa</a>
+      </li>
+      <li>
+         <a href="#caracterSeminario" title="https://w3id.org/def/otn#caracterSeminario">carácter seminario</a>
+      </li>
+      <li>
+         <a href="#caracterTrabajoDirigido"
+            title="https://w3id.org/def/otn#caracterTrabajoDirigido">carácter trabajo dirigido</a>
+      </li>
+      <li>
+         <a href="#caracterTrabajoFinDeGrado"
+            title="https://w3id.org/def/otn#caracterTrabajoFinDeGrado">carácter trabajo fin de grado</a>
+      </li>
+      <li>
+         <a href="#caracterTrabajoFinDeMaster"
+            title="https://w3id.org/def/otn#caracterTrabajoFinDeMaster">carácter trabajo fin de máster</a>
+      </li>
+   </ul>
+   <div class="entity" id="caracterBasico">
+      <h3>carácter básico<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterBasico</p>
+      <div class="comment">
+         <span class="markdown">Se refiere a asignatura o materia que forma parte del fundamento de la titulación.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterMixto">
+      <h3>carácter mixto<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterMixto</p>
+      <div class="comment">
+         <span class="markdown">Se refiere a a materia que incluye asignaturas de diferente carácter, por ejemplo, asignaturas obligatorias y optativas.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterObligatorio">
+      <h3>carácter obligatorio<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterObligatorio</p>
+      <div class="comment">
+         <span class="markdown">Se refiere a asignatura o mateira no básica que debe cursarse obligatoriamente.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterOptativo">
+      <h3>carácter optativo<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterOptativo</p>
+      <div class="comment">
+         <span class="markdown">Se refiere a asignatura o materia que el estudiante puede o no cursar.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterPracticasExternas">
+      <h3>carácter prácticas en empresa<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterPracticasExternas</p>
+      <div class="comment">
+         <span class="markdown">Las prácticas académicas externas constituyen una actividad de naturaleza formativa realizada por los estudiantes universitarios y supervisada por las Universidades, cuyo objetivo es permitir a los mismos aplicar y complementar los conocimientos adquiridos en su formación académica, favoreciendo la adquisición de competencias que les preparen para el ejercicio de actividades profesionales, faciliten su empleabilidad y fomenten su capacidad de emprendimiento (véase el punto 1 del artículo 2 del Real Decreto 1707/2011, de 18 de noviembre, por el que se regulan las prácticas académicas externas de los estudiantes universitarios [https://www.boe.es/buscar/doc.php?id=BOE-A-2011-1936])</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterSeminario">
+      <h3>carácter seminario<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterSeminario</p>
+      <div class="comment">
+         <span class="markdown">Se refiere a una asignatura o materia en la que el protagonismo es compartido por los estudiantes y el profesor.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterTrabajoDirigido">
+      <h3>carácter trabajo dirigido<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterTrabajoDirigido</p>
+      <div class="comment">
+         <span class="markdown">Se refiere a una asignatura o matiera que consiste en la realización de un trabajo bajo supervisión.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterTrabajoFinDeGrado">
+      <h3>carácter trabajo fin de grado<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterTrabajoFinDeGrado</p>
+      <div class="comment">
+         <span class="markdown">Véase la clase 'trabajo fin de grado'</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="caracterTrabajoFinDeMaster">
+      <h3>carácter trabajo fin de máster<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/otn#caracterTrabajoFinDeMaster</p>
+      <div class="comment">
+         <span class="markdown">Véase la clase 'trabajo fin de máster'.</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <a href="#CaracterMateriaAsignatura"
+               title="https://w3id.org/def/otn#CaracterMateriaAsignatura">carácter de materia-asignatura</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>

@@ -242,6 +242,24 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:comment xml:lang="es">Una idea o noción; una unidad de pensamiento.</rdfs:comment>
+        <rdfs:label xml:lang="es">concepto SKOS</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:comment xml:lang="es">Un conjunto de conceptos, opcionalmente pueden incluir afirmaciones sobre relaciones semánticas entre tales conceptos.</rdfs:comment>
+        <rdfs:label xml:lang="es">esquema de concepto SKOS</rdfs:label>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/def/otn#Asignatura -->
 
     <owl:Class rdf:about="https://w3id.org/def/otn#Asignatura">
@@ -987,6 +1005,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterBasico">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Se refiere a asignatura o materia que forma parte del fundamento de la titulación.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter básico</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -995,6 +1015,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterMixto">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Se refiere a a materia que incluye asignaturas de diferente carácter, por ejemplo, asignaturas obligatorias y optativas.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter mixto</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1003,6 +1025,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterObligatorio">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Se refiere a asignatura o mateira no básica que debe cursarse obligatoriamente.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter obligatorio</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1011,6 +1035,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterOptativo">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Se refiere a asignatura o materia que el estudiante puede o no cursar.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter optativo</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1019,6 +1045,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterPracticasExternas">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Las prácticas académicas externas constituyen una actividad de naturaleza formativa realizada por los estudiantes universitarios y supervisada por las Universidades, cuyo objetivo es permitir a los mismos aplicar y complementar los conocimientos adquiridos en su formación académica, favoreciendo la adquisición de competencias que les preparen para el ejercicio de actividades profesionales, faciliten su empleabilidad y fomenten su capacidad de emprendimiento (véase el punto 1 del artículo 2 del Real Decreto 1707/2011, de 18 de noviembre, por el que se regulan las prácticas académicas externas de los estudiantes universitarios [https://www.boe.es/buscar/doc.php?id=BOE-A-2011-1936])</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter prácticas en empresa</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1027,6 +1055,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterSeminario">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Se refiere a una asignatura o materia en la que el protagonismo es compartido por los estudiantes y el profesor.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter seminario</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1035,6 +1065,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterTrabajoDirigido">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Se refiere a una asignatura o matiera que consiste en la realización de un trabajo bajo supervisión.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter trabajo dirigido</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1043,6 +1075,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterTrabajoFinDeGrado">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Véase la clase &apos;trabajo fin de grado&apos;</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter trabajo fin de grado</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1051,6 +1085,8 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/otn#caracterTrabajoFinDeMaster">
         <rdf:type rdf:resource="https://w3id.org/def/otn#CaracterMateriaAsignatura"/>
+        <rdfs:comment xml:lang="es">Véase la clase &apos;trabajo fin de máster&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="es">carácter trabajo fin de máster</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
