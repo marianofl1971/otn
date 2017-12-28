@@ -49,6 +49,17 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- https://w3id.org/def/otn#esAsignaturaDe -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esAsignaturaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tieneAsignatura"/>
+        <rdfs:comment xml:lang="es">Relación inversa de &apos;tiene asignatura&apos;</rdfs:comment>
+        <rdfs:label xml:lang="es">es asignatura de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/otn#esCaracterDe -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esCaracterDe">
@@ -94,6 +105,17 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:range rdf:resource="https://w3id.org/def/otn#Universidad"/>
         <rdfs:comment xml:lang="es">Es la relación que se establece entre un departamento y una universidad.</rdfs:comment>
         <rdfs:label xml:lang="es">es departamento de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#esMateriaDe -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esMateriaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tieneMateria"/>
+        <rdfs:comment xml:lang="es">Relación inversa de &apos;tiene materia&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="es">es materia de</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -166,6 +188,18 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- https://w3id.org/def/otn#tieneAsignatura -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneAsignatura">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/otn#Materia"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#Asignatura"/>
+        <rdfs:comment xml:lang="es">Relación que se establece entre una materia y una asignatura.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene asignatura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/otn#tieneCaracter -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneCaracter">
@@ -212,6 +246,18 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
         <rdfs:comment xml:lang="es">Relación inversa de &apos;es curso académico de&apos;.</rdfs:comment>
         <rdfs:label xml:lang="es">tiene lugar durante curso académico</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#tieneMateria -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneMateria">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/otn#Modulo"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#Materia"/>
+        <rdfs:comment xml:lang="es">Relación que se establece entre un módulo y una materia.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene materia</rdfs:label>
     </owl:ObjectProperty>
     
 
