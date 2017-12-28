@@ -1046,16 +1046,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
-    <!-- https://w3id.org/def/otn#tieneNombre -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/otn#tieneNombre">
-        <rdfs:comment xml:lang="es">Nombre que recibe la entidad.</rdfs:comment>
-        <rdfs:label xml:lang="es">tiene nombre</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

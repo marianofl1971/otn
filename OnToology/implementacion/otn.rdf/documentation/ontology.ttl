@@ -653,12 +653,6 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                                <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
 
 
-###  https://w3id.org/def/otn#tieneNombre
-:tieneNombre rdf:type owl:DatatypeProperty ;
-             rdfs:comment "Nombre que recibe la entidad."@es ;
-             rdfs:label "tiene nombre"@es .
-
-
 #################################################################
 #    Classes
 #################################################################

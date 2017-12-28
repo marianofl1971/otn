@@ -576,11 +576,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en .
 <http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
 # 
-# https://w3id.org/def/otn#tieneNombre
-<https://w3id.org/def/otn#tieneNombre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/otn#tieneNombre> <http://www.w3.org/2000/01/rdf-schema#comment> "Nombre que recibe la entidad."@es .
-<https://w3id.org/def/otn#tieneNombre> <http://www.w3.org/2000/01/rdf-schema#label> "tiene nombre"@es .
-# 
 # 
 # 
 # #################################################################
