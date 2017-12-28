@@ -53,8 +53,22 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esCaracterDe">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tieneCaracter"/>
         <rdfs:comment xml:lang="es">Relación inversa de &apos;tiene carácter&apos;</rdfs:comment>
         <rdfs:label xml:lang="es">es carácter de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#esCentroEncargadoDeLaImparticionDelTitulo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esCentroEncargadoDeLaImparticionDelTitulo">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tieneCentroEncargadoDeLaEjecuciónDelPlanDeEstudios"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/otn#CentroComoDivisionAcademica"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#EjecucionDePlanDeEstudios"/>
+        <rdfs:label xml:lang="es">Es la relación que se estable entre un centro como división académica y una ejecución de plan de estudios.</rdfs:label>
+        <rdfs:label xml:lang="es">es centro encargado de la impartición del título</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -72,10 +86,23 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- https://w3id.org/def/otn#esDepartamentoDe -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esDepartamentoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/otn#Departamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#Universidad"/>
+        <rdfs:comment xml:lang="es">Es la relación que se establece entre un departamento y una universidad.</rdfs:comment>
+        <rdfs:label xml:lang="es">es departamento de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/otn#esProfesorIncluidoEn -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esProfesorIncluidoEn">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#incluyeProfesor"/>
         <rdfs:comment xml:lang="es">Relación inversa de &apos;incluye profesor&apos;.</rdfs:comment>
         <rdfs:label xml:lang="es">es profesor incluido en</rdfs:label>
     </owl:ObjectProperty>
@@ -93,12 +120,15 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
-    <!-- https://w3id.org/def/otn#esTituloImpartidoPor -->
+    <!-- https://w3id.org/def/otn#esSalaDe -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esTituloImpartidoPor">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough"/>
-        <rdfs:comment xml:lang="es">Es la relación inversa de &apos;imparte título&apos;.</rdfs:comment>
-        <rdfs:label xml:lang="es">es título impartido por</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#esSalaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/otn#tieneSala"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/otn#Sala"/>
+        <rdfs:comment xml:lang="es">Relación inversa de &apos;tiene sala&apos;</rdfs:comment>
+        <rdfs:label xml:lang="es">es sala de</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -120,16 +150,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf"/>
         <rdfs:comment xml:lang="es">Es la relación inversa de &apos;es responsable de&apos;.</rdfs:comment>
         <rdfs:label xml:lang="es">está bajo la responsabilidad de</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/def/otn#imparteTitulo -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#imparteTitulo">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor"/>
-        <rdfs:comment xml:lang="es">Es la realación que se establece entre un centro y un plan de estudios. Un título puede ser impartido en varios centros.</rdfs:comment>
-        <rdfs:label xml:lang="es">imparte título</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -166,6 +186,16 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
     
 
 
+    <!-- https://w3id.org/def/otn#tieneCentroEncargadoDeLaEjecuciónDelPlanDeEstudios -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneCentroEncargadoDeLaEjecuciónDelPlanDeEstudios">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#involvesAgent"/>
+        <rdfs:comment xml:lang="es">Es la relación inversa de &apos;es centro encargado de la ejecución del plan de estudios&apos;</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene centro encargado de la ejecución del plan de estudios</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/otn#tieneCoordinador -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneCoordinador">
@@ -182,6 +212,16 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
         <rdfs:comment xml:lang="es">Relación inversa de &apos;es curso académico de&apos;.</rdfs:comment>
         <rdfs:label xml:lang="es">tiene lugar durante curso académico</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/otn#tieneSala -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/otn#tieneSala">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:comment xml:lang="es">Relación que se establece entre un lugar más amplio (por ejemplo, un &apos;centro como lugar&apos;) y una sala. Es una sub-propiedad de &apos;tiene parte&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene sala</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -572,12 +612,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Aula"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#Sala"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -621,12 +655,6 @@ automatizada los diferentes títulos sin necesidad de programar un scrapper para
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#NormativaDePermanencia"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/otn#esTituloImpartidoPor"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/otn#CentroComoDivisionAcademica"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
