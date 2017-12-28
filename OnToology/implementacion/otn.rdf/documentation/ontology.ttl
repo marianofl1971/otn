@@ -220,8 +220,18 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                                                                       rdfs:label "incluye agente"@es .
 
 
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#involvesAgent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#involvesAgent> rdfs:comment "Participación de agente."@es ;
+                                                                      rdfs:label "implica agente"@es .
+
+
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn
 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn> rdfs:label "es agente incluido en"@es .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn> rdfs:comment "Participación de agente."@es ;
+                                                                          rdfs:label "es agente implicado en"@es .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy
@@ -446,11 +456,30 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
           owl:versionInfo "Cociernta los diferentes elementos del sistema."@es .
 
 
+###  https://w3id.org/def/otn#esAsignaturaDe
+:esAsignaturaDe rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> ;
+                owl:inverseOf :tieneAsignatura ;
+                rdfs:comment "Relación inversa de 'tiene asignatura'"@es ;
+                rdfs:label "es asignatura de"@es .
+
+
 ###  https://w3id.org/def/otn#esCaracterDe
 :esCaracterDe rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> ;
+              owl:inverseOf :tieneCaracter ;
               rdfs:comment "Relación inversa de 'tiene carácter'"@es ;
               rdfs:label "es carácter de"@es .
+
+
+###  https://w3id.org/def/otn#esCentroEncargadoDeLaImparticionDelTitulo
+:esCentroEncargadoDeLaImparticionDelTitulo rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn> ;
+                                           owl:inverseOf :tieneCentroEncargadoDeLaEjecuciónDelPlanDeEstudios ;
+                                           rdfs:domain :CentroComoDivisionAcademica ;
+                                           rdfs:range :EjecucionDePlanDeEstudios ;
+                                           rdfs:comment "Es la relación que se estable entre un centro como división académica y una ejecución de plan de estudios."@es ;
+                                           rdfs:label "es centro encargado de la impartición del título"@es .
 
 
 ###  https://w3id.org/def/otn#esCursoAcademicoDe
@@ -459,13 +488,32 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                     owl:inverseOf :tieneCursoAcademico ;
                     rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> ;
                     rdfs:range :CursoAcademico ;
-                    rdfs:comment "Curso académico a lo largo del cual tiene lugar una determinada entidad."@es ;
+                    rdfs:comment "Curso académico a lo largo del cual tiene lugar una determinada situación (por ejemplo, la ejecución de una asignatura)."@es ;
                     rdfs:label "es curso académico de"@es .
+
+
+###  https://w3id.org/def/otn#esDepartamentoDe
+:esDepartamentoDe rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor> ;
+                  owl:inverseOf :tieneDepartamento ;
+                  rdfs:domain :Departamento ;
+                  rdfs:range :Universidad ;
+                  rdfs:comment "Es la relación que se establece entre un departamento y una universidad."@es ;
+                  rdfs:label "es departamento de"@es .
+
+
+###  https://w3id.org/def/otn#esMateriaDe
+:esMateriaDe rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> ;
+             owl:inverseOf :tieneMateria ;
+             rdfs:comment "Relación inversa de 'tiene materia'."@es ;
+             rdfs:label "es materia de"@es .
 
 
 ###  https://w3id.org/def/otn#esProfesorIncluidoEn
 :esProfesorIncluidoEn rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentIncludedIn> ;
+                      owl:inverseOf :incluyeProfesor ;
                       rdfs:comment "Relación inversa de 'incluye profesor'."@es ;
                       rdfs:label "es profesor incluido en"@es .
 
@@ -474,21 +522,24 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 :esResponsableDe rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> ;
                  owl:inverseOf :estaBajoLaResponsabilidadDe ;
-                 rdfs:comment "Tiene a su cargo algo a alguien (inspirado en http://dle.rae.es/?id=WCrxqOp)."@es ;
+                 rdfs:comment "Tiene a su cargo algo a alguien (inspirado en http://dle.rae.es/?id=WCrxqOp acepción 3)."@es ;
                  rdfs:label "es responsable de"@es .
 
 
-###  https://w3id.org/def/otn#esTituloImpartidoPor
-:esTituloImpartidoPor rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough> ;
-                      rdfs:comment "Es la relación inversa de 'imparte título'."@es ;
-                      rdfs:label "es título impartido por"@es .
+###  https://w3id.org/def/otn#esSalaDe
+:esSalaDe rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> ;
+          owl:inverseOf :tieneSala ;
+          rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ;
+          rdfs:range :Sala ;
+          rdfs:comment "Relación inversa de 'tiene sala'"@es ;
+          rdfs:label "es sala de"@es .
 
 
 ###  https://w3id.org/def/otn#esUnidadDeMedidadDe
 :esUnidadDeMedidadDe rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> ;
-                     owl:inverseOf :tiene_UnidadDeMedida ;
+                     owl:inverseOf :tieneUnidadDeMedida ;
                      rdfs:comment "Es la relación inversa de 'tiene unidad de medida'."@es ;
                      rdfs:label "es unidad de medida de"@es .
 
@@ -500,13 +551,6 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                              rdfs:label "está bajo la responsabilidad de"@es .
 
 
-###  https://w3id.org/def/otn#imparteTitulo
-:imparteTitulo rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor> ;
-               rdfs:comment "Es la realación que se establece entre un centro y un plan de estudios. Un título puede ser impartido en varios centros."@es ;
-               rdfs:label "imparte título"@es .
-
-
 ###  https://w3id.org/def/otn#incluyeProfesor
 :incluyeProfesor rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent> ;
@@ -514,6 +558,15 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                  rdfs:range :Profesor ;
                  rdfs:comment "Relación que se establece entre una situación y un profesor."@es ;
                  rdfs:label "incluye profesor"@es .
+
+
+###  https://w3id.org/def/otn#tieneAsignatura
+:tieneAsignatura rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+                 rdfs:domain :Materia ;
+                 rdfs:range :Asignatura ;
+                 rdfs:comment "Relación que se establece entre una materia y una asignatura."@es ;
+                 rdfs:label "tiene asignatura"@es .
 
 
 ###  https://w3id.org/def/otn#tieneCaracter
@@ -530,6 +583,13 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                rdfs:seeAlso "https://w3id.org/def/otn#ConceptoDeCaracterMateriaAsignatura"@es .
 
 
+###  https://w3id.org/def/otn#tieneCentroEncargadoDeLaEjecuciónDelPlanDeEstudios
+:tieneCentroEncargadoDeLaEjecuciónDelPlanDeEstudios rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#involvesAgent> ;
+                                                    rdfs:comment "Es la relación inversa de 'es centro encargado de la ejecución del plan de estudios'"@es ;
+                                                    rdfs:label "tiene centro encargado de la ejecución del plan de estudios"@es .
+
+
 ###  https://w3id.org/def/otn#tieneCoordinador
 :tieneCoordinador rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf> ;
@@ -544,13 +604,36 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
                      rdfs:label "tiene lugar durante curso académico"@es .
 
 
-###  https://w3id.org/def/otn#tiene_UnidadDeMedida
-:tiene_UnidadDeMedida rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies> ;
-                      rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ;
-                      rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure> ;
-                      rdfs:comment "Relación entre un parámetro y una unidad de medida, por ejemplo, entre los créditos ECTS de la titulacióǹ y la unidad de medida ECTS."@es ;
-                      rdfs:label "tiene unidad de medida"@es .
+###  https://w3id.org/def/otn#tieneDepartamento
+:tieneDepartamento rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough> ;
+                   rdfs:comment "Es la relación inversa de 'es departamento de'."@es ;
+                   rdfs:label "tiene departamento"@es .
+
+
+###  https://w3id.org/def/otn#tieneMateria
+:tieneMateria rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+              rdfs:domain :Modulo ;
+              rdfs:range :Materia ;
+              rdfs:comment "Relación que se establece entre un módulo y una materia."@es ;
+              rdfs:label "tiene materia"@es .
+
+
+###  https://w3id.org/def/otn#tieneSala
+:tieneSala rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> ;
+           rdfs:comment "Relación que se establece entre un lugar más amplio (por ejemplo, un 'centro como lugar') y una sala. Es una sub-propiedad de 'tiene parte'."@es ;
+           rdfs:label "tiene sala"@es .
+
+
+###  https://w3id.org/def/otn#tieneUnidadDeMedida
+:tieneUnidadDeMedida rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies> ;
+                     rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> ;
+                     rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure> ;
+                     rdfs:comment "Relación entre un parámetro y una unidad de medida, por ejemplo, entre los créditos ECTS de la titulacióǹ y la unidad de medida ECTS."@es ;
+                     rdfs:label "tiene unidad de medida"@es .
 
 
 #################################################################
@@ -792,14 +875,14 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 ###  https://w3id.org/def/otn#Competencia
 :Competencia rdf:type owl:Class ;
              rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity> ;
-             rdfs:comment "Por competencia se entiende ``el conjunto de conocimientos, habilidades, actitudes que se adquieren o desarrollan mediante experiencias formativas coordinadas, las cuales tienen el propósito de lograr conocimientos funcionales que den respuesta de modo eficiente a una tarea o problema de la vida cotidiana y profesional que requiera un proceso de enseñanza y aprendizaje'.  En el ámbito universitario, las competencias deben ser evaluables y coherentes (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
+             rdfs:comment "Por competencia se entiende \"el conjunto de conocimientos, habilidades, actitudes que se adquieren o desarrollan mediante experiencias formativas coordinadas, las cuales tienen el propósito de lograr conocimientos funcionales que den respuesta de modo eficiente a una tarea o problema de la vida cotidiana y profesional que requiera un proceso de enseñanza y aprendizaje\".  En el ámbito universitario, las competencias deben ser evaluables y coherentes (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
              rdfs:label "competencia"@es .
 
 
 ###  https://w3id.org/def/otn#CompetenciaBasica
 :CompetenciaBasica rdf:type owl:Class ;
                    rdfs:subClassOf :Competencia ;
-                   rdfs:comment "la competencias básicas son comunes a la mayoría de los títulos pero están adaptadas al contexto específico de cada uno de ellos. Dentro de este bloque se pueden encontrar competencias personales, competencias interpersonales, etc. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])"^^xsd:string ;
+                   rdfs:comment "La competencias básicas son comunes a la mayoría de los títulos pero están adaptadas al contexto específico de cada uno de ellos. Dentro de este bloque se pueden encontrar competencias personales, competencias interpersonales, etc. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])"^^xsd:string ;
                    rdfs:label "competencia básica"@es ,
                               "competencia general"@es .
 
@@ -807,14 +890,14 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 ###  https://w3id.org/def/otn#CompetenciaEspecifica
 :CompetenciaEspecifica rdf:type owl:Class ;
                        rdfs:subClassOf :Competencia ;
-                       rdfs:comment "las comptencias específicasson propias de un ámbito o título y están orientadas a la consecución de un perfil específico de egresado. En general, acostumbran a tener una proyección longitudinal en el título. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
+                       rdfs:comment "Las comptencias específicas son propias de un ámbito o título y están orientadas a la consecución de un perfil específico de egresado. En general, acostumbran a tener una proyección longitudinal en el título. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
                        rdfs:label "competencia específica"@es .
 
 
 ###  https://w3id.org/def/otn#CompetenciaTransversal
 :CompetenciaTransversal rdf:type owl:Class ;
                         rdfs:subClassOf :Competencia ;
-                        rdfs:comment "las competencias transversales son comunes a todos los estudiantes de una misma Universidad o centro universitario, independientemente del título que cursen. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
+                        rdfs:comment "Las competencias transversales son comunes a todos los estudiantes de una misma Universidad o centro universitario, independientemente del título que cursen. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])."^^xsd:string ;
                         rdfs:label "competencia transversal"@es .
 
 
@@ -851,7 +934,7 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
                                             owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> ;
                                             owl:someValuesFrom xsd:int
                                           ] ;
-                          rdfs:comment "Créditos ECTS necesarios para completar la titulación."@es ;
+                          rdfs:comment "Esfuerzo estimado, en ECTS, que debe realizar un alumno medio para culminar con éxito la titulación."@es ;
                           rdfs:label "créditos ECTS de la titulación"@es .
 
 
@@ -937,10 +1020,6 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
-                                                                  owl:someValuesFrom :Aula
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
                                                                   owl:someValuesFrom :Sala
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
@@ -970,10 +1049,6 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> ;
                                                                   owl:someValuesFrom :NormativaDePermanencia
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty :esTituloImpartidoPor ;
-                                                                  owl:someValuesFrom :CentroComoDivisionAcademica
                                                                 ] ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :tieneCoordinador ;
@@ -1018,7 +1093,7 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 ###  https://w3id.org/def/otn#EsquemaDeCaracterDeMateriaAsignatura
 :EsquemaDeCaracterDeMateriaAsignatura rdf:type owl:Class ;
                                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                      rdfs:comment "Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])."@es ;
+                                      rdfs:comment "Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (Véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])."@es ;
                                       rdfs:label "esquema de carácter de materia-asignatura"@es .
 
 
@@ -1041,14 +1116,14 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 ###  https://w3id.org/def/otn#Idioma
 :Idioma rdf:type owl:Class ;
         rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> ;
-        rdfs:comment "Lengua de un pueblo o nación, o común a varios (http://dle.rae.es/?id=KuMp7nw) acepción 1}."^^xsd:string ;
+        rdfs:comment "Lengua de un pueblo o nación, o común a varios (http://dle.rae.es/?id=KuMp7nw acepción 1)."^^xsd:string ;
         rdfs:label "idioma"@es .
 
 
 ###  https://w3id.org/def/otn#Instituto
 :Instituto rdf:type owl:Class ;
            rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> ;
-           rdfs:comment "Institución científica, cultural, etc. (http://dle.rae.es/?id=Lnnv6Ry)"@es ;
+           rdfs:comment "Institución científica, cultural, etc. (http://dle.rae.es/?id=Lnnv6Ry acepción 2)."@es ;
            rdfs:label "instituto"@es .
 
 
@@ -1112,7 +1187,7 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 :Profesor rdf:type owl:Class ;
           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person> ,
                           <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> ;
-          rdfs:comment "Persona que se dedica a la docencia en la universidad."^^xsd:string ;
+          rdfs:comment "Persona que se dedica a la docencia."^^xsd:string ;
           rdfs:label "profesor"@es .
 
 
@@ -1174,7 +1249,7 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
                         owl:onProperty <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> ;
                         owl:someValuesFrom :CentroComoLugar
                       ] ;
-      rdfs:comment "En un edificio público, habitación de grandes dimensiones (http://dle.rae.es/?id=X0gpajU)."@es ;
+      rdfs:comment "En un edificio público, habitación de grandes dimensiones (http://dle.rae.es/?id=X0gpajU acepción 2)."@es ;
       rdfs:label "sala"@es .
 
 
@@ -1234,28 +1309,28 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 ###  https://w3id.org/def/otn#caracterBasico
 :caracterBasico rdf:type owl:NamedIndividual ,
                          :CaracterMateriaAsignatura ;
-                rdfs:comment "Se refiere a asignatura o materia que forma parte del fundamento de la titulación."@es ;
+                rdfs:comment "Se refiere a aquellas asignaturas y/o materias que forman parte del fundamento de la titulación."@es ;
                 rdfs:label "carácter básico"@es .
 
 
 ###  https://w3id.org/def/otn#caracterMixto
 :caracterMixto rdf:type owl:NamedIndividual ,
                         :CaracterMateriaAsignatura ;
-               rdfs:comment "Se refiere a a materia que incluye asignaturas de diferente carácter, por ejemplo, asignaturas obligatorias y optativas."@es ;
+               rdfs:comment "Se refiere a aquellas materias que incluyen asignaturas de diferente carácter, por ejemplo, asignaturas obligatorias y optativas."@es ;
                rdfs:label "carácter mixto"@es .
 
 
 ###  https://w3id.org/def/otn#caracterObligatorio
 :caracterObligatorio rdf:type owl:NamedIndividual ,
                               :CaracterMateriaAsignatura ;
-                     rdfs:comment "Se refiere a asignatura o mateira no básica que debe cursarse obligatoriamente."@es ;
+                     rdfs:comment "Se refiere a aquellas asignaturas y/o materias que no son básicas que deben cursarse obligatoriamente."@es ;
                      rdfs:label "carácter obligatorio"@es .
 
 
 ###  https://w3id.org/def/otn#caracterOptativo
 :caracterOptativo rdf:type owl:NamedIndividual ,
                            :CaracterMateriaAsignatura ;
-                  rdfs:comment "Se refiere a asignatura o materia que el estudiante puede o no cursar."@es ;
+                  rdfs:comment "Se refiere a aquellas asignaturas y/o materias que el estudiante puede o no cursar."@es ;
                   rdfs:label "carácter optativo"@es .
 
 
@@ -1269,14 +1344,14 @@ Al ser dependientes de la comunicación, todos los agentes sociales necesitan es
 ###  https://w3id.org/def/otn#caracterSeminario
 :caracterSeminario rdf:type owl:NamedIndividual ,
                             :CaracterMateriaAsignatura ;
-                   rdfs:comment "Se refiere a una asignatura o materia en la que el protagonismo es compartido por los estudiantes y el profesor."@es ;
+                   rdfs:comment "Se refiere a aquellas asignaturas y/o materias en la que el protagonismo es compartido por los estudiantes y el profesor."@es ;
                    rdfs:label "carácter seminario"@es .
 
 
 ###  https://w3id.org/def/otn#caracterTrabajoDirigido
 :caracterTrabajoDirigido rdf:type owl:NamedIndividual ,
                                   :CaracterMateriaAsignatura ;
-                         rdfs:comment "Se refiere a una asignatura o matiera que consiste en la realización de un trabajo bajo supervisión."@es ;
+                         rdfs:comment "Se refiere a aquellas asignaturas y/o materias que consisten en la realización de un trabajo bajo supervisión."@es ;
                          rdfs:label "carácter trabajo dirigido"@es .
 
 
@@ -1786,19 +1861,11 @@ Los cinco enfoques responden a diferentes requisitos. Por ejemplo, un valor simp
                                                                    rdfs:label "presenta"@es .
 
 
-<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#involvesAgent> rdfs:comment "Participación de agente."@es ;
-                                                                      rdfs:label "implica agente"@es .
-
-
 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAbout> rdfs:comment "Una relación entre objetos de información y entidades cualesquiera (incluyendo objetos de información). Se puede utilizar para hablar sobre, por ejemplo, entidades referenciadas por nombres propios: “Leonardo da Vinci” ‘se refiere a’ la ‘persona’ Leonardo da Vinci. También se puede utilizar para conjuntos de entidades que se describen mediante un nombre común: el nombre común  “persona” se refiere al conjunto de todas las personas en un dominio del discurso."@es ;
                                                                 rdfs:label "se refiere a"@es .
 
 
 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isActionIncludedIn> rdfs:label "es acción incluida en"@es .
-
-
-<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAgentInvolvedIn> rdfs:comment "Participación de agente."@es ;
-                                                                          rdfs:label "es agente implicado en"@es .
 
 
 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isCharacterizedBy> rdfs:label "está caracterizado por"@es .
