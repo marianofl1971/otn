@@ -1,0 +1,679 @@
+<https://w3id.org/def/otn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/otn> <http://purl.org/dc/elements/1.1/title> "Ontología de Títulos Universitarios (OTN)"@es .
+<https://w3id.org/def/otn> <http://purl.org/dc/terms/creator> "Mariano Fernández-López"@es .
+<https://w3id.org/def/otn> <http://purl.org/dc/terms/license> "Creative Commons CC-BY-SA"@es .
+<https://w3id.org/def/otn> <http://www.w3.org/2000/01/rdf-schema#comment> "El propósito de la elaboración de esta ontología es especificar de manera formal una estructura conceptual para el intercambio de información de acuerdo con la Guía Práctica para la Evaluación del Seguimiento de Títulos Universitarios Oficiales de la Fundación Madri+d (http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf).\n\nLa ontología estará centrada en la información de los títulos oficiales que, según Madri+d, debe ser pública. Esta guía es aplicable a las 14 universidades de la Comunidad de Madrid (http://www.emes.es/Sistemauniversitario/UniversidadesdeMadrid/tabid/215/Default.aspx).\n\nSe espera que esta ontología sea útil para desarrollar sistemas de ayuda a la decisión, orientados a futuros estudiantes universitarios, que traten de forma\nautomatizada los diferentes títulos sin necesidad de programar un scrapper para el sitio Web de cada título. También puede resultar útil para intercambio de información entre las aplicaciones de Madri+d y las de las universidades."@es .
+<https://w3id.org/def/otn> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/otn#coordina
+<https://w3id.org/def/otn#coordina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/otn#coordina> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> .
+<https://w3id.org/def/otn#coordina> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/otn#tieneCoordinador> .
+<https://w3id.org/def/otn#coordina> <http://www.w3.org/2000/01/rdf-schema#label> "coordina"@es .
+<https://w3id.org/def/otn#coordina> <http://www.w3.org/2002/07/owl#versionInfo> "Cociernta los diferentes elementos del sistema."@es .
+# 
+# https://w3id.org/def/otn#esResponsableDe
+<https://w3id.org/def/otn#esResponsableDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/otn#esResponsableDe> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> .
+<https://w3id.org/def/otn#esResponsableDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Tiene a su cargo algo a alguien (inspirado en http://dle.rae.es/?id=WCrxqOp)."@es .
+<https://w3id.org/def/otn#esResponsableDe> <http://www.w3.org/2000/01/rdf-schema#label> "es responsable de"@es .
+# 
+# https://w3id.org/def/otn#esTituloImpartidoPor
+<https://w3id.org/def/otn#esTituloImpartidoPor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/otn#esTituloImpartidoPor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsThrough> .
+<https://w3id.org/def/otn#esTituloImpartidoPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Es la relación inversa de 'imparte título'."@es .
+<https://w3id.org/def/otn#esTituloImpartidoPor> <http://www.w3.org/2000/01/rdf-schema#label> "es título impartido por"@es .
+# 
+# https://w3id.org/def/otn#estaBajoLaResponsabilidadDe
+<https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf> .
+<https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> <http://www.w3.org/2000/01/rdf-schema#comment> "Es la relación inversa de 'es responsable de'."@es .
+<https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> <http://www.w3.org/2000/01/rdf-schema#label> "está bajo la responsabilidad de"@es .
+# 
+# https://w3id.org/def/otn#imparteTitulo
+<https://w3id.org/def/otn#imparteTitulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/otn#imparteTitulo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#actsFor> .
+<https://w3id.org/def/otn#imparteTitulo> <http://www.w3.org/2000/01/rdf-schema#comment> "Es la realación que se establece entre un centro y un plan de estudios. Un título puede ser impartido en varios centros."@es .
+<https://w3id.org/def/otn#imparteTitulo> <http://www.w3.org/2000/01/rdf-schema#label> "imparte título"@es .
+# 
+# https://w3id.org/def/otn#tieneCoordinador
+<https://w3id.org/def/otn#tieneCoordinador> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/otn#tieneCoordinador> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf> .
+<https://w3id.org/def/otn#tieneCoordinador> <http://www.w3.org/2000/01/rdf-schema#comment> "Es la relación inversa de 'coordina'."@es .
+<https://w3id.org/def/otn#tieneCoordinador> <http://www.w3.org/2000/01/rdf-schema#label> "tiene coordinador"@es .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/def/otn#tieneNombre
+<https://w3id.org/def/otn#tieneNombre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/otn#tieneNombre> <http://www.w3.org/2000/01/rdf-schema#comment> "Nombre que recibe la entidad."@es .
+<https://w3id.org/def/otn#tieneNombre> <http://www.w3.org/2000/01/rdf-schema#label> "tiene nombre"@es .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity
+<http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/d0.owl#Topic
+<http://www.ontologydesignpatterns.org/ont/d0.owl#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#ItinerarioFormativo> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/otn#Asignatura
+<https://w3id.org/def/otn#Asignatura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Asignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/d0.owl#Topic> .
+<https://w3id.org/def/otn#Asignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Competencia> .
+<https://w3id.org/def/otn#Asignatura> <http://www.w3.org/2000/01/rdf-schema#comment> "Unidad académica que incluye una serie de contenidos coherentes desde el punto de vista disciplinar de la que es evaluado el estudiante y se le asigna una calificación." .
+<https://w3id.org/def/otn#Asignatura> <http://www.w3.org/2000/01/rdf-schema#label> "asignatura"@es .
+# 
+# https://w3id.org/def/otn#Aula
+<https://w3id.org/def/otn#Aula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Aula> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Sala> .
+<https://w3id.org/def/otn#Aula> <http://www.w3.org/2000/01/rdf-schema#comment> "Sala donde se imparten clases en los centros docentes (http://dle.rae.es/?id=4OCO4gi acepción 1)." .
+<https://w3id.org/def/otn#Aula> <http://www.w3.org/2000/01/rdf-schema#label> "aula"@es .
+# 
+# https://w3id.org/def/otn#AulaInformatica
+<https://w3id.org/def/otn#AulaInformatica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#AulaInformatica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Aula> .
+<https://w3id.org/def/otn#AulaInformatica> <http://www.w3.org/2000/01/rdf-schema#comment> "Aula con ordenadores para que puedan trabajar con ellos los alumnos." .
+<https://w3id.org/def/otn#AulaInformatica> <http://www.w3.org/2000/01/rdf-schema#label> "aula informática"@es .
+# 
+# https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo
+<https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> .
+<https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo> <http://www.w3.org/2000/01/rdf-schema#comment> "Secuencia temporal en la que se van implantando los diferentes cursos de la titulación (véase el página 62 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])." .
+<https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo> <http://www.w3.org/2000/01/rdf-schema#label> "calendario de implantación del título"@es .
+# 
+# https://w3id.org/def/otn#CatedraticoDeUniversidad
+<https://w3id.org/def/otn#CatedraticoDeUniversidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CatedraticoDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Doctor> .
+<https://w3id.org/def/otn#CatedraticoDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#CatedraticoDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor funcionario doctor con plena capacidad tanto para la docencia como para la investigación que tiene la categoría docente más alta. Para acceder a esta posición es necesario haber obtenido una acreditación nacional (véase la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#CatedraticoDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#label> "catedrático de universidad"@es .
+# 
+# https://w3id.org/def/otn#CentroComoDivisionAcademica
+<https://w3id.org/def/otn#CentroComoDivisionAcademica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CentroComoDivisionAcademica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> .
+<https://w3id.org/def/otn#CentroComoDivisionAcademica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CentroComoLugar> .
+<https://w3id.org/def/otn#CentroComoDivisionAcademica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Universidad> .
+<https://w3id.org/def/otn#CentroComoDivisionAcademica> <http://www.w3.org/2000/01/rdf-schema#comment> "División académica de una universidad, en la que se agrupan los estudios de disciplinas similares (adaptado de la RAE [http://dle.rae.es/?id=HTxyZDZ]). Un centro está encargado de la organización de las enseñanzas y de los procesos académicos, administrativos y de gestión conducentes a la obtención de títulos universitarios (véase el artículo 8 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#CentroComoDivisionAcademica> <http://www.w3.org/2000/01/rdf-schema#label> "centro como división académica"@es .
+# 
+# https://w3id.org/def/otn#CentroComoLugar
+<https://w3id.org/def/otn#CentroComoLugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CentroComoLugar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> .
+<https://w3id.org/def/otn#CentroComoLugar> <http://www.w3.org/2000/01/rdf-schema#comment> "Local o conjunto de locales en que funciona un 'centro como división académica' (adaptado de la RAE [http://dle.rae.es/?id=HTxyZDZ])." .
+<https://w3id.org/def/otn#CentroComoLugar> <http://www.w3.org/2000/01/rdf-schema#label> "centro como lugar"@es .
+# 
+# https://w3id.org/def/otn#Competencia
+<https://w3id.org/def/otn#Competencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Competencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity> .
+<https://w3id.org/def/otn#Competencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Por competencia se entiende ``el conjunto de conocimientos, habilidades, actitudes que se adquieren o desarrollan mediante experiencias formativas coordinadas, las cuales tienen el propósito de lograr conocimientos funcionales que den respuesta de modo eficiente a una tarea o problema de la vida cotidiana y profesional que requiera un proceso de enseñanza y aprendizaje'.  En el ámbito universitario, las competencias deben ser evaluables y coherentes (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])." .
+<https://w3id.org/def/otn#Competencia> <http://www.w3.org/2000/01/rdf-schema#label> "competencia"@es .
+# 
+# https://w3id.org/def/otn#CompetenciaBasica
+<https://w3id.org/def/otn#CompetenciaBasica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CompetenciaBasica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Competencia> .
+<https://w3id.org/def/otn#CompetenciaBasica> <http://www.w3.org/2000/01/rdf-schema#comment> "la competencias básicas son comunes a la mayoría de los títulos pero están adaptadas al contexto específico de cada uno de ellos. Dentro de este bloque se pueden encontrar competencias personales, competencias interpersonales, etc. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])" .
+<https://w3id.org/def/otn#CompetenciaBasica> <http://www.w3.org/2000/01/rdf-schema#label> "competencia básica"@es .
+<https://w3id.org/def/otn#CompetenciaBasica> <http://www.w3.org/2000/01/rdf-schema#label> "competencia general"@es .
+# 
+# https://w3id.org/def/otn#CompetenciaEspecifica
+<https://w3id.org/def/otn#CompetenciaEspecifica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CompetenciaEspecifica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Competencia> .
+<https://w3id.org/def/otn#CompetenciaEspecifica> <http://www.w3.org/2000/01/rdf-schema#comment> "las comptencias específicasson propias de un ámbito o título y están orientadas a la consecución de un perfil específico de egresado. En general, acostumbran a tener una proyección longitudinal en el título. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])." .
+<https://w3id.org/def/otn#CompetenciaEspecifica> <http://www.w3.org/2000/01/rdf-schema#label> "competencia específica"@es .
+# 
+# https://w3id.org/def/otn#CompetenciaTransversal
+<https://w3id.org/def/otn#CompetenciaTransversal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CompetenciaTransversal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Competencia> .
+<https://w3id.org/def/otn#CompetenciaTransversal> <http://www.w3.org/2000/01/rdf-schema#comment> "las competencias transversales son comunes a todos los estudiantes de una misma Universidad o centro universitario, independientemente del título que cursen. (véase la página 20 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])." .
+<https://w3id.org/def/otn#CompetenciaTransversal> <http://www.w3.org/2000/01/rdf-schema#label> "competencia transversal"@es .
+# 
+# https://w3id.org/def/otn#CreditoECTS
+<https://w3id.org/def/otn#CreditoECTS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CreditoECTS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#UnitOfMeasure> .
+<https://w3id.org/def/otn#CreditoECTS> <http://www.w3.org/2000/01/rdf-schema#comment> "El crédito europeo es la unidad de medida del haber académico que representa la cantidad de trabajo del estudiante para cumplir los objetivos del programa de estudios y que se obtiene por la superación de cada una de las materias que integran los planes de estudios de las diversas enseñanzas conducentes a la obtención de títulos universitarios de carácter oficial y validez en todo el territorio nacional. En esta unidad de medida se integran las enseñanzas teóricas y prácticas, así como otras actividades académicas dirigidas, con inclusión de las horas de estudio y de trabajo que el estudiante debe realizar para alcanzar los objetivos formativos propios de cada una de las materias del correspondiente plan de estudios (véase el artículo 3 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf]). El número mínimo de horas, por crédito, será de 25, y el número máximo, de 30 (véase el artículo 4, apartado 5 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf])." .
+<https://w3id.org/def/otn#CreditoECTS> <http://www.w3.org/2000/01/rdf-schema#label> "crédito ECTS"@es .
+# 
+# https://w3id.org/def/otn#CreditosECTSDeLaAsignatura
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> .
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CreditoECTS> .
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#comment> "Esfuerzo estimado, en ECTS, que debe realizar un alumno medio para culminar con éxito la asignatura."@es .
+<https://w3id.org/def/otn#CreditosECTSDeLaAsignatura> <http://www.w3.org/2000/01/rdf-schema#label> "créditos ECTS de la asignatura"@es .
+# 
+# https://w3id.org/def/otn#CreditosECTSDeTitulacion
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> .
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CreditoECTS> .
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Créditos ECTS necesarios para completar la titulación."@es .
+<https://w3id.org/def/otn#CreditosECTSDeTitulacion> <http://www.w3.org/2000/01/rdf-schema#label> "créditos ECTS de la titulación"@es .
+# 
+# https://w3id.org/def/otn#CursoAcademico
+<https://w3id.org/def/otn#CursoAcademico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CursoAcademico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval> .
+<https://w3id.org/def/otn#CursoAcademico> <http://www.w3.org/2000/01/rdf-schema#comment> "Intervalo de tiempo anual en el que se desarrolla la actividad académica." .
+<https://w3id.org/def/otn#CursoAcademico> <http://www.w3.org/2000/01/rdf-schema#label> "curso académico"@es .
+# 
+# https://w3id.org/def/otn#Departamento
+<https://w3id.org/def/otn#Departamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Departamento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> .
+<https://w3id.org/def/otn#Departamento> <http://www.w3.org/2000/01/rdf-schema#comment> "Unidad de docencia e investigación encargada de coordinar las enseñanzas de uno o varios ámbitos del conocimiento en uno o varios centros, de acuerdo con la programación docente de la universidad, de apoyar las actividades e iniciativas docentes e investigadoras del profesorado, y de ejercer aquellas otras funciones que sean determinadas por los estatutos (véase el artículo 9 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#Departamento> <http://www.w3.org/2000/01/rdf-schema#label> "departamento"@es .
+# 
+# https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir
+<https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal> .
+<https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Competencia> .
+<https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir> <http://www.w3.org/2000/01/rdf-schema#comment> "Descripción de competencia que se tiene como meta adquirir."@es .
+<https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir> <http://www.w3.org/2000/01/rdf-schema#label> "descripción de competencia a adquirir"@es .
+# 
+# https://w3id.org/def/otn#Doctor
+<https://w3id.org/def/otn#Doctor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Doctor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person> .
+<https://w3id.org/def/otn#Doctor> <http://www.w3.org/2000/01/rdf-schema#comment> "Persona que ha defendido con éxito una tesis doctoral, consistente en un trabajo original de investigación y que, por tanto, posee el título de doctor." .
+<https://w3id.org/def/otn#Doctor> <http://www.w3.org/2000/01/rdf-schema#label> "doctor"@es .
+# 
+# https://w3id.org/def/otn#EjecucionDeAsignatura
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Ense\u00F1anza> .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAgent> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#GuiaDocente> .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Asignatura> .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#comment> "Siituación en la que la asignatura está en ejecución."@es .
+<https://w3id.org/def/otn#EjecucionDeAsignatura> <http://www.w3.org/2000/01/rdf-schema#label> "ejecución de asignatura"@es .
+# 
+# https://w3id.org/def/otn#EjecucionDePlanDeEstudios
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PlanExecution> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CentroComoDivisionAcademica> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Departamento> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/otn#estaBajoLaResponsabilidadDe> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Instituto> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Aula> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Sala> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#EjecucionDeAsignatura> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Universidad> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesAction> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Ense\u00F1anza> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#MemoriaDeVerificacion> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor> .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Idioma> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#NormativaDePermanencia> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/otn#esTituloImpartidoPor> .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CentroComoDivisionAcademica> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/otn#tieneCoordinador> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Universidad> .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#comment> "Siituación en la que el plan de estudios está en ejecución."@es .
+<https://w3id.org/def/otn#EjecucionDePlanDeEstudios> <http://www.w3.org/2000/01/rdf-schema#label> "ejecución de plan de estudios"@es .
+# 
+# https://w3id.org/def/otn#EnsenanzaADistancia
+<https://w3id.org/def/otn#EnsenanzaADistancia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EnsenanzaADistancia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Ense\u00F1anza> .
+<https://w3id.org/def/otn#EnsenanzaADistancia> <http://www.w3.org/2000/01/rdf-schema#comment> "Aquélla en que la gran mayoría de las actividades formativas previstas en el Plan de Estudios no requieren la presencia física del estudiante en el centro de impartición del título (véase el página 10 del Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])." .
+<https://w3id.org/def/otn#EnsenanzaADistancia> <http://www.w3.org/2000/01/rdf-schema#label> "enseñanza a distancia"@es .
+# 
+# https://w3id.org/def/otn#EnsenanzaPresencial
+<https://w3id.org/def/otn#EnsenanzaPresencial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EnsenanzaPresencial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Ense\u00F1anza> .
+<https://w3id.org/def/otn#EnsenanzaPresencial> <http://www.w3.org/2000/01/rdf-schema#comment> "Aquélla que requiere que el estudiante asista de forma regular y continuada durante todos los cursos a actividades formativas regladas en el centro de impartición del título (véase el página 10 del Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])." .
+<https://w3id.org/def/otn#EnsenanzaPresencial> <http://www.w3.org/2000/01/rdf-schema#label> "enseñanza presencial"@es .
+# 
+# https://w3id.org/def/otn#EnsenanzaSemi-presencial
+<https://w3id.org/def/otn#EnsenanzaSemi-presencial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EnsenanzaSemi-presencial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Ense\u00F1anza> .
+<https://w3id.org/def/otn#EnsenanzaSemi-presencial> <http://www.w3.org/2000/01/rdf-schema#comment> "Aquélla en la que la planificación de las actividades formativas previstas en el Plan de Estudios combina la presencia física del estudiante en el centro de impartición del título con un mayor trabajo autónomo del estudiante al propio de la enseñanza presencial (véase el página 10 del Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])." .
+<https://w3id.org/def/otn#EnsenanzaSemi-presencial> <http://www.w3.org/2000/01/rdf-schema#label> "enseñanza semi-presencial"@es .
+# 
+# https://w3id.org/def/otn#Enseñanza
+<https://w3id.org/def/otn#Ense\u00F1anza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Ense\u00F1anza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action> .
+<https://w3id.org/def/otn#Ense\u00F1anza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasTimeInterval> .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CursoAcademico> .
+<https://w3id.org/def/otn#Ense\u00F1anza> <http://www.w3.org/2000/01/rdf-schema#comment> "Ejemplo, acción o suceso que sirve de experiencia, enseñando o advirtiendo cómo se debe obrar en casos análogos (http://dle.rae.es/?id=FdHOWng acepción 2)."@es .
+<https://w3id.org/def/otn#Ense\u00F1anza> <http://www.w3.org/2000/01/rdf-schema#label> "enseñanza"@es .
+# 
+# https://w3id.org/def/otn#Estudiante
+<https://w3id.org/def/otn#Estudiante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Estudiante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> .
+<https://w3id.org/def/otn#Estudiante> <http://www.w3.org/2000/01/rdf-schema#comment> "Toda  persona  que  curse  enseñanzas  oficiales en alguno de los tres ciclos universitarios (Grado, Máster y Doctorado (véase el artículo 8 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf])), enseñanzas de formación continua u otros estudios ofrecidos por las universidades (véase el artículo 1, apartado 3 del Estatuto del Estudiante [https://www.boe.es/boe/dias/2010/12/31/pdfs/BOE-A-2010-20147.pdf])." .
+<https://w3id.org/def/otn#Estudiante> <http://www.w3.org/2000/01/rdf-schema#label> "estudiante"@es .
+# 
+# https://w3id.org/def/otn#EstudianteATiempoCompleto
+<https://w3id.org/def/otn#EstudianteATiempoCompleto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EstudianteATiempoCompleto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Estudiante> .
+<https://w3id.org/def/otn#EstudianteATiempoCompleto> <http://www.w3.org/2000/01/rdf-schema#comment> "Estudiante que dedica un mínimo de 36 horas y un máximo de 40 a la semana a sus universitarios (véase el artículo 4, apartado 4 del Real Decreto 1125/2003, de 5 de septiembre, por el que se establece el sistema europeo de créditos y el sistema de califica- ciones en las titulaciones universitarias de carácter oficial y validez en todo el territorio nacional.  [https://www.boe.es/boe/dias/2003/09/18/pdfs/A34355-34356.pdf])." .
+<https://w3id.org/def/otn#EstudianteATiempoCompleto> <http://www.w3.org/2000/01/rdf-schema#label> "estudiante a tiempo completo"@es .
+# 
+# https://w3id.org/def/otn#EstudianteATiempoParcial
+<https://w3id.org/def/otn#EstudianteATiempoParcial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#EstudianteATiempoParcial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Estudiante> .
+<https://w3id.org/def/otn#EstudianteATiempoParcial> <http://www.w3.org/2000/01/rdf-schema#comment> "Estudiante que requiere una trayectoria de aprendizaje flexible (véase el artículo 7, apartado 2 del Real Decreto 1791/2010, de 30 de diciembre, por el que se aprueba el Estatuto del Estudiante Universitario. [https://www.boe.es/boe/dias/2010/12/31/pdfs/BOE-A-2010-20147.pdf]), y que, por tanto, no llega a una dedicación de 36 horas semanales a sus estudios universitarios." .
+<https://w3id.org/def/otn#EstudianteATiempoParcial> <http://www.w3.org/2000/01/rdf-schema#label> "estudiante a tiempo parcial"@es .
+# 
+# https://w3id.org/def/otn#GuiaDocente
+<https://w3id.org/def/otn#GuiaDocente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#GuiaDocente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> .
+<https://w3id.org/def/otn#GuiaDocente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir> .
+<https://w3id.org/def/otn#GuiaDocente> <http://www.w3.org/2000/01/rdf-schema#comment> "Especificación de una asignatura que incluye su número de créditos ECTS, el programa a desarrollar, la metodología de aprendizaje, los sistemas de evaluación, etc. (Véase el sección D.5 del Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])." .
+<https://w3id.org/def/otn#GuiaDocente> <http://www.w3.org/2000/01/rdf-schema#label> "guía docente"@es .
+# 
+# https://w3id.org/def/otn#Idioma
+<https://w3id.org/def/otn#Idioma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Idioma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject> .
+<https://w3id.org/def/otn#Idioma> <http://www.w3.org/2000/01/rdf-schema#comment> "Lengua de un pueblo o nación, o común a varios (http://dle.rae.es/?id=KuMp7nw) acepción 1}." .
+<https://w3id.org/def/otn#Idioma> <http://www.w3.org/2000/01/rdf-schema#label> "idioma"@es .
+# 
+# https://w3id.org/def/otn#Instituto
+<https://w3id.org/def/otn#Instituto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Instituto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> .
+<https://w3id.org/def/otn#Instituto> <http://www.w3.org/2000/01/rdf-schema#comment> "Institución científica, cultural, etc. (http://dle.rae.es/?id=Lnnv6Ry)"@es .
+<https://w3id.org/def/otn#Instituto> <http://www.w3.org/2000/01/rdf-schema#label> "instituto"@es .
+# 
+# https://w3id.org/def/otn#ItinerarioFormativo
+<https://w3id.org/def/otn#ItinerarioFormativo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ItinerarioFormativo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> .
+<https://w3id.org/def/otn#ItinerarioFormativo> <http://www.w3.org/2000/01/rdf-schema#comment> "Mención (para el caso de un grado), especialidad (para el caso de un máster) (véase el sección D.4 Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf]) (véase el artículo 9, apartado 3 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf])." .
+<https://w3id.org/def/otn#ItinerarioFormativo> <http://www.w3.org/2000/01/rdf-schema#label> "itinerario formativo"@es .
+# 
+# https://w3id.org/def/otn#Materia
+<https://w3id.org/def/otn#Materia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Materia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/d0.owl#Topic> .
+<https://w3id.org/def/otn#Materia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Asignatura> .
+<https://w3id.org/def/otn#Materia> <http://www.w3.org/2000/01/rdf-schema#comment> "Unidad académica que incluye una o varias asignaturas que pueden concebirse de manera integrada, de tal forma que constituyen unidades coherentes desde el punto de vista disciplinar (véase el página 33 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])." .
+<https://w3id.org/def/otn#Materia> <http://www.w3.org/2000/01/rdf-schema#label> "materia"@es .
+# 
+# https://w3id.org/def/otn#MemoriaDeVerificacion
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan> .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo> .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CreditosECTSDeTitulacion> .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines> .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#NumeroDePlazas> .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#ItinerarioFormativo> .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Descripción del plan de estudios que ha de ser verificada por la ANECA."@es .
+<https://w3id.org/def/otn#MemoriaDeVerificacion> <http://www.w3.org/2000/01/rdf-schema#label> "memoria de verificación"@es .
+# 
+# https://w3id.org/def/otn#Modulo
+<https://w3id.org/def/otn#Modulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Modulo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/d0.owl#Topic> .
+<https://w3id.org/def/otn#Modulo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#Materia> .
+<https://w3id.org/def/otn#Modulo> <http://www.w3.org/2000/01/rdf-schema#comment> "Unidad académica que incluye una o varias materias que constituyen una unidad organizativa dentro de un plan de estudios (véase el página 33 del Guía de apoyo para la elaboración de la memoria de verificación de títulos oficialaes universitarios (Grado y Máster)  [http://www.aneca.es/content/download/12155/136031/file/verifica_gm_guia_V05.pdf])." .
+<https://w3id.org/def/otn#Modulo> <http://www.w3.org/2000/01/rdf-schema#label> "módulo"@es .
+# 
+# https://w3id.org/def/otn#NormativaDePermanencia
+<https://w3id.org/def/otn#NormativaDePermanencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#NormativaDePermanencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject> .
+<https://w3id.org/def/otn#NormativaDePermanencia> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de normas que establecen bajo qué condiciones un estudiante puede permanecer en la universidad." .
+<https://w3id.org/def/otn#NormativaDePermanencia> <http://www.w3.org/2000/01/rdf-schema#label> "normativa de permanencia"@es .
+# 
+# https://w3id.org/def/otn#NumeroDePlazas
+<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> .
+<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> .
+_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de nuevos estudiantes que pueden admitirse a lo largo de un curso académico en una titulación." .
+<https://w3id.org/def/otn#NumeroDePlazas> <http://www.w3.org/2000/01/rdf-schema#label> "número de plazas"@es .
+# 
+# https://w3id.org/def/otn#Profesor
+<https://w3id.org/def/otn#Profesor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Profesor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person> .
+<https://w3id.org/def/otn#Profesor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> .
+<https://w3id.org/def/otn#Profesor> <http://www.w3.org/2000/01/rdf-schema#comment> "Persona que se dedica a la docencia en la universidad." .
+<https://w3id.org/def/otn#Profesor> <http://www.w3.org/2000/01/rdf-schema#label> "profesor"@es .
+# 
+# https://w3id.org/def/otn#ProfesorAsociado
+<https://w3id.org/def/otn#ProfesorAsociado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorAsociado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorAsociado> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor, con contrado temporal a tiempo parcial, especialista de reconocida competencia que acredita ejercer su actividad profesional fuera del ámbito académico universitario que desarrolla tareas docentes a través de las que aporta sus conocimientos y experiencia profesionales a la universidad (véase el artículo 53 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorAsociado> <http://www.w3.org/2000/01/rdf-schema#label> "profesor asociado"@es .
+# 
+# https://w3id.org/def/otn#ProfesorAyudante
+<https://w3id.org/def/otn#ProfesorAyudante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorAyudante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorAyudante> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor en periodo de formación, con contrato de carácter temporal y dedicación a tiempo completo, que ha sido admitido, o está en condiciones de ser admitido, en estudios de doctorado (véase el artículo 49 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorAyudante> <http://www.w3.org/2000/01/rdf-schema#label> "profesor ayudante"@es .
+# 
+# https://w3id.org/def/otn#ProfesorAyudanteDoctor
+<https://w3id.org/def/otn#ProfesorAyudanteDoctor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorAyudanteDoctor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorAyudanteDoctor> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor doctor, con contrato de carácter temporal y dedicación a tiempo completo, que ha obtenido una acreditación nacional o autonómica, y que desarrolla tareas docentes y de investigación (véase el artículo 50 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorAyudanteDoctor> <http://www.w3.org/2000/01/rdf-schema#label> "profesor ayudante doctor"@es .
+# 
+# https://w3id.org/def/otn#ProfesorContratadoDoctor
+<https://w3id.org/def/otn#ProfesorContratadoDoctor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorContratadoDoctor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Doctor> .
+<https://w3id.org/def/otn#ProfesorContratadoDoctor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorContratadoDoctor> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor doctor con contrato laboral indefinido y dedicación a tiempo completo que ha obtenido una acreditación nacional o autonómica, que desarrolla, con plena capacidad docente e investigadora, tareas docentes y de investigación (o prioritariamente de investigación) (véase el artículo 52 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorContratadoDoctor> <http://www.w3.org/2000/01/rdf-schema#label> "profesor contratado doctor"@es .
+# 
+# https://w3id.org/def/otn#ProfesorEmerito
+<https://w3id.org/def/otn#ProfesorEmerito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorEmerito> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorEmerito> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor jubilado que ha que ha prestado servicios destacados a la universidad (véase el artículo 54bis de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorEmerito> <http://www.w3.org/2000/01/rdf-schema#label> "profesor emérito"@es .
+# 
+# https://w3id.org/def/otn#ProfesorTitularDeUniversidad
+<https://w3id.org/def/otn#ProfesorTitularDeUniversidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorTitularDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Doctor> .
+<https://w3id.org/def/otn#ProfesorTitularDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorTitularDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor funcionario doctor con plena capacidad tanto para la docencia como para la investigación. Para acceder a esta posición es necesario haber obtenido una acreditación nacional (véase la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorTitularDeUniversidad> <http://www.w3.org/2000/01/rdf-schema#label> "profesor titular de universidad"@es .
+# 
+# https://w3id.org/def/otn#ProfesorVisitante
+<https://w3id.org/def/otn#ProfesorVisitante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#ProfesorVisitante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Profesor> .
+<https://w3id.org/def/otn#ProfesorVisitante> <http://www.w3.org/2000/01/rdf-schema#comment> "Profesor o investigador, con contrato temporal a tiempo parcial o completo, de reconocido prestigio de otra universidad o centro de investigación, que desarrolla tareas docentes o de investigación a través de las que aporta conocimientos y experiencia docente e investigadora (véase el artículo 54 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#ProfesorVisitante> <http://www.w3.org/2000/01/rdf-schema#label> "profesor visitante"@es .
+# 
+# https://w3id.org/def/otn#Sala
+<https://w3id.org/def/otn#Sala> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Sala> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> .
+<https://w3id.org/def/otn#Sala> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/otn#CentroComoLugar> .
+<https://w3id.org/def/otn#Sala> <http://www.w3.org/2000/01/rdf-schema#comment> "En un edificio público, habitación de grandes dimensiones (http://dle.rae.es/?id=X0gpajU)."@es .
+<https://w3id.org/def/otn#Sala> <http://www.w3.org/2000/01/rdf-schema#label> "sala"@es .
+# 
+# https://w3id.org/def/otn#SalaDeBiblioteca
+<https://w3id.org/def/otn#SalaDeBiblioteca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#SalaDeBiblioteca> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Sala> .
+<https://w3id.org/def/otn#SalaDeBiblioteca> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar donde se tiene considerable número de libros ordenados para la lectura (http://dle.rae.es/?id=5SGETnQ acepción 2)."@es .
+<https://w3id.org/def/otn#SalaDeBiblioteca> <http://www.w3.org/2000/01/rdf-schema#label> "sala de biblioteca"@es .
+# 
+# https://w3id.org/def/otn#SalaDeEstudio
+<https://w3id.org/def/otn#SalaDeEstudio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#SalaDeEstudio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Sala> .
+<https://w3id.org/def/otn#SalaDeEstudio> <http://www.w3.org/2000/01/rdf-schema#comment> "Sala debidamente acondicionada para que los alumnos puedan estudiar." .
+<https://w3id.org/def/otn#SalaDeEstudio> <http://www.w3.org/2000/01/rdf-schema#label> "sala de estudio"@es .
+# 
+# https://w3id.org/def/otn#TrabajoFinDeGrado
+<https://w3id.org/def/otn#TrabajoFinDeGrado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#TrabajoFinDeGrado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Asignatura> .
+<https://w3id.org/def/otn#TrabajoFinDeGrado> <http://www.w3.org/2000/01/rdf-schema#comment> "Trabajo con el que concluye un título de grado (véase el artículo 12, apartado 3 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]). El trabajo de fin de Grado tendrá entre 6 y 30 créditos, deberá realizarse en la fase final del plan de estudios y estar orientado a la evaluación de competencias asociadas al título. (Véase el artículo 12, apartado 7 del Real Decreto)." .
+<https://w3id.org/def/otn#TrabajoFinDeGrado> <http://www.w3.org/2000/01/rdf-schema#label> "trabajo fin de grado"@es .
+# 
+# https://w3id.org/def/otn#TrabajoFinDeMaster
+<https://w3id.org/def/otn#TrabajoFinDeMaster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#TrabajoFinDeMaster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Asignatura> .
+<https://w3id.org/def/otn#TrabajoFinDeMaster> <http://www.w3.org/2000/01/rdf-schema#comment> "Trabajo con el que concluye un título de máster (véase el artículo 15, apartado 3 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]). Tendrá entre 6 y 30 créditos." .
+<https://w3id.org/def/otn#TrabajoFinDeMaster> <http://www.w3.org/2000/01/rdf-schema#label> "trabajo fin de máster"@es .
+# 
+# https://w3id.org/def/otn#Universidad
+<https://w3id.org/def/otn#Universidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#Universidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization> .
+<https://w3id.org/def/otn#Universidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Institución de educación superior dedicada a la investigación, la docencia y el estudio (véase el articulo 1, apartado 1 de la Ley Orgánica 6/2001, de 21 de diciembre, de Universidades [http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf])." .
+<https://w3id.org/def/otn#Universidad> <http://www.w3.org/2000/01/rdf-schema#label> "universidad"@es .
+# 
+# https://w3id.org/def/otn#UniversidadPrivada
+<https://w3id.org/def/otn#UniversidadPrivada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#UniversidadPrivada> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Universidad> .
+<https://w3id.org/def/otn#UniversidadPrivada> <http://www.w3.org/2000/01/rdf-schema#comment> "Universidad cuya titularidad ostenta una persona física o jurídica de carácter privado (véase el artículo 3 del Real Decreto 557/1991, de 12 de abril, sobre creación y reconocimiento de universidades y centros universitarios [https://www.boe.es/buscar/doc.php?id=BOE-A-1991-9609])." .
+<https://w3id.org/def/otn#UniversidadPrivada> <http://www.w3.org/2000/01/rdf-schema#label> "universidad privada"@es .
+# 
+# https://w3id.org/def/otn#UniversidadPublica
+<https://w3id.org/def/otn#UniversidadPublica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#UniversidadPublica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/otn#Universidad> .
+<https://w3id.org/def/otn#UniversidadPublica> <http://www.w3.org/2000/01/rdf-schema#comment> "Universidad cuya titularidad ostenta el Estado o una Comunidad Autónoma (véase el artículo 3 del Real Decreto 557/1991, de 12 de abril, sobre creación y reconocimiento de universidades y centros universitarios [https://www.boe.es/buscar/doc.php?id=BOE-A-1991-9609])." .
+<https://w3id.org/def/otn#UniversidadPublica> <http://www.w3.org/2000/01/rdf-schema#label> "universidad pública"@es .
+# 
+# https://w3id.org/def/otn#CaracterDeMateria/asignatura
+<https://w3id.org/def/otn#CaracterDeMateria/asignatura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/otn#CaracterDeMateria/asignatura> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> .
+<https://w3id.org/def/otn#CaracterDeMateria/asignatura> <http://www.w3.org/2000/01/rdf-schema#comment> "Clasificación de la materia/asignatura en básica, obligatoria, optativa, seminario, prácticas externas, trabajo dirigido, trabajo fin de grado, trabajo de fin de máster, o mixta. (Véase el artículo 12, apartado 2 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. [https://www.boe.es/boe/dias/2007/10/30/pdfs/A44037-44048.pdf]) (véase la sección D.5 de la Guía práctica para la evaluación del seguimiento [http://www.madrimasd.org/uploads/acreditacion/doc/seguimiento2013/Guia_de_Evaluacion_2014.pdf])" .
+<https://w3id.org/def/otn#CaracterDeMateria/asignatura> <http://www.w3.org/2000/01/rdf-schema#label> "carácter de materia/asignatura"@es .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

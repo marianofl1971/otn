@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "http://webprotege.stanford.edu/R91LQFVGLSYYGEcSmVbLx1C" ; /*classes style*/
+	"http://webprotege.stanford.edu/R91LQFVGLSYYGEcSmVbLx1C" -> "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,32 @@
+[ {
+  "@id" : "http://w3id.org/education/otn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/def/dul-dolce-zero-en-espannol"
+  } ]
+}, {
+  "@id" : "http://w3id.org/education/otn#ClasePatron",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Descripción"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "nombre en español"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R91LQFVGLSYYGEcSmVbLx1C",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Documento expedido en nombre del Rey por el Rector de una universidad que acredita una serie de conocimientos científicos, técnicos o artísticos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "título oficial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.boe.es/buscar/pdf/2001/BOE-A-2001-24515-consolidado.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"
+  } ]
+} ]

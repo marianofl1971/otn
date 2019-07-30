@@ -1,0 +1,331 @@
+{
+  "@context" : {
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/def/dul-es#UnitOfMeasure"
+    },
+    "CreditosECTSDeTitulacion" : {
+      "@id" : "https://w3id.org/def/otn#CreditosECTSDeTitulacion"
+    },
+    "Competencia" : {
+      "@id" : "https://w3id.org/def/otn#Competencia"
+    },
+    "InformationObject" : {
+      "@id" : "https://w3id.org/def/dul-es#InformationObject"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "isParametrizedBy" : {
+      "@id" : "https://w3id.org/def/dul-es#isParametrizedBy",
+      "@type" : "@id"
+    },
+    "includesAgent" : {
+      "@id" : "https://w3id.org/def/dul-es#includesAgent",
+      "@type" : "@id"
+    },
+    "TrabajoFinDeMaster" : {
+      "@id" : "https://w3id.org/def/otn#TrabajoFinDeMaster"
+    },
+    "ProfesorAyudante" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorAyudante"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "isSettingFor" : {
+      "@id" : "https://w3id.org/def/dul-es#isSettingFor",
+      "@type" : "@id"
+    },
+    "UniversidadPrivada" : {
+      "@id" : "https://w3id.org/def/otn#UniversidadPrivada"
+    },
+    "Organization" : {
+      "@id" : "https://w3id.org/def/dul-es#Organization"
+    },
+    "ProfesorContratadoDoctor" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorContratadoDoctor"
+    },
+    "Profesor" : {
+      "@id" : "https://w3id.org/def/otn#Profesor"
+    },
+    "SocialObject" : {
+      "@id" : "https://w3id.org/def/dul-es#SocialObject"
+    },
+    "CompetenciaTransversal" : {
+      "@id" : "https://w3id.org/def/otn#CompetenciaTransversal"
+    },
+    "imparteTitulo" : {
+      "@id" : "https://w3id.org/def/otn#imparteTitulo",
+      "@type" : "@id"
+    },
+    "Asignatura" : {
+      "@id" : "https://w3id.org/def/otn#Asignatura"
+    },
+    "Estudiante" : {
+      "@id" : "https://w3id.org/def/otn#Estudiante"
+    },
+    "EjecucionDePlanDeEstudios" : {
+      "@id" : "https://w3id.org/def/otn#EjecucionDePlanDeEstudios"
+    },
+    "MemoriaDeVerificacion" : {
+      "@id" : "https://w3id.org/def/otn#MemoriaDeVerificacion"
+    },
+    "includesAction" : {
+      "@id" : "https://w3id.org/def/dul-es#includesAction",
+      "@type" : "@id"
+    },
+    "Instituto" : {
+      "@id" : "https://w3id.org/def/otn#Instituto"
+    },
+    "CalendarioDeImplantacionDelTitulo" : {
+      "@id" : "https://w3id.org/def/otn#CalendarioDeImplantacionDelTitulo"
+    },
+    "asignatura" : {
+      "@id" : "https://w3id.org/def/otn#CaracterDeMateria/asignatura"
+    },
+    "hasRole" : {
+      "@id" : "https://w3id.org/def/dul-es#hasRole",
+      "@type" : "@id"
+    },
+    "ProfesorAsociado" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorAsociado"
+    },
+    "Doctor" : {
+      "@id" : "https://w3id.org/def/otn#Doctor"
+    },
+    "CentroComoLugar" : {
+      "@id" : "https://w3id.org/def/otn#CentroComoLugar"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "CatedraticoDeUniversidad" : {
+      "@id" : "https://w3id.org/def/otn#CatedraticoDeUniversidad"
+    },
+    "CursoAcademico" : {
+      "@id" : "https://w3id.org/def/otn#CursoAcademico"
+    },
+    "Modulo" : {
+      "@id" : "https://w3id.org/def/otn#Modulo"
+    },
+    "isPartOf" : {
+      "@id" : "https://w3id.org/def/dul-es#isPartOf",
+      "@type" : "@id"
+    },
+    "CreditosECTSDeLaAsignatura" : {
+      "@id" : "https://w3id.org/def/otn#CreditosECTSDeLaAsignatura"
+    },
+    "hasPart" : {
+      "@id" : "https://w3id.org/def/dul-es#hasPart",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "https://w3id.org/def/dul-es#Concept"
+    },
+    "DescripcionDeCompetenciaAAdquirir" : {
+      "@id" : "https://w3id.org/def/otn#DescripcionDeCompetenciaAAdquirir"
+    },
+    "EnsenanzaSemi-presencial" : {
+      "@id" : "https://w3id.org/def/otn#EnsenanzaSemi-presencial"
+    },
+    "Departamento" : {
+      "@id" : "https://w3id.org/def/otn#Departamento"
+    },
+    "actsThrough" : {
+      "@id" : "https://w3id.org/def/dul-es#actsThrough",
+      "@type" : "@id"
+    },
+    "defines" : {
+      "@id" : "https://w3id.org/def/dul-es#defines",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "https://w3id.org/def/dul-es#Person"
+    },
+    "associatedWith" : {
+      "@id" : "https://w3id.org/def/dul-es#associatedWith",
+      "@type" : "@id"
+    },
+    "esTituloImpartidoPor" : {
+      "@id" : "https://w3id.org/def/otn#esTituloImpartidoPor",
+      "@type" : "@id"
+    },
+    "Topic" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/d0.owl#Topic"
+    },
+    "Materia" : {
+      "@id" : "https://w3id.org/def/otn#Materia"
+    },
+    "Idioma" : {
+      "@id" : "https://w3id.org/def/otn#Idioma"
+    },
+    "CentroComoDivisionAcademica" : {
+      "@id" : "https://w3id.org/def/otn#CentroComoDivisionAcademica"
+    },
+    "expresses" : {
+      "@id" : "https://w3id.org/def/dul-es#expresses",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "TrabajoFinDeGrado" : {
+      "@id" : "https://w3id.org/def/otn#TrabajoFinDeGrado"
+    },
+    "Role" : {
+      "@id" : "https://w3id.org/def/dul-es#Role"
+    },
+    "EnsenanzaADistancia" : {
+      "@id" : "https://w3id.org/def/otn#EnsenanzaADistancia"
+    },
+    "UniversidadPublica" : {
+      "@id" : "https://w3id.org/def/otn#UniversidadPublica"
+    },
+    "PlanExecution" : {
+      "@id" : "https://w3id.org/def/dul-es#PlanExecution"
+    },
+    "ProfesorAyudanteDoctor" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorAyudanteDoctor"
+    },
+    "AulaInformatica" : {
+      "@id" : "https://w3id.org/def/otn#AulaInformatica"
+    },
+    "tieneCoordinador" : {
+      "@id" : "https://w3id.org/def/otn#tieneCoordinador",
+      "@type" : "@id"
+    },
+    "TimeInterval" : {
+      "@id" : "https://w3id.org/def/dul-es#TimeInterval"
+    },
+    "isRoleOf" : {
+      "@id" : "https://w3id.org/def/dul-es#isRoleOf",
+      "@type" : "@id"
+    },
+    "ProfesorTitularDeUniversidad" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorTitularDeUniversidad"
+    },
+    "CompetenciaBasica" : {
+      "@id" : "https://w3id.org/def/otn#CompetenciaBasica"
+    },
+    "CreditoECTS" : {
+      "@id" : "https://w3id.org/def/otn#CreditoECTS"
+    },
+    "ItinerarioFormativo" : {
+      "@id" : "https://w3id.org/def/otn#ItinerarioFormativo"
+    },
+    "hasTimeInterval" : {
+      "@id" : "https://w3id.org/def/dul-es#hasTimeInterval",
+      "@type" : "@id"
+    },
+    "EstudianteATiempoParcial" : {
+      "@id" : "https://w3id.org/def/otn#EstudianteATiempoParcial"
+    },
+    "tieneNombre" : {
+      "@id" : "https://w3id.org/def/otn#tieneNombre"
+    },
+    "Goal" : {
+      "@id" : "https://w3id.org/def/dul-es#Goal"
+    },
+    "Plan" : {
+      "@id" : "https://w3id.org/def/dul-es#Plan"
+    },
+    "Place" : {
+      "@id" : "https://w3id.org/def/dul-es#Place"
+    },
+    "EstudianteATiempoCompleto" : {
+      "@id" : "https://w3id.org/def/otn#EstudianteATiempoCompleto"
+    },
+    "Parameter" : {
+      "@id" : "https://w3id.org/def/dul-es#Parameter"
+    },
+    "Enseñanza" : {
+      "@id" : "https://w3id.org/def/otn#Enseñanza"
+    },
+    "ProfesorVisitante" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorVisitante"
+    },
+    "Aula" : {
+      "@id" : "https://w3id.org/def/otn#Aula"
+    },
+    "Universidad" : {
+      "@id" : "https://w3id.org/def/otn#Universidad"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasParticipant" : {
+      "@id" : "https://w3id.org/def/dul-es#hasParticipant",
+      "@type" : "@id"
+    },
+    "CompetenciaEspecifica" : {
+      "@id" : "https://w3id.org/def/otn#CompetenciaEspecifica"
+    },
+    "isExpressedBy" : {
+      "@id" : "https://w3id.org/def/dul-es#isExpressedBy",
+      "@type" : "@id"
+    },
+    "EjecucionDeAsignatura" : {
+      "@id" : "https://w3id.org/def/otn#EjecucionDeAsignatura"
+    },
+    "GuiaDocente" : {
+      "@id" : "https://w3id.org/def/otn#GuiaDocente"
+    },
+    "hasParameterDataValue" : {
+      "@id" : "https://w3id.org/def/dul-es#hasParameterDataValue"
+    },
+    "SalaDeBiblioteca" : {
+      "@id" : "https://w3id.org/def/otn#SalaDeBiblioteca"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "NormativaDePermanencia" : {
+      "@id" : "https://w3id.org/def/otn#NormativaDePermanencia"
+    },
+    "Sala" : {
+      "@id" : "https://w3id.org/def/otn#Sala"
+    },
+    "coordina" : {
+      "@id" : "https://w3id.org/def/otn#coordina",
+      "@type" : "@id"
+    },
+    "ProfesorEmerito" : {
+      "@id" : "https://w3id.org/def/otn#ProfesorEmerito"
+    },
+    "SalaDeEstudio" : {
+      "@id" : "https://w3id.org/def/otn#SalaDeEstudio"
+    },
+    "actsFor" : {
+      "@id" : "https://w3id.org/def/dul-es#actsFor",
+      "@type" : "@id"
+    },
+    "Action" : {
+      "@id" : "https://w3id.org/def/dul-es#Action"
+    },
+    "CognitiveEntity" : {
+      "@id" : "http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity"
+    },
+    "EnsenanzaPresencial" : {
+      "@id" : "https://w3id.org/def/otn#EnsenanzaPresencial"
+    },
+    "esResponsableDe" : {
+      "@id" : "https://w3id.org/def/otn#esResponsableDe",
+      "@type" : "@id"
+    },
+    "hasLocation" : {
+      "@id" : "https://w3id.org/def/dul-es#hasLocation",
+      "@type" : "@id"
+    },
+    "estaBajoLaResponsabilidadDe" : {
+      "@id" : "https://w3id.org/def/otn#estaBajoLaResponsabilidadDe",
+      "@type" : "@id"
+    },
+    "NumeroDePlazas" : {
+      "@id" : "https://w3id.org/def/otn#NumeroDePlazas"
+    },
+    "satisfies" : {
+      "@id" : "https://w3id.org/def/dul-es#satisfies",
+      "@type" : "@id"
+    }
+  }
+}

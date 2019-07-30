@@ -1,0 +1,17 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "skos:ConceptScheme" "skos:Concept" ; /*classes style*/
+	"skos:scopeNote" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
+	"skos:example" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
+	"skos:altLabel" -> "rdfs:label" [ label = "rdfs:subPropertyOf" ];
+	"skos:Concept" -> "skos:ConceptScheme" [ label = "owl:disjointWith" ];
+	"skos:prefLabel" -> "rdfs:label" [ label = "rdfs:subPropertyOf" ];
+	"skos:historyNote" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
+	"skos:changeNote" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
+	"skos:definition" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
+	"skos:editorialNote" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
+	"skos:hiddenLabel" -> "rdfs:label" [ label = "rdfs:subPropertyOf" ];
+	"http://www.w3.org/2004/02/skos/core" -> "http://www.w3.org/TR/skos-reference/" [ label = "rdfs:seeAlso" ];
+
+}
