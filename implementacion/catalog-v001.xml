@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2004/02/skos/core" uri="http://www.w3.org/2004/02/skos/core"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2004/02/skos/core" uri="https://www.w3.org/2009/08/skos-reference/skos.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1514479213282" name="http://www.w3.org/2004/02/skos/core" uri="skos_local.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1514479213282" name="duplicate:https://w3id.org/def/otn" uri="otn.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1514479213282" name="duplicate:https://w3id.org/def/otn" uri="otn_nnapa.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1514479213282" name="duplicate:https://w3id.org/def/otn" uri="otn_sin_dul.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1514479213282" name="duplicate:https://w3id.org/def/otn" uri="otn_sp.rdf"/>
+    </group>
+</catalog>

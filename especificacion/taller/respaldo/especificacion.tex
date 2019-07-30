@@ -1,0 +1,46 @@
+\documentclass[spanish,11pt,oneside,a4paper]{book}
+% El siguiente paquete se utiliza para la divisi贸n en s铆labas en espa帽ol. IMPORTANTE: requiere instalaci贸n de paquetes texlive-babel-spanish y texlive-babel-spanish-doc (ambos sin t al final de tex). La opci贸n es-noshorthands es para evitar el problema que se ocasiona cuando la opci贸n spanish deshabilita algunos caracteres.
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{eurosym} % Para poder escribir el s铆mbolo del euro
+\lstset{escapeinside=||} % Para poder poner acentos en dentro del entorno lstlisting. Por ejemplo, para poner "Fern谩ndez" en unos comentarios de Java, hay que escribir "Fern|谩|ndez"
+\usepackage{framed} % Para poder crear cuadros alrededor de textos. Permite utilizar el entorno framed.
+\usepackage{courier}
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\usepackage{tikz} % Para las figuras en formato LaTeX
+\usetikzlibrary{arrows,positioning,calc,shapes.geometric}
+\usepackage{amsthm} % Este paquete lo utilizo para crear entornos ejemplo, ejercicio, etc. con newtheorem.
+\usepackage{amsmath} % Lo utilizo para poder utilizar el entorno equation*, que permite tener f贸rmulas si n煤mero de f贸rmula.
+\usepackage{float} % Para poder poner las figuras donde yo quiera.
+\usepackage{amsfonts} % Para poder escribir el s铆mbolo de los n煤meros naturales, el de los n煤meros enteros, etc.
+\usepackage{booktabs} % Para poder utilizar \toprule, midrule, etc. en tablas.
+\usepackage{tikz} % Para poder dibujar, por ejemplo, aut髆atas
+\usetikzlibrary{automata,positioning} % Para poder dibujar aut髆atas
+
+
+%\usepackage{array}
+
+%\input{latex-macros}
+
+\begin{document}
+\theoremstyle{definition}
+\newtheorem{ejercicio}{Ejercicio}[chapter] %El primer par谩metro es el nombre del entorno y, el segundo, el nombre que va a aparecer en el texto. Lo que hay entre corchetes indica que la numeraci贸n va a llevar el n煤mero de secci贸n.
+\newtheorem{definimos}{Definici贸n}[chapter] 
+\newtheorem{teorema}{Teorema}[chapter] 
+\newtheorem{observamos}{Observaci贸n}[chapter] 
+\newtheorem{ejemplo}{Ejemplo}[chapter] 
+%\renewcommand{\listtablename}{蚽dice de tablas}
+\renewcommand{\tablename}{Tabla}
+\include{cover}
+\tableofcontents
+\include{contenido}
+\end{document}

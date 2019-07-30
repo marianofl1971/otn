@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/TeX Live for SUSE Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: especificacion.aux
+A level-1 auxiliary file: cover.aux
+A level-1 auxiliary file: contenido.aux
+The style file: plain.bst
+Database file #1: ../bibliografia/bibTex.bib
+Warning--to sort, need author, editor, or key in guiaMadridMasD
+Warning--to sort, need author or key in rdUniversidadesPrivadas
+Warning--to sort, need author or key in leyUniversidades
+Warning--to sort, need author or key in rdECTS
+Warning--to sort, need author or key in rd1393
+Warning--to sort, need author or key in rd861
+Warning--to sort, need author or key in estatutoEstudiante
+Warning--to sort, need author, editor, or key in guiaAneca
+Warning--empty author in rdUniversidadesPrivadas
+Warning--empty journal in rdUniversidadesPrivadas
+Warning--empty author in rdECTS
+Warning--empty journal in rdECTS
+Warning--empty author in rd1393
+Warning--empty journal in rd1393
+Warning--empty author in estatutoEstudiante
+Warning--empty journal in estatutoEstudiante
+Warning--empty author in rd861
+Warning--empty journal in rd861
+Warning--empty author and editor in guiaAneca
+Warning--empty author and editor in guiaMadridMasD
+Warning--empty author in leyUniversidades
+Warning--empty journal in leyUniversidades
+You've used 8 entries,
+            2118 wiz_defined-function locations,
+            538 strings with 6254 characters,
+and the built_in function-call counts, 1422 in all, are:
+= -- 136
+> -- 8
+< -- 0
++ -- 8
+- -- 0
+* -- 90
+:= -- 195
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 86
+empty$ -- 157
+format.name$ -- 0
+if$ -- 309
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 0
+pop$ -- 42
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 54
+stack$ -- 0
+substring$ -- 40
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 22
+while$ -- 0
+width$ -- 9
+write$ -- 76
+(There were 22 warnings)
